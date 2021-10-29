@@ -1,0 +1,107 @@
+{
+    "link": [
+        {
+            "title": "网站建设",
+            "list": [
+                {
+                    "route": "/",
+                    "title": "企业官网"
+                },
+                {
+                    "route": "/",
+                    "title": "速成建站"
+                },
+                {
+                    "route": "/",
+                    "title": "营销型网站"
+                }
+            ]
+        },
+        {
+            "title": "小程序",
+            "list": [
+                {
+                    "route": "/",
+                    "title": "电商零售"
+                },
+                {
+                    "route": "/",
+                    "title": "生活服务"
+                },
+                {
+                    "route": "/",
+                    "title": "餐饮外卖"
+                }
+            ]
+        },
+        {
+            "title": "电商系统",
+            "list": [
+                {
+                    "route": "/",
+                    "title": "B2B"
+                },
+                {
+                    "route": "/",
+                    "title": "多用户系统"
+                },
+                {
+                    "route": "/",
+                    "title": "B2C"
+                }
+            ]
+        },
+        {
+            "title": "营销推广",
+            "list": [
+                {
+                    "route": "/",
+                    "title": "抖音获客"
+                },
+                {
+                    "route": "/",
+                    "title": "SEO"
+                },
+                {
+                    "route": "/",
+                    "title": "竞价推广"
+                }
+            ]
+        },
+        {
+            "title": "信息化建设",
+            "list": [
+                {
+                    "route": "/",
+                    "title": "智慧水务"
+                },
+                {
+                    "route": "/",
+                    "title": "智慧党建"
+                },
+                {
+                    "route": "/",
+                    "title": "智慧农村"
+                }
+            ]
+        },
+        {
+            "title": "定制服务",
+            "list": [
+                {
+                    "route": "/",
+                    "title": "APP开发"
+                },
+                {
+                    "route": "/",
+                    "title": "网站定制"
+                },
+                {
+                    "route": "/",
+                    "title": "H5开发"
+                }
+            ]
+        }
+    ],
+    "more_route": "/"
+}

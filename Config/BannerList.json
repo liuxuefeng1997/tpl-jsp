@@ -1,0 +1,12 @@
+{
+    "banner": [
+        {
+            "img": "https://img-prod-cms-rt-microsoft-com.akamaized.net/cms/api/am/imageFileData/RE4wtc2?ver=504e",
+            "route": "/"
+        },
+        {
+            "img": "https://img-prod-cms-rt-microsoft-com.akamaized.net/cms/api/am/imageFileData/RE4wyTx?ver=75ec",
+            "route": "/"
+        }
+    ]
+}

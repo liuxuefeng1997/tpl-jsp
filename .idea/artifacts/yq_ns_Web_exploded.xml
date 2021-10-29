@@ -1,0 +1,22 @@
+<component name="ArtifactManager">
+  <artifact type="exploded-war" name="yq-ns:Web exploded">
+    <output-path>$PROJECT_DIR$/out/artifacts/yq_ns_Web_exploded</output-path>
+    <root id="root">
+      <element id="javaee-facet-resources" facet="yq-ns/web/Web" />
+      <element id="directory" name="WEB-INF">
+        <element id="directory" name="classes">
+          <element id="module-output" name="yq-ns" />
+        </element>
+        <element id="directory" name="lib">
+          <element id="library" level="project" name="com.iuideas.library" />
+          <element id="library" level="project" name="annotations-api" />
+          <element id="library" level="project" name="el-api" />
+          <element id="library" level="project" name="jaspic-api" />
+          <element id="library" level="project" name="tomcat-api" />
+          <element id="library" level="project" name="jsp-api" />
+          <element id="library" level="project" name="servlet-api" />
+        </element>
+      </element>
+    </root>
+  </artifact>
+</component>

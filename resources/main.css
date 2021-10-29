@@ -1,0 +1,199 @@
+@charset "UTF-8";
+* {
+    font-family: system-ui;
+}
+html::-webkit-scrollbar,
+body::-webkit-scrollbar{
+    display: none;
+}
+.ns-bg-color {
+    background-color: #2A7EFB !important;
+}
+/**************** 尾部 ********************/
+.ns-base-width {
+    width: 1200px;
+    margin: auto;
+}
+.base-footer {
+    background: #272B2E;
+    min-width: 1200px;
+}
+
+.base-footer .footer-main {
+    padding: 50px 0;
+    margin: auto;
+}
+
+.base-footer .footer-consult {
+    display: flex;
+    justify-content: space-between;
+}
+
+.base-footer .footer-consult .consult-left {
+    display: flex;
+}
+
+.base-footer .footer-consult .consult-left dl {
+    margin-bottom: 0;
+}
+
+.base-footer .footer-consult .consult-left dl ~ dl {
+    margin-left: 75px;
+}
+
+.base-footer .footer-consult .consult-left dt {
+    margin-bottom: 25px;
+    font-size: 16px;
+    color: #FFF;
+}
+
+.base-footer .footer-consult .consult-left dd {
+    font-size: 14px;
+    color: #909192;
+    margin-bottom: 0;
+}
+
+.base-footer .footer-consult .consult-left dd a {
+    color: #909192;
+}
+
+.base-footer .footer-consult .consult-left dd a:hover {
+    text-decoration: none;
+}
+
+.base-footer .footer-consult .consult-left dd ~ dd {
+    margin-top: 20px;
+}
+
+.base-footer .footer-consult .consult-left dd span:first-of-type {
+    display: inline-block;
+    width: 84px;
+}
+
+.base-footer .footer-consult .consult-left dd.time span:last-of-type {
+    display: block;
+    margin-left: 88px;
+}
+
+.base-footer .footer-consult .consult-left dd.online-contact a {
+    display: inline-block;
+    text-align: center;
+    line-height: 32px;
+    width: 110px;
+    height: 32px;
+    background-color: #2A7EFB;
+    border-radius: 25px;
+    color: #fff;
+}
+
+.base-footer .footer-consult .consult-left dd.online-contact a:hover {
+    text-decoration: none;
+}
+
+.base-footer .footer-consult .consult-right {
+    display: flex;
+}
+
+.base-footer .footer-consult .consult-right .consult-right-code {
+    text-align: center;
+    width: 140px;
+    height: 140px;
+}
+
+.base-footer .footer-consult .consult-right .consult-right-code:first-of-type {
+    margin-right: 55px;
+}
+
+.base-footer .footer-consult .consult-right .consult-right-code:first-of-type img {
+    padding: 10px;
+    background-color: #fff;
+    box-sizing: border-box;
+}
+
+.base-footer .footer-consult .consult-right .consult-right-code img {
+    margin-bottom: 10px;
+    max-width: 100%;
+}
+
+.base-footer .footer-consult .consult-right .consult-right-code span {
+    font-size: 14px;
+    color: #fff;
+}
+
+.base-footer .footer-other-info {
+    margin-top: 32px;
+    padding: 32px 0;
+    border-top: 1px solid #44484a;
+    border-bottom: 1px solid #44484a;
+}
+
+.base-footer .footer-other-info dl {
+    display: flex;
+    color: #909192;
+    font-size: 14px;
+}
+
+.base-footer .footer-other-info dl a {
+    color: #909192;
+}
+
+.base-footer .footer-other-info dl dd:nth-child(2n) {
+    margin: 0 5px;
+}
+
+.base-footer .footer-other-info .other-company-info {
+    display: flex;
+    align-items: center;
+    color: #909192;
+}
+
+.base-footer .footer-other-info .other-company-info span:first-of-type {
+    margin-top: 4px;
+    margin-right: 10px;
+}
+.btn:focus,
+.btn:active:focus,
+.btn.active:focus,
+.btn.focus,
+.btn:active.focus,
+.btn.active.focus,
+.navbar-toggler:focus,
+.navbar-toggler:active:focus,
+.navbar-toggler.active:focus,
+.navbar-toggler.focus,
+.navbar-toggler:active.focus,
+.navbar-toggler.active.focus,
+.btn-close:focus,
+.btn-close:active:focus,
+.btn-close.active:focus,
+.btn-close.focus,
+.btn-close:active.focus,
+.btn-close.active.focus {
+    outline: none;
+    box-shadow:none;
+}
+a {
+    text-decoration: none;
+}
+.navbar .nav-login {
+    width: 150px;
+}
+.navbar .nav-login .btn {
+    background: rgba(28,11,185,1);
+    border-radius: unset;
+}
+.navbar .nav-login .btn:focus {
+    border-color: rgba(0,0,0,0);
+}
+.navbar .navbar-nav .nav-item {
+    padding: 0 18px;
+}
+.navbar .navbar-nav .nav-item .nav-link {
+    font-weight: bold;
+    font-size: 18px;
+}
+.navbar .navbar-nav .nav-item .nav-bottom-active {
+    height: 2px;
+    background: #2A7EFB;
+    border-radius: 1px;
+}

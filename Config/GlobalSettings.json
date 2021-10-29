@@ -1,0 +1,30 @@
+{
+    "banner_login_bg": "https://cn.bing.com/th?id=OHR.UnkindnessRavens_ZH-CN2840574948_1920x1080.jpg&rf=LaDigue_1920x1080.jpg",
+    "is_streamer_show": true,
+    "streamer": {
+        "slogan": "我们力争做优秀的产品，欢迎加入",
+        "btn_title": "立即注册",
+        "btn_route": "/"
+    },
+    "concat": [
+        {
+            "title": "QQ讨论群",
+            "inner": "295097902"
+        },
+        {
+            "title": "周一至周六",
+            "inner": "400-886-7993"
+        }
+    ],
+    "concat_qr": {
+        "a": {
+            "img": "https://www.niushop.com/app/web/view/public/img/base/qq_code.png",
+            "title": "官方QQ群"
+        },
+        "b": {
+            "img": "https://www.niushop.com/app/web/view/public/img/base/wx_code.png",
+            "title": "官方公众号"
+        }
+    },
+    "beian": "沪ICP备12345678号"
+}

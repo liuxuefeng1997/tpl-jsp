@@ -1,0 +1,51 @@
+{
+    "menu": [
+        {
+            "title": "关于我们",
+            "link_list": [
+                {
+                    "route": "/",
+                    "title": "简介"
+                },
+                {
+                    "route": "/",
+                    "title": "常见问题"
+                }
+            ]
+        },
+        {
+            "title": "产品与服务",
+            "link_list": [
+                {
+                    "route": "/",
+                    "title": "开源商城案例"
+                },
+                {
+                    "route": "/",
+                    "title": "行业商城方案"
+                },
+                {
+                    "route": "/",
+                    "title": "商城系统手册"
+                }
+            ]
+        },
+        {
+            "title": "资讯",
+            "link_list": [
+                {
+                    "route": "/",
+                    "title": "公司新闻"
+                },
+                {
+                    "route": "/",
+                    "title": "行业资讯"
+                },
+                {
+                    "route": "/",
+                    "title": "业界视点"
+                }
+            ]
+        }
+    ]
+}

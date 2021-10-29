@@ -1,0 +1,160 @@
+@charset "UTF-8";
+.container {
+    min-width: 1200px;
+}
+/*  底部信息  */
+.bottom-info{
+    margin-top: 60px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 194px;
+}
+.bottom-info span{
+    font-size: 26px;
+    color: #fff;
+}
+.bottom-info a {
+    text-decoration: none;
+}
+.hide-text {
+    color: rgba(255,255,255,0);
+    user-select: none;
+}
+.hide-text:hover {
+    color: rgba(255,255,255,1);
+}
+.bottom-info button{
+    margin-top: 30px;
+    width: 160px;
+    height: 40px;
+    background:rgba(255,255,255,1);
+    border-radius:3px;
+}
+.ns-btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100px;
+    height: 32px;
+    border: 1px solid #2A7EFB;
+    color: #2A7EFB;
+    background-color: #fff;
+}
+.bottom-info .ns-btn:hover {
+    background-color: #FFFFFF;
+    color: #2A7EFB;
+}
+.banner-box {
+    border-radius: 2px;
+    user-select: none;
+    /*Banner 区域内模块阴影*/
+    --banner-box-shadow: rgba(0,0,0,0.1) 0 6px 6px 0;
+}
+.banner-box img {
+    user-select: none;
+    -webkit-user-drag: none;
+}
+/*Banner 左侧区域*/
+.banner-box-left {
+    border-top: 5px solid rgba(20,114,251,1);
+    box-shadow: var(--banner-box-shadow);
+}
+/*Banner 右侧区域*/
+.banner-box-right {
+    border-top: 5px solid rgba(255,255,255,1);
+    box-shadow: var(--banner-box-shadow);
+}
+/*Banner 中间轮播图*/
+.banner-box-carousel {
+    border-top: 5px solid rgba(255,255,255,0);
+    height: 320px;
+    overflow: hidden;
+    box-shadow: var(--banner-box-shadow);
+}
+.banner-box-link-more {
+    font-size: 12px;
+}
+.banner-box-link-more a {
+    color: #272B2E;
+}
+.banner-box-link-more a:hover {
+    opacity: 0.8;
+}
+.banner-box-link-title {
+    font-size: 16px;
+    font-weight: bold;
+}
+.banner-box-link-inner {
+    font-size: 14px;
+}
+.banner-box-link-inner a {
+    color: #272B2E;
+}
+.banner-box-link-inner a:hover {
+    opacity: 0.8;
+}
+.banner-box-login-area {
+    width: 100%;
+    height: 164px;
+}
+.banner-box-login-img-box {
+    width: 100%;
+    height: 109px;
+}
+.banner-box-login-button-area {
+    width: 100%;
+    height: 35px;
+    position: relative;
+}
+.banner-box-login-button-area button {
+    height: 35px;
+    width: 90px;
+    line-height: 0.6;
+    border-radius: calc(35px / 2);
+    --button-width: 15px;
+}
+.banner-box-login-button-area button:nth-child(1) {
+    position: absolute;
+    left: var(--button-width);
+}
+.banner-box-login-button-area button:nth-child(2) {
+    position: absolute;
+    right: var(--button-width);
+}
+.banner-box-ad-area {
+    height: 215px;
+    width: 100%;
+    background: rgba(232,232,232,1);
+}
+.banner-box-ad-area:hover {
+    cursor: pointer;
+}
+.banner-box-trd {
+    height: 75px;
+    width: 100%;
+}
+.banner-box-trd .banner-box-trd-width {
+    width: calc(100% - 10px);
+}
+.banner-box-trd-card {
+    width: 100%;
+    height: calc(100% - 4px);
+    margin-top: 2px;
+    border-radius: 3px;
+    background: rgba(232,232,232,1);
+    box-shadow: var(--banner-box-shadow);
+}
+.banner-box-trd-card:hover {
+    cursor: pointer;
+}
+.banner-box-trd .row>* {
+    padding-right: calc(var(--bs-gutter-x) * .15);
+    padding-left: calc(var(--bs-gutter-x) * .15);
+}
+@media screen and (min-width: 1400px){
+    .banner-box-login-button-area button {
+        --button-width: 25px;
+    }
+}
