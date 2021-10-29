@@ -113,6 +113,46 @@
         </div>
     </div>
 </div>
+<div class="container mt-5 mb-1">
+    <div class="sa-card">
+        <div class="sa-card-title">热点应用排行</div>
+        <div class="sa-card-inner">
+            <div class="sa-card-inner-left-img"></div>
+            <div class="sa-card-inner-right" id="sa-sm-card-1">
+                <div class="sa-sm-card-out">
+                    <% for(int i = 0;i < 12;i++){ %>
+                        <div class="sa-sm-card">
+                            <div class="sa-sm-card-img" onclick="window.open('./?r=/','_self')"></div>
+                            <div class="sa-sm-card-title">抖音本地生活小程序</div>
+                            <div class="sa-sm-card-old-price">市场价:<span>￥19800.00</span></div>
+                            <div class="sa-sm-card-last-price">价格:<span>￥4999.00</span></div>
+                        </div>
+                    <% } %>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+        //鼠标拖动事件
+        document.getElementById("sa-sm-card-1").onmousedown=function(ev){
+            //鼠标移动时事件
+            document.onmousemove=function(e){
+                //兼容处理
+                let _event = e || event;
+                document.getElementById("sa-sm-card-1").scrollLeft -= _event.movementX;
+            }
+
+            //鼠标脱离事件
+            document.onmouseup=function(){
+                //让脱离的时候全部东西为空   保证松手后不会继续跟着鼠标移动
+                document.onmousemove=null;
+                document.onmouseup=null;
+                //阻止默认事件
+                return false;
+            }
+        }
+    </script>
+</div>
 <% if (GlobalSettings.getBoolean("is_streamer_show")) { %>
     <div class="bottom-info ns-bg-color position-relative">
         <span><%=GlobalSettings.getJsonObject("streamer").getString("slogan")%></span>
