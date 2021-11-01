@@ -6,6 +6,12 @@
         "btn_title": "立即注册",
         "btn_route": "/"
     },
+    "is_hot_app_show": false,
+    "is_inner_streamer_show": false,
+    "is_solution_show": false,
+    "is_web_extend_show": false,
+    "is_wx_app_show": false,
+    "is_news_modal_show": false,
     "concat": [
         {
             "title": "QQ讨论群",

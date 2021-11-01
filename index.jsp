@@ -18,5 +18,7 @@
     <%--这里插入footer--%>
     <%@ include file="Temples/footer.jsp" %>
 <% } else { %>
-    <%="Route is Null"%>
+    <script>
+        window.open("./?r=/","_self");
+    </script>
 <% } %>
