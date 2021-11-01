@@ -1,20 +1,20 @@
 {
     "middle_bottom": {
         "left": {
-            "img": "https://cn.bing.com/th?id=OHR.UnkindnessRavens_ZH-CN2840574948_1920x1080.jpg&rf=LaDigue_1920x1080.jpg",
+            "img": "resources/images/t1.png",
             "route": "/"
         },
         "middle": {
-            "img": "https://cn.bing.com/th?id=OHR.UnkindnessRavens_ZH-CN2840574948_1920x1080.jpg&rf=LaDigue_1920x1080.jpg",
+            "img": "resources/images/t1.png",
             "route": "/"
         },
         "right": {
-            "img": "https://cn.bing.com/th?id=OHR.UnkindnessRavens_ZH-CN2840574948_1920x1080.jpg&rf=LaDigue_1920x1080.jpg",
+            "img": "resources/images/t1.png",
             "route": "/"
         }
     },
     "right_bottom": {
-        "img": "https://cn.bing.com/th?id=OHR.UnkindnessRavens_ZH-CN2840574948_1920x1080.jpg&rf=LaDigue_1920x1080.jpg",
+        "img": "resources/images/temple1.jpg",
         "route": "/"
     }
 }

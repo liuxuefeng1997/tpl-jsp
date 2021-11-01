@@ -76,19 +76,19 @@
                 <div class="row banner-box-trd-width h-100 m-auto">
                     <div class="col-4">
                         <div class="banner-box-trd-card"
-                             style="background: url('<%=BannerADLink_middle.getJsonObject("left").getString("img")%>') no-repeat;background-size:100% 100%;"
+                             style="background: url('<%=BannerADLink_middle.getJsonObject("left").getString("img")%>') no-repeat center center;background-size:auto 100%;"
                              onclick="window.open('./?r=<%=BannerADLink_middle.getJsonObject("left").getString("route")%>','_self')"
                         ></div>
                     </div>
                     <div class="col-4">
                         <div class="banner-box-trd-card"
-                             style="background: url('<%=BannerADLink_middle.getJsonObject("middle").getString("img")%>') no-repeat;background-size:100% 100%;"
+                             style="background: url('<%=BannerADLink_middle.getJsonObject("middle").getString("img")%>') no-repeat center center;background-size:auto 100%;"
                              onclick="window.open('./?r=<%=BannerADLink_middle.getJsonObject("middle").getString("route")%>','_self')"
                         ></div>
                     </div>
                     <div class="col-4">
                         <div class="banner-box-trd-card"
-                             style="background: url('<%=BannerADLink_middle.getJsonObject("right").getString("img")%>') no-repeat;background-size:100% 100%;"
+                             style="background: url('<%=BannerADLink_middle.getJsonObject("right").getString("img")%>') no-repeat center center;background-size:auto 100%;"
                              onclick="window.open('./?r=<%=BannerADLink_middle.getJsonObject("right").getString("route")%>','_self')"
                         ></div>
                     </div>
@@ -99,7 +99,7 @@
             <div class="container-fluid mt-1 mb-1 pb-3 bg-white banner-box banner-box-right">
                 <div class="banner-box-login-area mt-1 mb-1">
                     <div class="banner-box-login-img-box mt-1 mb-1"
-                         style="background: url('<%=GlobalSettings.getString("banner_login_bg")%>') no-repeat;background-size:100% 100%;"
+                         style="background: url('<%=GlobalSettings.getString("banner_login_bg")%>') no-repeat center center;background-size:auto 100%;"
                     ></div>
                     <div class="banner-box-login-button-area mt-1 mb-1">
                         <button type="button" class="btn btn-primary">登录</button>
@@ -107,7 +107,7 @@
                     </div>
                 </div>
                 <div class="banner-box-ad-area mt-1"
-                     style="background: url('<%=BannerADLink_right.getString("img")%>') no-repeat;background-size:100% 100%;"
+                     style="background: url('<%=BannerADLink_right.getString("img")%>') no-repeat center center;background-size:100% auto;"
                      onclick="window.open('./?r=<%=BannerADLink_right.getString("route")%>','_self')"
                 ></div>
             </div>
@@ -123,7 +123,9 @@
         <div class="sa-card">
             <div class="sa-card-title">热点应用排行</div>
             <div class="sa-card-inner">
-                <div class="sa-card-inner-left-img"></div>
+                <div class="sa-card-inner-left-img"
+                     style="background: url('<%=GlobalSettings.getString("hot_app_img")%>') no-repeat center center;background-size: 100% auto;"
+                ></div>
                 <div class="sa-card-inner-right" id="<%=cid%>">
                     <div class="sa-sm-card-out">
                         <% for(int i = 0;i < 12;i++){ %>
@@ -163,7 +165,10 @@
 <%--广告横幅--%>
 <% if (GlobalSettings.getBoolean("is_inner_streamer_show")) { %>
     <!--广告横幅-->
-    <div class="bottom-info sa-bg-color position-relative"></div>
+    <div class="bottom-info sa-bg-color position-relative"
+         style="background: url('<%=GlobalSettings.getJsonObject("inner_streamer").getString("img")%>') no-repeat center center;background-size: auto 100%;"
+         onclick="window.open('./?r=<%=GlobalSettings.getJsonObject("inner_streamer").getString("route")%>','_self')"
+    ></div>
 <% } %>
 <%--行业解决方案--%>
 <% if(GlobalSettings.getBoolean("is_solution_show")){ %>
@@ -173,7 +178,9 @@
         <div class="sa-card">
             <div class="sa-card-title">行业解决方案</div>
             <div class="sa-card-inner">
-                <div class="sa-card-inner-left-img"></div>
+                <div class="sa-card-inner-left-img"
+                     style="background: url('<%=GlobalSettings.getString("solution_img")%>') no-repeat center center;background-size: 100% auto;"
+                ></div>
                 <div class="sa-card-inner-right" id="<%=cid%>">
                     <div class="sa-sm-card-out">
                         <% for(int i = 0;i < 12;i++){ %>
@@ -215,15 +222,15 @@
     <div class="container mt-5 mb-1">
         <div class="row">
             <div class="col">
-                <div class="card">
+                <div class="card us-none">
                     <div class="card-header text-center fw-bold">网站建设</div>
-                    <img src="https://cn.bing.com/th?id=OHR.UnkindnessRavens_ZH-CN2840574948_1920x1080.jpg&rf=LaDigue_1920x1080.jpg" alt="" class="card-img-bottom">
+                    <img src="<%=GlobalSettings.getJsonObject("web").getString("img")%>" onclick="window.open('./?r=<%=GlobalSettings.getJsonObject("web").getString("route")%>','_self')" alt="" class="card-img-bottom">
                 </div>
             </div>
             <div class="col">
-                <div class="card">
+                <div class="card us-none">
                     <div class="card-header text-center fw-bold">营销推广</div>
-                    <img src="https://cn.bing.com/th?id=OHR.UnkindnessRavens_ZH-CN2840574948_1920x1080.jpg&rf=LaDigue_1920x1080.jpg" alt="" class="card-img-bottom">
+                    <img src="<%=GlobalSettings.getJsonObject("extend").getString("img")%>" onclick="window.open('./?r=<%=GlobalSettings.getJsonObject("extend").getString("route")%>','_self')" alt="" class="card-img-bottom">
                 </div>
             </div>
         </div>
@@ -237,7 +244,9 @@
         <div class="sa-card">
             <div class="sa-card-title">小程序系统</div>
             <div class="sa-card-inner">
-                <div class="sa-card-inner-left-img"></div>
+                <div class="sa-card-inner-left-img"
+                     style="background: url('<%=GlobalSettings.getString("wx_app_img")%>') no-repeat center center;background-size: 100% auto;"
+                ></div>
                 <div class="sa-card-inner-right" id="<%=cid%>">
                     <div class="sa-sm-card-out">
                         <% for(int i = 0;i < 12;i++){ %>
@@ -277,6 +286,7 @@
 <%--新闻模块--%>
 <% if(GlobalSettings.getBoolean("is_news_modal_show")){ %>
     <div class="container mt-5 mb-1">
+        <div class="sa-card-title">资讯信息</div>
         <nav>
             <div class="nav nav-tabs" id="nav-tab" role="tablist">
                 <button class="nav-link active" id="news-tab" data-bs-toggle="tab" data-bs-target="#nav-news" type="button" role="tab" aria-controls="nav-news" aria-selected="true">最新资讯</button>

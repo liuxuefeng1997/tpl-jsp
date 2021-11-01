@@ -1,17 +1,36 @@
 {
-    "banner_login_bg": "https://cn.bing.com/th?id=OHR.UnkindnessRavens_ZH-CN2840574948_1920x1080.jpg&rf=LaDigue_1920x1080.jpg",
+    "banner_login_bg": "resources/images/temple_login.jpg",
     "is_streamer_show": true,
     "streamer": {
+        "_self": "页脚横幅设置",
         "slogan": "我们力争做优秀的产品，欢迎加入",
         "btn_title": "立即注册",
         "btn_route": "/"
     },
-    "is_hot_app_show": false,
-    "is_inner_streamer_show": false,
-    "is_solution_show": false,
-    "is_web_extend_show": false,
-    "is_wx_app_show": false,
-    "is_news_modal_show": false,
+    "is_hot_app_show": true,
+    "hot_app_img": "resources/images/temple1.jpg",
+    "is_inner_streamer_show": true,
+    "inner_streamer": {
+        "_self": "页中横幅设置",
+        "img": "resources/images/default/ad.png",
+        "route": "/"
+    },
+    "is_solution_show": true,
+    "solution_img": "resources/images/temple1.jpg",
+    "is_web_extend_show": true,
+    "web": {
+        "_self": "网站建设图片设置",
+        "img": "https://cn.bing.com/th?id=OHR.UnkindnessRavens_ZH-CN2840574948_1920x1080.jpg&rf=LaDigue_1920x1080.jpg",
+        "route": "/"
+    },
+    "extend": {
+        "_self": "营销推广图片设置",
+        "img": "https://cn.bing.com/th?id=OHR.UnkindnessRavens_ZH-CN2840574948_1920x1080.jpg&rf=LaDigue_1920x1080.jpg",
+        "route": "/"
+    },
+    "is_wx_app_show": true,
+    "wx_app_img": "resources/images/temple1.jpg",
+    "is_news_modal_show": true,
     "concat": [
         {
             "title": "QQ讨论群",
