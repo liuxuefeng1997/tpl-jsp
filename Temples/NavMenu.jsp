@@ -9,7 +9,7 @@
 <%--加载项--%>
 <%@ include file="../Controller/Addon/Active.jsp" %>
 <!--页首菜单-->
-<nav class="navbar navbar-expand-lg navbar-light sa-bg-blue fixed-top">
+<nav class="navbar navbar-expand-lg navbar-light sa-bg-blue fixed-top us-none">
     <div class="container">
         <a class="navbar-brand" href="#">
             <img src="https://v5.bootcss.com/docs/5.1/assets/brand/bootstrap-logo.svg" alt="" width="30" height="24" class="d-inline-block align-text-top">
@@ -20,22 +20,22 @@
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav">
                 <li class="nav-item">
-                    <a class="nav-link<%=ActiveX.getStu(request.getParameter("r"),"/"," active","")%>" aria-current="page" href="./?r=/">首页</a>
+                    <a class="nav-link<%=ActiveX.getStu(request.getParameter("r"),"/"," active","")%>" href="./?r=/">首页</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link<%=ActiveX.getStu(request.getParameter("r"),"/product/"," active","")%>" aria-current="page" href="./?r=/product/">产品中心</a>
+                    <a class="nav-link<%=ActiveX.getStu(request.getParameter("r"),"/product/"," active","")%>" href="./?r=/product/">产品中心</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link<%=ActiveX.getStu(request.getParameter("r"),"/j"," active","")%>" aria-current="page" href="./?r=/">解决方案</a>
+                    <a class="nav-link<%=ActiveX.getStu(request.getParameter("r"),"/solution/"," active","")%>" href="./?r=/solution/">解决方案</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link<%=ActiveX.getStu(request.getParameter("a"),"/j"," active","")%>" href="#">加盟代理</a>
+                    <a class="nav-link<%=ActiveX.getStu(request.getParameter("r"),"/join_to/"," active","")%>" href="./?r=/join_to/">加盟代理</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link<%=ActiveX.getStu(request.getParameter("r"),"/c"," active","")%>" href="#">成功案例</a>
+                    <a class="nav-link<%=ActiveX.getStu(request.getParameter("r"),"/case/"," active","")%>" href="./?r=/case/">成功案例</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link<%=ActiveX.getStu(request.getParameter("r"),"/g"," active","")%>" href="#">官方动态</a>
+                    <a class="nav-link<%=ActiveX.getStu(request.getParameter("r"),"/news/"," active","")%>" href="./?r=/news/">官方动态</a>
                 </li>
             </ul>
             <div class="nav-login ms-auto">

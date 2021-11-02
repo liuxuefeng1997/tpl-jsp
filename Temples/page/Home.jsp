@@ -128,7 +128,7 @@
                 ></div>
                 <div class="sa-card-inner-right" id="<%=cid%>">
                     <div class="sa-sm-card-out">
-                        <% for(int i = 0;i < 12;i++){ %>
+                        <% for(int i = 0;i < 4;i++){ %>
                             <div class="sa-sm-card">
                                 <div class="sa-sm-card-img" onclick="window.open('./?r=/','_self')"></div>
                                 <div class="sa-sm-card-title">抖音本地生活小程序</div>
@@ -228,7 +228,7 @@
                 ></div>
                 <div class="sa-card-inner-right" id="<%=cid%>">
                     <div class="sa-sm-card-out">
-                        <% for(int i = 0;i < 12;i++){ %>
+                        <% for(int i = 0;i < 4;i++){ %>
                             <div class="sa-sm-card">
                                 <div class="sa-sm-card-img" onclick="window.open('./?r=/','_self')"></div>
                                 <div class="sa-sm-card-title">抖音本地生活小程序</div>

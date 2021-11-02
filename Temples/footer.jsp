@@ -9,7 +9,7 @@
 <%--页尾横幅--%>
 <% if (GlobalSettings.getBoolean("is_streamer_show")) { %>
     <!--底部横幅-->
-    <div class="bottom-info ns-bg-color position-relative">
+    <div class="bottom-info ns-bg-color position-relative us-none">
         <span><%=GlobalSettings.getJsonObject("streamer").getString("slogan")%></span>
         <button type="button" class="ns-btn" onclick="window.open('./?r=<%=GlobalSettings.getJsonObject("streamer").getString("btn_route")%>','_self')"><%=GlobalSettings.getJsonObject("streamer").getString("btn_title")%></button>
     </div>
@@ -22,7 +22,7 @@
                 <% for(int i = 0;i < FooterMenu.getJsonArray("menu").size();i++){
                     JsonObject _menu = FooterMenu.getJsonArray("menu").getJsonObject(i);
                 %>
-                    <dl>
+                    <dl class="us-none">
                         <dt><%=_menu.getString("title")%></dt>
                         <% for(int n = 0;n < _menu.getJsonArray("link_list").size();n++){
                             JsonObject _menu_link = _menu.getJsonArray("link_list").getJsonObject(n);
@@ -32,16 +32,16 @@
                     </dl>
                 <% } %>
                 <dl>
-                    <dt>咨询我们</dt>
+                    <dt class="us-none">咨询我们</dt>
                     <% for(int i = 0;i < GlobalSettings.getJsonArray("concat").size();i++){ %>
                         <dd>
-                            <span><%=GlobalSettings.getJsonArray("concat").getJsonObject(i).getString("title")%>：</span>
+                            <span class="us-none"><%=GlobalSettings.getJsonArray("concat").getJsonObject(i).getString("title")%>：</span>
                             <span><%=GlobalSettings.getJsonArray("concat").getJsonObject(i).getString("inner")%></span>
                         </dd>
                     <% } %>
                 </dl>
             </div>
-            <div class="consult-right">
+            <div class="consult-right us-none">
                 <div class="consult-right-code">
                     <img src="<%=GlobalSettings.getJsonObject("concat_qr").getJsonObject("a").getString("img")%>" alt="a">
                     <span><%=GlobalSettings.getJsonObject("concat_qr").getJsonObject("a").getString("title")%></span>

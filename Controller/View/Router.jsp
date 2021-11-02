@@ -25,6 +25,14 @@
         <%@ include file="../../Temples/page/Home.jsp" %>
     <% break; case "/product/": %>
         <%@ include file="../../Temples/page/Product.jsp" %>
+    <% break; case "/news/": %>
+        <%@ include file="../../Temples/page/Intro.jsp" %>
+    <% break; case "/solution/": %>
+        <%=request.getContextPath()%>
+    <% break; case "/join_to/": %>
+        <%=request.getContextPath() + ""%>
+    <% break; case "/case/": %>
+        <%=request.getContextPath() + "" + ""%>
     <% break; default: %>
         <script>
             window.open("./?r=/","_self");

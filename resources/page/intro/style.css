@@ -1,0 +1,35 @@
+@charset "UTF-8";
+.in-top-image {
+    height: 160px;
+    width: 100%;
+    border-radius: 6px;
+}
+.in-right-newly {
+    width: 100%;
+    overflow: hidden;
+}
+.in-right-newly-title,
+.in-right-newly-child {
+    margin: 13px;
+    width: calc(100% - 26px);
+    color: #333;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 24px;
+    height: 24px;
+}
+.in-right-newly-title {
+    margin: 13px 13px 5px;
+    font-weight: bold;
+    font-size: 21px;
+    height: 28px;
+    line-height: 28px;
+}
+.in-right-newly-child-top3 {
+    color: #FF0000;
+}
+.in-right-newly-child {
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+}

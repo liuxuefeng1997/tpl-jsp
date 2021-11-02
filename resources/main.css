@@ -39,6 +39,10 @@ body::-webkit-scrollbar{
     margin: 8px;
     float: left;
 }
+#nav-tabContent .news-card-x {
+    width: calc(100% - 16px);
+    margin: auto;
+}
 #nav-tabContent .news-card-title {
     font-size: 14px;
     font-weight: bold;

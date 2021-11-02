@@ -9,13 +9,13 @@
 <% JsonObject ProductSettings = JSONReaderX.getJsonObj(FileReaderX.getStr(wwwRoot + "/Config/ProductSettings.json")); %>
 <div class="container mt-1 mb-1">
     <div class="pd-banner" style="background: url('<%=ProductSettings.getString("banner")%>') no-repeat center center;background-size: auto 100%;">
-        <div class="pd-banner-right">
+        <div class="pd-banner-right us-none">
             <div class="pd-banner-card">码云下载</div>
             <div class="pd-banner-card">授权查询</div>
             <div class="pd-banner-card">GitHub</div>
         </div>
     </div>
-    <div class="pd-banner-bottom">
+    <div class="pd-banner-bottom us-none">
         <div class="row">
             <div class="col">
                 <div class="pd-banner-bottom-card">
@@ -64,7 +64,7 @@
         <div class="tab-pane fade show active" id="nav-news" role="tabpanel" aria-labelledby="news-tab">
             <div class="w-100 mt-1 overflow-hidden">
                 <% for(int i = 0;i < 16;i++){ %>
-                    <div class="card pd-card">
+                    <div class="card pd-card us-none">
                         <div class="pd-card-img" style="background: url('<%=ProductSettings.getString("card")%>') no-repeat center center;background-size: 100% 100%;"></div>
                         <div class="pd-card-body">
                             <div class="pd-card-title">单商户V4基础版</div>

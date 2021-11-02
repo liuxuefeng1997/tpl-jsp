@@ -132,3 +132,8 @@
     color: #666;
     font-weight: bold;
 }
+.pd-card:hover,
+.pd-banner-card:hover,
+.pd-banner-bottom-card:hover {
+    cursor: pointer;
+}
