@@ -17,4 +17,6 @@
     JsonObject GlobalSettings = JSONReaderX.getJsonObj(FileReaderX.getStr(wwwRoot + "/Config/GlobalSettings.json"));
     //加载页脚菜单
     JsonObject FooterMenu = JSONReaderX.getJsonObj(FileReaderX.getStr(wwwRoot + "/Config/FooterMenu.json"));
+    //内容页设置
+    JsonObject IntroSettings = JSONReaderX.getJsonObj(FileReaderX.getStr(wwwRoot + "/Config/IntroSettings.json"));
 %>

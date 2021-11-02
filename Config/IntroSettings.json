@@ -1,5 +1,6 @@
 {
     "top_img": {
-        "official": "resources/images/default/in-official.png"
+        "official": "resources/images/default/in-official.png",
+        "join": "resources/images/default/jt-banner.png"
     }
 }

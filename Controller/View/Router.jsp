@@ -30,7 +30,7 @@
     <% break; case "/solution/": %>
         <%=request.getContextPath()%>
     <% break; case "/join_to/": %>
-        <%=request.getContextPath() + ""%>
+        <%@ include file="../../Temples/page/JoinTo.jsp" %>
     <% break; case "/case/": %>
         <%=request.getContextPath() + "" + ""%>
     <% break; default: %>
