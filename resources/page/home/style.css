@@ -2,50 +2,6 @@
 .container {
     min-width: 1200px;
 }
-/*  底部信息  */
-.bottom-info{
-    margin-top: 60px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    height: 194px;
-}
-.bottom-info span{
-    font-size: 26px;
-    color: #fff;
-}
-.bottom-info a {
-    text-decoration: none;
-}
-.hide-text {
-    color: rgba(255,255,255,0);
-    user-select: none;
-}
-.hide-text:hover {
-    color: rgba(255,255,255,1);
-}
-.bottom-info button{
-    margin-top: 30px;
-    width: 160px;
-    height: 40px;
-    background:rgba(255,255,255,1);
-    border-radius:3px;
-}
-.ns-btn {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 100px;
-    height: 32px;
-    border: 1px solid #2A7EFB;
-    color: #2A7EFB;
-    background-color: #fff;
-}
-.bottom-info .ns-btn:hover {
-    background-color: #FFFFFF;
-    color: #2A7EFB;
-}
 .banner-box {
     border-radius: 2px;
     user-select: none;

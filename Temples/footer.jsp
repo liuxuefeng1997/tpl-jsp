@@ -6,6 +6,14 @@
   To change this template use File | Settings | File Templates.
 --%>
 <%@ page contentType="text/html;charset=UTF-8" %>
+<%--页尾横幅--%>
+<% if (GlobalSettings.getBoolean("is_streamer_show")) { %>
+    <!--底部横幅-->
+    <div class="bottom-info ns-bg-color position-relative">
+        <span><%=GlobalSettings.getJsonObject("streamer").getString("slogan")%></span>
+        <button type="button" class="ns-btn" onclick="window.open('./?r=<%=GlobalSettings.getJsonObject("streamer").getString("btn_route")%>','_self')"><%=GlobalSettings.getJsonObject("streamer").getString("btn_title")%></button>
+    </div>
+<% } %>
 <!--页脚开始-->
 <div class="base-footer">
     <div class="ns-base-width footer-main">
