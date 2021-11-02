@@ -16,35 +16,43 @@
             <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav me-auto">
+            <ul class="navbar-nav">
                 <li class="nav-item">
                     <a class="nav-link" aria-current="page" href="./?r=/">首页</a>
                     <% if(request.getParameter("r").equals("/")){ %><div class="nav-bottom-active"></div><% } %>
                 </li>
-                <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownP" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                        产品中心
-                    </a>
-                    <% if(request.getParameter("r").startsWith("/p")){ %><div class="nav-bottom-active"></div><% } %>
-                    <ul class="dropdown-menu" aria-labelledby="navbarDropdownP">
-                        <li><a class="dropdown-item" href="#">Action</a></li>
-                        <li><a class="dropdown-item" href="#">Another action</a></li>
-                        <li><hr class="dropdown-divider"></li>
-                        <li><a class="dropdown-item" href="#">Something else here</a></li>
-                    </ul>
+                <li class="nav-item">
+                    <a class="nav-link" aria-current="page" href="./?r=/product/">产品中心</a>
+                    <% if(request.getParameter("r").equals("/product/")){ %><div class="nav-bottom-active"></div><% } %>
                 </li>
-                <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownK" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                        解决方案
-                    </a>
-                    <% if(request.getParameter("r").startsWith("/j")){ %><div class="nav-bottom-active"></div><% } %>
-                    <ul class="dropdown-menu" aria-labelledby="navbarDropdownK">
-                        <li><a class="dropdown-item" href="#">Action</a></li>
-                        <li><a class="dropdown-item" href="#">Another action</a></li>
-                        <li><hr class="dropdown-divider"></li>
-                        <li><a class="dropdown-item" href="#">Something else here</a></li>
-                    </ul>
+                <li class="nav-item">
+                    <a class="nav-link" aria-current="page" href="./?r=/">解决方案</a>
+                    <% if(request.getParameter("r").equals("/j")){ %><div class="nav-bottom-active"></div><% } %>
                 </li>
+<%--                <li class="nav-item dropdown">--%>
+<%--                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownP" role="button" data-bs-toggle="dropdown" aria-expanded="false">--%>
+<%--                        产品中心--%>
+<%--                    </a>--%>
+<%--                    <% if(request.getParameter("r").startsWith("/p")){ %><div class="nav-bottom-active"></div><% } %>--%>
+<%--                    <ul class="dropdown-menu" aria-labelledby="navbarDropdownP">--%>
+<%--                        <li><a class="dropdown-item" href="#">Action</a></li>--%>
+<%--                        <li><a class="dropdown-item" href="#">Another action</a></li>--%>
+<%--                        <li><hr class="dropdown-divider"></li>--%>
+<%--                        <li><a class="dropdown-item" href="#">Something else here</a></li>--%>
+<%--                    </ul>--%>
+<%--                </li>--%>
+<%--                <li class="nav-item dropdown">--%>
+<%--                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownK" role="button" data-bs-toggle="dropdown" aria-expanded="false">--%>
+<%--                        解决方案--%>
+<%--                    </a>--%>
+<%--                    <% if(request.getParameter("r").startsWith("/j")){ %><div class="nav-bottom-active"></div><% } %>--%>
+<%--                    <ul class="dropdown-menu" aria-labelledby="navbarDropdownK">--%>
+<%--                        <li><a class="dropdown-item" href="#">Action</a></li>--%>
+<%--                        <li><a class="dropdown-item" href="#">Another action</a></li>--%>
+<%--                        <li><hr class="dropdown-divider"></li>--%>
+<%--                        <li><a class="dropdown-item" href="#">Something else here</a></li>--%>
+<%--                    </ul>--%>
+<%--                </li>--%>
                 <li class="nav-item">
                     <a class="nav-link" href="#">加盟代理</a>
                     <% if(request.getParameter("r").startsWith("/a")){ %><div class="nav-bottom-active"></div><% } %>
@@ -58,7 +66,7 @@
                     <% if(request.getParameter("r").startsWith("/g")){ %><div class="nav-bottom-active"></div><% } %>
                 </li>
             </ul>
-            <div class="nav-login">
+            <div class="nav-login ms-auto">
                 <button type="button" class="btn btn-primary btn-lg">登录</button>
             </div>
         </div>

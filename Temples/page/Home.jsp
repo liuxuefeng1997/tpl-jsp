@@ -174,17 +174,16 @@
 <% if(GlobalSettings.getBoolean("is_solution_show")){ %>
     <!--行业解决方案-->
     <div class="container mt-5 mb-1">
-        <% String cid = "sa-sm-card-2"; %>
         <div class="sa-card">
             <div class="sa-card-title">行业解决方案</div>
-            <div class="sa-card-inner">
+            <div class="sa-card-inner sa-card-inner-x">
                 <div class="sa-card-inner-left-img"
                      style="background: url('<%=GlobalSettings.getString("solution_img")%>') no-repeat center center;background-size: 100% auto;"
                 ></div>
-                <div class="sa-card-inner-right" id="<%=cid%>">
-                    <div class="sa-sm-card-out">
-                        <% for(int i = 0;i < 12;i++){ %>
-                            <div class="sa-sm-card">
+                <div class="sa-card-inner-right">
+                    <div class="sa-sm-card-out-x">
+                        <% for(int i = 0;i < 8;i++){ %>
+                            <div class="sa-sm-card sa-sm-card-x">
                                 <div class="sa-sm-card-img" onclick="window.open('./?r=/','_self')"></div>
                                 <div class="sa-sm-card-title">抖音本地生活小程序</div>
                                 <div class="sa-sm-card-old-price">市场价:<span>￥19800.00</span></div>
@@ -195,26 +194,6 @@
                 </div>
             </div>
         </div>
-        <script>
-            //鼠标拖动事件
-            document.getElementById("<%=cid%>").onmousedown=function(ev){
-                //鼠标移动时事件
-                document.onmousemove=function(e){
-                    //兼容处理
-                    let _event = e || event;
-                    document.getElementById("<%=cid%>").scrollLeft -= _event.movementX;
-                }
-    
-                //鼠标脱离事件
-                document.onmouseup=function(){
-                    //让脱离的时候全部东西为空   保证松手后不会继续跟着鼠标移动
-                    document.onmousemove=null;
-                    document.onmouseup=null;
-                    //阻止默认事件
-                    return false;
-                }
-            }
-        </script>
     </div>
 <% } %>
 <%--网站建设与营销推广--%>
@@ -281,6 +260,36 @@
                 }
             }
         </script>
+    </div>
+<% } %>
+<%--独立部署软件--%>
+<% if(GlobalSettings.getBoolean("is_onOne_show")){ %>
+    <!--独立部署软件-->
+    <div class="container mt-5 mb-1">
+        <div class="sa-card">
+            <div class="sa-card-title">独立部署软件</div>
+            <div class="sa-card-inner sa-card-inner-x">
+                <div class="sa-card-inner-left-img"
+                     style="background: url('<%=GlobalSettings.getString("onOne_img")%>') no-repeat center center;background-size: 100% auto;"
+                ></div>
+                <div class="sa-card-inner-right">
+                    <div class="sa-sm-card-out-x">
+                        <% for(int i = 0;i < 7;i++){ %>
+                            <div class="sa-sm-card sa-sm-card-x">
+                                <div class="sa-sm-card-img" onclick="window.open('./?r=/','_self')"></div>
+                                <div class="sa-sm-card-title">抖音本地生活小程序</div>
+                                <div class="sa-sm-card-old-price">市场价:<span>￥19800.00</span></div>
+                                <div class="sa-sm-card-last-price">价格:<span>￥4999.00</span></div>
+                            </div>
+                        <% } %>
+                        <div class="sa-sm-card sa-sm-card-x" onclick="window.open('./?r=/','_self')">
+                            <div class="sa-sm-card-more-top">其他/社群粉丝</div>
+                            <div class="sa-sm-card-more-bottom">查看更多></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
 <% } %>
 <%--新闻模块--%>

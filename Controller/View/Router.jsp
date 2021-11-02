@@ -23,8 +23,8 @@
 <% }} else { %>
     <% switch (request.getParameter("r")){case "/": %>
         <%@ include file="../../Temples/page/Home.jsp" %>
-    <% break; case "2": %>
-        <%="2"%>
+    <% break; case "/product/": %>
+        <%@ include file="../../Temples/page/Product.jsp" %>
     <% break; default: %>
         <script>
             window.open("./?r=/","_self");
