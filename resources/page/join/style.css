@@ -1,0 +1,15 @@
+@charset "UTF-8";
+.jt-top-card {
+    height: 313px;
+}
+.jt-card {
+    width: 100%;
+    overflow: hidden;
+}
+.jt-card-avatar {
+    height: 61px;
+    width: 61px;
+    margin: 33px auto;
+    border-radius: calc(61px / 2);
+    outline: 4px solid #FFF;
+}
