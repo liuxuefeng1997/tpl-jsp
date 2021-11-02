@@ -19,6 +19,9 @@ body::-webkit-scrollbar{
 .sa-bg-color {
     background-color: rgba(0,0,0,0.2);
 }
+.sa-bg-blue {
+    background-color: #3B78EF;
+}
 #nav-tab .nav-link {
     background-color: rgba(255,255,255,0) !important;
     color: #495057;
@@ -230,8 +233,13 @@ a {
     width: 150px;
 }
 .navbar .nav-login .btn {
-    background: rgba(28,11,185,1);
-    border-radius: unset;
+    background: rgba(11,69,182,1);
+    border-radius: 22px;
+    height: 44px;
+    width: 132px;
+}
+.btn-group-lg>.btn, .btn-lg {
+    padding: unset;
 }
 .navbar .nav-login .btn:focus {
     border-color: rgba(0,0,0,0);
@@ -240,8 +248,15 @@ a {
     padding: 0 18px;
 }
 .navbar .navbar-nav .nav-item .nav-link {
-    font-weight: bold;
+    font-weight: 400;
     font-size: 18px;
+    color: #DDD;
+}
+.navbar .navbar-nav .nav-item .nav-link.active {
+    font-weight: bold;
+    font-size: 21px;
+    line-height: 26px;
+    color: #FFF;
 }
 .navbar .navbar-nav .nav-item .nav-bottom-active {
     height: 2px;
