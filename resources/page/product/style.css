@@ -1,0 +1,134 @@
+@charset "UTF-8";
+.pd-banner {
+    width: 100%;
+    height: 300px;
+    border-radius: 6px;
+    position: relative;
+    z-index: 100;
+}
+.pd-banner-right {
+    width: 160px;
+    height: 100%;
+    overflow: hidden;
+    margin-right: 26px;
+    margin-left: auto;
+}
+.pd-banner-card {
+    width: 100%;
+    height: 60px;
+    margin: 20px 0 0;
+    border-radius: 6px;
+    background: #FFF;
+    color: #3B78EF;
+    font-weight: bold;
+    line-height: 60px;
+    text-align: center;
+    font-size: 21px;
+}
+.pd-banner-bottom {
+    width: calc(100% - 38px);
+    height: 90px;
+    margin: auto;
+}
+.pd-banner-bottom .pd-banner-bottom-card{
+    background: #FFF;
+    height: 88px;
+    width: 180px;
+    box-shadow: 0 3px 9px rgba(0, 0, 0, 0.16);
+    border-radius: 6px;
+    margin: -44px auto 0;
+    position: relative;
+    overflow: hidden;
+    z-index: 150;
+}
+.pd-banner-bottom-card-title {
+    font-size: 19px;
+    width: 100%;
+    height: 26px;
+    line-height: 26px;
+    color: #333;
+    margin-top: 10px;
+    text-align: center;
+    font-weight: bold;
+}
+.pd-banner-bottom-card-subtitle {
+    width: 100%;
+    height: 18px;
+    line-height: 18px;
+    color: #999;
+    font-size: 14px;
+    font-weight: 400;
+    text-align: center;
+    margin-top: 18px;
+}
+.pd-card {
+    height: 272px;
+    width: 264px;
+    margin: 12px;
+    overflow: hidden;
+    float: left;
+}
+.pd-card .pd-card-img {
+    width: 100%;
+    height: 176px;
+    border-radius: 6px;
+}
+.pd-card-body {
+    width: calc(100% - 18px);
+    margin: 9px;
+    position: relative;
+    overflow: hidden;
+}
+.pd-card-title {
+    font-size: 16px;
+    height: 21px;
+    line-height: 21px;
+    width: 100%;
+    color: #333;
+    font-weight: bold;
+}
+.pd-card-subtitle {
+    width: 100%;
+    height: 17px;
+    line-height: 17px;
+    color: #999;
+    font-size: 12px;
+    font-weight: bold;
+    margin-top: 11px;
+}
+.pd-card-bottom {
+    width: 100%;
+    height: 21px;
+    margin-top: 10px;
+    position: relative;
+}
+.pd-card-price {
+    height: 21px;
+    line-height: 21px;
+    width: 50%;
+    position: absolute;
+    left: 0;
+}
+.pd-card-price span:nth-child(1) {
+    color: red;
+    font-size: 16px;
+    font-weight: bold;
+}
+.pd-card-price span:nth-child(2) {
+    color: #999;
+    font-size: 12px;
+    font-weight: 400;
+    text-decoration: line-through;
+}
+.pd-card-buySum {
+    height: 17px;
+    line-height: 17px;
+    width: 50%;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    text-align: right;
+    font-size: 12px;
+    color: #666;
+    font-weight: bold;
+}
