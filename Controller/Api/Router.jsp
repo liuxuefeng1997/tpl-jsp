@@ -8,8 +8,6 @@
 <%@ page contentType="text/html;charset=UTF-8" %>
 <% switch (request.getParameter("r")){case "/auth/": %>
     <%@ include file="Authn.jsp" %>
-<% break; case "/config/": %>
-    <%@ include file="ShowConfig.jsp" %>
 <% break; default: %>
     <script>
         window.open("./?r=/","_self");
