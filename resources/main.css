@@ -43,6 +43,9 @@ body::-webkit-scrollbar{
     width: calc(100% - 16px);
     margin: auto;
 }
+#nav-tabContent .news-card-x:hover {
+    cursor: pointer;
+}
 #nav-tabContent .news-card-title {
     font-size: 14px;
     font-weight: bold;

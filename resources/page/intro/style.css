@@ -33,3 +33,6 @@
     overflow: hidden;
     white-space: nowrap;
 }
+.in-right-newly-child:hover {
+    cursor: pointer;
+}

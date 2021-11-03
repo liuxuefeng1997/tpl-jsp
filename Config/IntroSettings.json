@@ -1,6 +1,16 @@
 {
     "top_img": {
-        "official": "resources/images/default/in-official.png",
-        "join": "resources/images/default/jt-banner.png"
+        "news": "resources/images/default/in-official.png",
+        "join": "resources/images/default/jt-banner.png",
+        "product": "resources/images/default/pd-banner.png",
+        "solution": "resources/images/default/in-official.png",
+        "case": "resources/images/default/in-official.png"
+    },
+    "title": {
+        "news": "官方动态",
+        "join": "加盟代理",
+        "product": "产品中心",
+        "solution": "解决方案",
+        "case": "成功案例"
     }
 }

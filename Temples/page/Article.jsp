@@ -6,17 +6,21 @@
   To change this template use File | Settings | File Templates.
 --%>
 <%@ page contentType="text/html;charset=UTF-8" %>
+<%
+    String _aid = request.getParameter("aid");
+    String _route = request.getParameter("r");
+%>
 <div class="container mt-1 mb-1">
     <div class="row">
         <div class="col-9">
             <div class="card jt-card jt-top-card mt-1 mb-1"
-                 style="background: url('<%=IntroSettings.getJsonObject("top_img").getString("join")%>') no-repeat center center;
+                 style="background: url('<%=IntroSettings.getJsonObject("top_img").getString(_route.replace("/",""))%>') no-repeat center center;
                          background-size: auto 100%;"
             ></div>
             <div class="card jt-card mt-4 mb-1">
                 <br>
                 <% for(int i = 0;i < 15;i++){ %>
-                    <center>这里是富文本</center>
+                    <center><%=_aid%></center>
                     <hr>
                     <br>
                 <% } %>
@@ -29,3 +33,4 @@
 </div>
 
 <link rel="stylesheet" href="<%=request.getContextPath()%>/resources/page/join/style.css?v=<%=TimerX.getNowTimeStr(10)%>">
+<link rel="stylesheet" href="<%=request.getContextPath()%>/resources/page/article/style.css?v=<%=TimerX.getNowTimeStr(10)%>">

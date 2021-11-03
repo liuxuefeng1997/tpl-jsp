@@ -64,7 +64,9 @@
         <div class="tab-pane fade show active" id="nav-news" role="tabpanel" aria-labelledby="news-tab">
             <div class="w-100 mt-1 overflow-hidden">
                 <% for(int i = 0;i < 16;i++){ %>
-                    <div class="card pd-card us-none">
+                    <div class="card pd-card us-none"
+                         onclick="window.open('./?r=/product/&aid=<%=i + ""%>','_self')"
+                    >
                         <div class="pd-card-img" style="background: url('<%=ProductSettings.getString("card")%>') no-repeat center center;background-size: 100% 100%;"></div>
                         <div class="pd-card-body">
                             <div class="pd-card-title">单商户V4基础版</div>
@@ -81,7 +83,9 @@
         <div class="tab-pane fade" id="nav-business" role="tabpanel" aria-labelledby="business-tab">
             <div class="w-100 mt-1 overflow-hidden">
                 <% for(int i = 0;i < 16;i++){ %>
-                    <div class="card pd-card">
+                    <div class="card pd-card us-none"
+                         onclick="window.open('./?r=/product/&aid=' + i,'_self')"
+                    >
                         <div class="pd-card-img" style="background: url('<%=ProductSettings.getString("card")%>') no-repeat center center;background-size: 100% 100%;"></div>
                         <div class="pd-card-body">
                             <div class="pd-card-title">单商户V4基础版</div>
@@ -98,7 +102,9 @@
         <div class="tab-pane fade" id="nav-contact" role="tabpanel" aria-labelledby="contact-tab">
             <div class="w-100 mt-1 overflow-hidden">
                 <% for(int i = 0;i < 16;i++){ %>
-                    <div class="card pd-card">
+                    <div class="card pd-card us-none"
+                         onclick="window.open('./?r=/product/&aid=' + i,'_self')"
+                    >
                         <div class="pd-card-img" style="background: url('<%=ProductSettings.getString("card")%>') no-repeat center center;background-size: 100% 100%;"></div>
                         <div class="pd-card-body">
                             <div class="pd-card-title">单商户V4基础版</div>
@@ -115,7 +121,9 @@
         <div class="tab-pane fade" id="nav-industry" role="tabpanel" aria-labelledby="industry-tab">
             <div class="w-100 mt-1 overflow-hidden">
                 <% for(int i = 0;i < 16;i++){ %>
-                    <div class="card pd-card">
+                    <div class="card pd-card us-none"
+                         onclick="window.open('./?r=/product/&aid=' + i,'_self')"
+                    >
                         <div class="pd-card-img" style="background: url('<%=ProductSettings.getString("card")%>') no-repeat center center;background-size: 100% 100%;"></div>
                         <div class="pd-card-body">
                             <div class="pd-card-title">单商户V4基础版</div>

@@ -29,7 +29,7 @@
                     <a class="nav-link<%=ActiveX.getStu(request.getParameter("r"),"/solution/"," active","")%>" href="./?r=/solution/">解决方案</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link<%=ActiveX.getStu(request.getParameter("r"),"/join_to/"," active","")%>" href="./?r=/join_to/">加盟代理</a>
+                    <a class="nav-link<%=ActiveX.getStu(request.getParameter("r"),"/join/"," active","")%>" href="./?r=/join/">加盟代理</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link<%=ActiveX.getStu(request.getParameter("r"),"/case/"," active","")%>" href="./?r=/case/">成功案例</a>

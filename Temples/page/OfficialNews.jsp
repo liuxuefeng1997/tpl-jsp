@@ -10,7 +10,7 @@
         <div class="row">
             <div class="col-8">
                 <div class="in-top-image mb-3"
-                     style="background: url('<%=IntroSettings.getJsonObject("top_img").getString("official")%>') no-repeat center center;
+                     style="background: url('<%=IntroSettings.getJsonObject("top_img").getString("news")%>') no-repeat center center;
                              background-size: auto 100%;"
                 ></div>
                 
@@ -34,7 +34,9 @@
                     <div class="tab-pane fade show active" id="nav-news" role="tabpanel" aria-labelledby="news-tab">
                         <div class="w-100 mt-1 overflow-hidden">
                             <% for (int i = 0; i < 4; i++) { %>
-                            <div class="card news-card-x mb-1">
+                            <div class="card news-card-x mb-1 us-none"
+                                 onclick="window.open('./?r=/news/&aid=<%=i + ""%>','_self')"
+                            >
                                 <div class="row">
                                     <div class="col-4">
                                         <img src="https://cn.bing.com/th?id=OHR.UnkindnessRavens_ZH-CN2840574948_1920x1080.jpg&rf=LaDigue_1920x1080.jpg"
@@ -55,7 +57,9 @@
                     <div class="tab-pane fade" id="nav-business" role="tabpanel" aria-labelledby="business-tab">
                         <div class="w-100 mt-1 overflow-hidden">
                             <% for (int i = 0; i < 4; i++) { %>
-                            <div class="card news-card-x">
+                            <div class="card news-card-x us-none"
+                                 onclick="window.open('./?r=/news/&aid=<%=i + ""%>','_self')"
+                            >
                                 <div class="row">
                                     <div class="col-4">
                                         <img src="https://cn.bing.com/th?id=OHR.UnkindnessRavens_ZH-CN2840574948_1920x1080.jpg&rf=LaDigue_1920x1080.jpg"
@@ -76,7 +80,9 @@
                     <div class="tab-pane fade" id="nav-contact" role="tabpanel" aria-labelledby="contact-tab">
                         <div class="w-100 mt-1 overflow-hidden">
                             <% for (int i = 0; i < 4; i++) { %>
-                            <div class="card news-card-x">
+                            <div class="card news-card-x us-none"
+                                 onclick="window.open('./?r=/news/&aid=<%=i + ""%>','_self')"
+                            >
                                 <div class="row">
                                     <div class="col-4">
                                         <img src="https://cn.bing.com/th?id=OHR.UnkindnessRavens_ZH-CN2840574948_1920x1080.jpg&rf=LaDigue_1920x1080.jpg"
@@ -97,7 +103,9 @@
                     <div class="tab-pane fade" id="nav-industry" role="tabpanel" aria-labelledby="industry-tab">
                         <div class="w-100 mt-1 overflow-hidden">
                             <% for (int i = 0; i < 4; i++) { %>
-                            <div class="card news-card-x">
+                            <div class="card news-card-x us-none"
+                                 onclick="window.open('./?r=/news/&aid=<%=i + ""%>','_self')"
+                            >
                                 <div class="row">
                                     <div class="col-4">
                                         <img src="https://cn.bing.com/th?id=OHR.UnkindnessRavens_ZH-CN2840574948_1920x1080.jpg&rf=LaDigue_1920x1080.jpg"
@@ -118,23 +126,7 @@
                 </div>
             </div>
             <div class="col-4">
-                <div class="card in-right-newly">
-                    <div class="in-right-newly-title">最热资讯</div>
-                    <% for(int i = 0;i < 10;i++){
-                        String _no = (i + 1) + "";
-                        if(_no.length() == 1){
-                            _no = "0" + _no;
-                        }
-                        String _class = "";
-                        if(i < 3){
-                            _class = "in-right-newly-child-top3";
-                        }
-                    %>
-                        <div class="in-right-newly-child"
-                             onclick=""
-                        ><span class="<%=_class%>"><%=_no%>&nbsp;&nbsp;&nbsp;&nbsp;</span>搭建私域流量池，企业应该选择微..</div>
-                    <% } %>
-                </div>
+                <%@ include file="../modal/IntroRightBar.jsp" %>
             </div>
         </div>
     </div>

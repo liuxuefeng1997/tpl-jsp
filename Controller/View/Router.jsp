@@ -24,15 +24,39 @@
     <% switch (request.getParameter("r")){case "/": %>
         <%@ include file="../../Temples/page/Home.jsp" %>
     <% break; case "/product/": %>
-        <%@ include file="../../Temples/page/Product.jsp" %>
+        <% if(StringX.isNotNull(request.getParameter("aid"))){ %>
+            <%--加载文章模板--%>
+            <%@ include file="../../Temples/page/Article.jsp" %>
+        <% } else { %>
+            <%--加载列表模板--%>
+            <%@ include file="../../Temples/page/Product.jsp" %>
+        <% } %>
     <% break; case "/news/": %>
-        <%@ include file="../../Temples/page/Intro.jsp" %>
+        <% if(StringX.isNotNull(request.getParameter("aid"))){ %>
+            <%--加载文章模板--%>
+            <%@ include file="../../Temples/page/Article.jsp" %>
+        <% } else { %>
+            <%--加载列表模板--%>
+            <%@ include file="../../Temples/page/OfficialNews.jsp" %>
+        <% } %>
     <% break; case "/solution/": %>
-        <%=request.getContextPath()%>
-    <% break; case "/join_to/": %>
+        <% if(StringX.isNotNull(request.getParameter("aid"))){ %>
+            <%--加载文章模板--%>
+            <%@ include file="../../Temples/page/Article.jsp" %>
+        <% } else { %>
+            <%--加载列表模板--%>
+            <%@ include file="../../Temples/page/List.jsp" %>
+        <% } %>
+    <% break; case "/join/": %>
         <%@ include file="../../Temples/page/JoinTo.jsp" %>
     <% break; case "/case/": %>
-        <%=request.getContextPath() + "" + ""%>
+        <% if(StringX.isNotNull(request.getParameter("aid"))){ %>
+            <%--加载文章 模板--%>
+            <%@ include file="../../Temples/page/Article.jsp" %>
+        <% } else { %>
+            <%--加载列表 模板--%>
+            <%@ include file="../../Temples/page/List.jsp" %>
+        <% } %>
     <% break; default: %>
         <script>
             window.open("./?r=/","_self");

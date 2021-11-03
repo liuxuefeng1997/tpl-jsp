@@ -5,11 +5,11 @@
             "title": "关于我们",
             "link_list": [
                 {
-                    "route": "/",
+                    "route": "/news/&aid=简介",
                     "title": "简介"
                 },
                 {
-                    "route": "/",
+                    "route": "/news/&aid=常见问题",
                     "title": "常见问题"
                 }
             ]
@@ -18,15 +18,15 @@
             "title": "产品与服务",
             "link_list": [
                 {
-                    "route": "/",
+                    "route": "/product/&aid=开源商城案例",
                     "title": "开源商城案例"
                 },
                 {
-                    "route": "/",
+                    "route": "/product/&aid=行业商城方案",
                     "title": "行业商城方案"
                 },
                 {
-                    "route": "/",
+                    "route": "/product/&aid=商城系统手册",
                     "title": "商城系统手册"
                 }
             ]
@@ -35,16 +35,16 @@
             "title": "资讯",
             "link_list": [
                 {
-                    "route": "/",
-                    "title": "公司新闻"
+                    "route": "/news/",
+                    "title": "官方动态"
                 },
                 {
-                    "route": "/",
-                    "title": "行业资讯"
+                    "route": "/case/",
+                    "title": "成功案例"
                 },
                 {
-                    "route": "/",
-                    "title": "业界视点"
+                    "route": "/solution/",
+                    "title": "解决方案"
                 }
             ]
         }
