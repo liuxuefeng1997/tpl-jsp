@@ -1,4 +1,7 @@
 {
+    "__c_self": "-----网站基本信息配置-----",
+    "logo": "https://v5.bootcss.com/docs/5.1/assets/brand/bootstrap-logo.svg",
+    "title": "yq-saas",
     "__b_self": "-----登录背景图配置-----",
     "banner_login_bg": "resources/images/temple_login.jpg",
     "__1_self": "-----页脚横幅开关及配置-----",

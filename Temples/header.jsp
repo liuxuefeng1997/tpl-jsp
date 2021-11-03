@@ -10,7 +10,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no">
-    <title>Title</title>
+    <title><%=GlobalSettings.getString("title")%></title>
     <script src="//www.mailx.top/public-js/iu.library.js?v=<%=TimerX.getNowTimeStr(10)%>" charset="UTF-8" type="text/javascript"></script>
     <!-- CSS only -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet">
