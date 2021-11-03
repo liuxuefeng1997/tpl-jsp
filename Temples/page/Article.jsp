@@ -18,12 +18,15 @@
                          background-size: auto 100%;"
             ></div>
             <div class="card jt-card mt-4 mb-1">
-                <br>
-                <% for(int i = 0;i < 15;i++){ %>
-                    <center><%=_aid%></center>
-                    <hr>
+                <% if(_route.equals("/product/") && _aid.equals("0")){ %>
+                    <%@ include file="../modal/DefaultProduct.jsp" %>
+                <% } else { %>
                     <br>
-                <% } %>
+                    <% for(int i = 0;i < 15;i++){ %>
+                        <center><%=_aid%></center>
+                        <hr>
+                        <br>
+                <% }} %>
             </div>
         </div>
         <div class="col-3">

@@ -1,0 +1,91 @@
+{
+    "mList": [
+        {
+            "img": "resources/images/default/acm-1.png",
+            "title": "生鲜"
+        },
+        {
+            "img": "resources/images/default/acm-2.png",
+            "title": "简约商城"
+        },
+        {
+            "img": "resources/images/default/acm-3.png",
+            "title": "外卖"
+        },
+        {
+            "img": "resources/images/default/acm-4.png",
+            "title": "母婴"
+        },
+        {
+            "img": "resources/images/default/acm-5.png",
+            "title": "家居"
+        }
+    ],
+    "sList": [
+        {
+            "icon": "resources/images/default/acs-1.png",
+            "title": "店铺管理",
+            "subtitle": "对店铺的自定义装修<br>以及店铺公告帮助等",
+            "bg-color": "#FFF2ED"
+        },
+        {
+            "icon": "resources/images/default/acs-2.png",
+            "title": "商品管理",
+            "subtitle": "商品列表、分类分组<br>和属性管理等",
+            "bg-color": "#FFECED"
+        },
+        {
+            "icon": "resources/images/default/acs-3.png",
+            "title": "订单管理",
+            "subtitle": "订单发货、退款售后<br>核销和发票等管理",
+            "bg-color": "#ECF8EC"
+        },
+        {
+            "icon": "resources/images/default/acs-4.png",
+            "title": "会员管理",
+            "subtitle": "会员等级、标签、群<br>体、黑名单等管理",
+            "bg-color": "#FFF7ED"
+        },
+        {
+            "icon": "resources/images/default/acs-5.png",
+            "title": "营销插件",
+            "subtitle": "限时秒杀、拼团、团<br>购等营销玩法管理",
+            "bg-color": "#ECF2FF"
+        },
+        {
+            "icon": "resources/images/default/acs-6.png",
+            "title": "门店管理",
+            "subtitle": "对门店信息进行管理<br>如添加门店等",
+            "bg-color": "#EAF8FB"
+        },
+        {
+            "icon": "resources/images/default/acs-7.png",
+            "title": "财务管理",
+            "subtitle": "财务概况、门店结算<br>会员提现等",
+            "bg-color": "#FFF7ED"
+        },
+        {
+            "icon": "resources/images/default/acs-8.png",
+            "title": "统计",
+            "subtitle": "对店铺、商品、交易<br>信息等的管理",
+            "bg-color": "#F1EDFF"
+        },
+        {
+            "icon": "resources/images/default/acs-9.png",
+            "title": "渠道",
+            "subtitle": "微信公众号、微信小<br>程序",
+            "bg-color": "#FFECED"
+        },
+        {
+            "icon": "resources/images/default/acs-0.png",
+            "title": "设置",
+            "subtitle": "对商城基础性功能进<br>行设置",
+            "bg-color": "#FFF2ED"
+        }
+    ],
+    "vip": {
+        "img": "resources/images/default/aci-1.png",
+        "title": "会员签到功能",
+        "intro": "新模板将签到功能修改调整为每日正常签到+连续签到，后台设置是否开启连续功能及连续签到给予用户权益，刺激用户持续在小程序商城中每天点击签到，增加小程序点击率。"
+    }
+}
