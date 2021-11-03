@@ -14,5 +14,11 @@
             }
             return _false_str;
         }
+        public static String getNull(String _can,String _true_str){
+            if(StringX.isNotNull(_can)){
+                return _true_str;
+            }
+            return "";
+        }
     }
 %>
