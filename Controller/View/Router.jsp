@@ -10,11 +10,15 @@
     if(request.getParameter("r").startsWith("/link/")){
         String url_c = request.getParameter("r").replace("/link/","");
         if(StringX.isNotNull(url_c)){
-            String _url = url_c.split("@")[0] + "://" + url_c.split("@")[1];
+            String _url = Base64X.getStr(url_c);
+            String _302 = "/";
+            if(StringX.isNotNull(request.getParameter("302"))){
+                _302 = request.getParameter("302");
+            }
 %>
     <script>
         window.open("<%=_url%>","_blank");
-        window.location.href = "./?r=/";
+        window.location.href = "./?r=<%=_302%>";
     </script>
 <% } else { %>
     <script>

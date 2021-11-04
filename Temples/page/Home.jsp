@@ -134,7 +134,7 @@
                     <div class="sa-sm-card-out">
                         <% for(int i = 0;i < 4;i++){ %>
                             <div class="sa-sm-card">
-                                <div class="sa-sm-card-img" onclick="window.open('./?r=/','_self')"></div>
+                                <div class="sa-sm-card-img" onclick="window.open('./?r=/product/&aid=0','_self')"></div>
                                 <div class="sa-sm-card-title">抖音本地生活小程序</div>
                                 <div class="sa-sm-card-old-price">市场价:<span>￥19800.00</span></div>
                                 <div class="sa-sm-card-last-price">价格:<span>￥4999.00</span></div>

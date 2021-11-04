@@ -1,5 +1,8 @@
 <%@ page import="com.iuideas.library.*" %>
 <%@ page import="javax.json.*" %>
+<%@ page import="java.util.Base64" %>
+<%@ page import="java.nio.charset.StandardCharsets" %>
+<%@ page import="java.util.Objects" %>
 <%--
   Created by IntelliJ IDEA.
   User: lxf
@@ -10,6 +13,7 @@
 <%@ page contentType="text/html;charset=UTF-8" %>
 <%--加载项--%>
 <%@ include file="../Controller/Addon/Active.jsp" %>
+<%@ include file="../Controller/Addon/Base64.jsp" %>
 <%
     //获取网站根目录路径
     String wwwRoot = FileReaderX.getFullPath().split("/WEB-INF/")[0].replace("%5B","[").replace("%5D","]");

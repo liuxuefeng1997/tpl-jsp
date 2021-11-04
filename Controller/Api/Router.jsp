@@ -6,7 +6,7 @@
   To change this template use File | Settings | File Templates.
 --%>
 <%@ page contentType="text/html;charset=UTF-8" %>
-<% switch (request.getParameter("r")){case "/auth/": %>
+<% switch (request.getParameter("r")){case "/base/": %>
     <%@ include file="Authn.jsp" %>
 <% break; default: %>
     <script>

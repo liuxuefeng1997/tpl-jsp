@@ -37,8 +37,6 @@
 <pre>   (>= 114) * 70</pre>
 # 外链说明 /link/
 ## 当需要使用外链时，路由格式如下：
-<pre>   /link/https@www.baidu.com</pre>
-<p style="font-size: 16px;"><span style="color: blanchedalmond">https</span> 处设置为<span style="color: blanchedalmond">对应协议</span> 并<span style="color: rosybrown">以 @ 分割协议和网址</span></p>
-
-#### *注：如果需要添加额外参数直接添加在route字段后面即可，用 & 分隔。
+<pre>   /link/[Base64URL]</pre>
+#### *注：如果需要添加额外参数直接添加在route字段后面即可，用 & 分隔；您还可以通过添加参数 302=重定向地址 自定义重定向跳转，默认跳转首页
 
