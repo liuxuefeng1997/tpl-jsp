@@ -17,7 +17,8 @@
             }
 %>
     <script>
-        window.open("<%=_url%>","_blank");
+        //兼容URL编码数据
+        window.open(decodeURIComponent("<%=_url%>"),"_blank");
         window.location.href = "./?r=<%=_302%>";
     </script>
 <% } else { %>

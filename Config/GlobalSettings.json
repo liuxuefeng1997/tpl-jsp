@@ -18,7 +18,7 @@
     "is_inner_streamer_show": true,
     "inner_streamer": {
         "img": "resources/images/default/ad.png",
-        "route": "/"
+        "route": "/link/aHR0cHM6Ly93d3cuYmFpZHUuY29t"
     },
     "__4_self": "-----行业解决方案开关及配置-----",
     "is_solution_show": true,
