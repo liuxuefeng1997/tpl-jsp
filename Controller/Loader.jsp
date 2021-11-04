@@ -8,6 +8,8 @@
   To change this template use File | Settings | File Templates.
 --%>
 <%@ page contentType="text/html;charset=UTF-8" %>
+<%--加载项--%>
+<%@ include file="../Controller/Addon/Active.jsp" %>
 <%
     //获取网站根目录路径
     String wwwRoot = FileReaderX.getFullPath().split("/WEB-INF/")[0].replace("%5B","[").replace("%5D","]");

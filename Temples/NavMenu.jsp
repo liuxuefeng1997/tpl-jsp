@@ -6,8 +6,6 @@
   To change this template use File | Settings | File Templates.
 --%>
 <%@ page contentType="text/html;charset=UTF-8" %>
-<%--加载项--%>
-<%@ include file="../Controller/Addon/Active.jsp" %>
 <!--页首菜单-->
 <nav class="navbar navbar-expand-lg navbar-light sa-bg-blue fixed-top us-none">
     <div class="container">
