@@ -61,8 +61,12 @@
                             }
                             JsonObject Banner = BannerList.getJsonArray("banner").getJsonObject(i);
                     %>
-                        <div class="carousel-item<%=_c%>">
-                            <img src="<%=Banner.getString("img")%>" class="d-block w-100 m-auto" alt="..." onclick="window.open('./?r=<%=Banner.getString("route")%>','_self')">
+                        <div class="carousel-item<%=_c%><%=ActiveX.getNull(Banner.getString("route")," us-hover")%>">
+                            <img src="<%=Banner.getString("img")%>"
+                                 class="d-block w-100 m-auto"
+                                 alt="..."
+                                <% if(StringX.isNotNull(Banner.getString("route"))){ %> onclick="window.open('./?r=<%=Banner.getString("route")%>','_self')"<% } %>
+                            >
                         </div>
                     <% } %>
                 </div>
@@ -203,13 +207,13 @@
             <div class="col">
                 <div class="card us-none">
                     <div class="card-header text-center fw-bold">网站建设</div>
-                    <img src="<%=GlobalSettings.getJsonObject("web").getString("img")%>" onclick="window.open('./?r=<%=GlobalSettings.getJsonObject("web").getString("route")%>','_self')" alt="" class="card-img-bottom">
+                    <img src="<%=GlobalSettings.getJsonObject("web").getString("img")%>" onclick="window.open('./?r=<%=GlobalSettings.getJsonObject("web").getString("route")%>','_self')" alt="" class="card-img-bottom us-hover">
                 </div>
             </div>
             <div class="col">
                 <div class="card us-none">
                     <div class="card-header text-center fw-bold">营销推广</div>
-                    <img src="<%=GlobalSettings.getJsonObject("extend").getString("img")%>" onclick="window.open('./?r=<%=GlobalSettings.getJsonObject("extend").getString("route")%>','_self')" alt="" class="card-img-bottom">
+                    <img src="<%=GlobalSettings.getJsonObject("extend").getString("img")%>" onclick="window.open('./?r=<%=GlobalSettings.getJsonObject("extend").getString("route")%>','_self')" alt="" class="card-img-bottom us-hover">
                 </div>
             </div>
         </div>
