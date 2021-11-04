@@ -8,7 +8,7 @@
 <%@ page contentType="text/html;charset=UTF-8" %>
 <div class="card jt-card jt-top-card sa-bg-blue mt-1 mb-1">
     <div class="jt-card-avatar bg-info"></div>
-    <div class="card-body">
+    <div class="card-body us-none">
         <div class="jt-card-intro">
             <div>你好，欢迎来到Niushop</div>
             <div>有什么问题可以咨询我哦</div>

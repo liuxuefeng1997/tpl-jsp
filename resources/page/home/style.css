@@ -83,6 +83,7 @@
     height: 215px;
     width: 100%;
     background: rgba(232,232,232,1);
+    border-radius: 6px;
 }
 .banner-box-ad-area:hover {
     cursor: pointer;

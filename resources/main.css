@@ -13,6 +13,9 @@ body::-webkit-scrollbar{
     -webkit-user-select: none;
     -webkit-user-drag: none;
 }
+.us-hover:hover {
+    cursor: pointer;
+}
 .ns-bg-color {
     background-color: #2A7EFB !important;
 }

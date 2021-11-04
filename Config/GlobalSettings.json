@@ -3,7 +3,7 @@
     "logo": "https://v5.bootcss.com/docs/5.1/assets/brand/bootstrap-logo.svg",
     "title": "yq-saas",
     "__b_self": "-----登录背景图配置-----",
-    "banner_login_bg": "resources/images/temple_login.jpg",
+    "banner_login_bg": "resources/images/default/temple_login.jpg",
     "__1_self": "-----页脚横幅开关及配置-----",
     "is_streamer_show": true,
     "streamer": {
@@ -13,7 +13,7 @@
     },
     "__2_self": "-----热点应用排行开关及配置-----",
     "is_hot_app_show": true,
-    "hot_app_img": "resources/images/t1.png",
+    "hot_app_img": "resources/images/default/a1.png",
     "__3_self": "-----页中横幅开关及配置-----",
     "is_inner_streamer_show": true,
     "inner_streamer": {
@@ -22,23 +22,23 @@
     },
     "__4_self": "-----行业解决方案开关及配置-----",
     "is_solution_show": true,
-    "solution_img": "resources/images/t1.png",
+    "solution_img": "resources/images/default/a2.png",
     "__5_self": "-----网站建设与营销推广模块开关及配置-----",
     "is_web_extend_show": true,
     "web": {
-        "img": "https://cn.bing.com/th?id=OHR.UnkindnessRavens_ZH-CN2840574948_1920x1080.jpg&rf=LaDigue_1920x1080.jpg",
+        "img": "resources/images/default/web.png",
         "route": "/"
     },
     "extend": {
-        "img": "https://cn.bing.com/th?id=OHR.UnkindnessRavens_ZH-CN2840574948_1920x1080.jpg&rf=LaDigue_1920x1080.jpg",
+        "img": "resources/images/default/extend.png",
         "route": "/"
     },
     "__6_self": "-----小程序系统开关及配置-----",
     "is_wx_app_show": true,
-    "wx_app_img": "resources/images/t1.png",
+    "wx_app_img": "resources/images/default/a3.png",
     "__7_self": "-----独立部署软件开关及配置-----",
     "is_onOne_show": true,
-    "onOne_img": "resources/images/t1.png",
+    "onOne_img": "resources/images/default/a4.png",
     "__8_self": "-----资讯模块开关-----",
     "is_news_modal_show": true,
     "__9_self": "-----页脚联系方式配置-----",

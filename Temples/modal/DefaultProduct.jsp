@@ -7,9 +7,9 @@
 --%>
 <%@ page contentType="text/html;charset=UTF-8" %>
 <% JsonObject Lists = JSONReaderX.getJsonObj(FileReaderX.getStr(wwwRoot + "/Config/DefaultProductList.json")); %>
-<div class="sa-card-title">模块选择</div>
-<div class="sa-card-subtitle">内置五套行业模板，不同的模板给您带来不一样的体验</div>
-<div class="row">
+<div class="sa-card-title us-none">模块选择</div>
+<div class="sa-card-subtitle us-none">内置五套行业模板，不同的模板给您带来不一样的体验</div>
+<div class="row us-none">
     <% for(int i = 0;i < Lists.getJsonArray("mList").size();i++){ JsonObject _card_data = Lists.getJsonArray("mList").getJsonObject(i);%>
         <div class="col">
             <div class="acm-card">
@@ -20,9 +20,9 @@
     <% } %>
 </div>
 
-<div class="sa-card-title">完善系统功能</div>
-<div class="sa-card-subtitle">内置五套行业模板，不同的模板给您带来不一样的体验</div>
-<div class="acs-area">
+<div class="sa-card-title us-none">完善系统功能</div>
+<div class="sa-card-subtitle us-none">内置五套行业模板，不同的模板给您带来不一样的体验</div>
+<div class="acs-area us-none">
     <% for(int i = 0;i < Lists.getJsonArray("sList").size();i++){ JsonObject _card_data = Lists.getJsonArray("sList").getJsonObject(i);%>
         <div class="acs-card"
              style="background-color: <%=_card_data.getString("bg-color")%>"
