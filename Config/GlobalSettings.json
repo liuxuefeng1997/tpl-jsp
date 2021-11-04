@@ -1,6 +1,6 @@
 {
     "__c_self": "-----网站基本信息配置-----",
-    "logo": "https://v5.bootcss.com/docs/5.1/assets/brand/bootstrap-logo.svg",
+    "logo": "https://sh-yq.com/templets/demo/picture/logo.png",
     "title": "saas",
     "__b_self": "-----登录背景图配置-----",
     "banner_login_bg": "resources/images/default/temple_login.jpg",
