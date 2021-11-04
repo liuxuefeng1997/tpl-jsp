@@ -10,7 +10,7 @@
 <nav class="navbar navbar-expand-lg navbar-light sa-bg-blue fixed-top us-none">
     <div class="container">
         <a class="navbar-brand"
-           href="./?r=<%=request.getParameter("r")%><%=ActiveX.getNull(request.getParameter("aid"),"&aid=" + request.getParameter("aid"))%>"
+           href="./?r=<%=request.getParameter("r")%><%=ActiveX.getUnNull(request.getParameter("aid"),"&aid=" + request.getParameter("aid"))%>"
         >
             <img src="<%=GlobalSettings.getString("logo")%>" alt="" height="44" class="d-inline-block align-text-top">
         </a>

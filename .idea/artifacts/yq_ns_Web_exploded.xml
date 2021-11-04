@@ -8,7 +8,6 @@
           <element id="module-output" name="yq-ns" />
         </element>
         <element id="directory" name="lib">
-          <element id="library" level="project" name="com.iuideas.library" />
           <element id="library" level="project" name="annotations-api" />
           <element id="library" level="project" name="el-api" />
           <element id="library" level="project" name="jaspic-api" />
