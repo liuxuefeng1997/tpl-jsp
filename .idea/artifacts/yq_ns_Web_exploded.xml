@@ -14,6 +14,7 @@
           <element id="library" level="project" name="tomcat-api" />
           <element id="library" level="project" name="jsp-api" />
           <element id="library" level="project" name="servlet-api" />
+          <element id="library" level="project" name="com.iuideas.library" />
         </element>
       </element>
     </root>

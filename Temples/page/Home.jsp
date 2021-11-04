@@ -28,13 +28,17 @@
                                     }
                                     JsonObject aLink = Link.getJsonArray("list").getJsonObject(n);
                             %>
-                                <%=_c%><a href="./?r=<%=aLink.getString("route")%>"><%=aLink.getString("title")%></a>
+                                <%=_c%><a href="./?r=<%=aLink.getString("route")%>" target="<%=ActiveX.getStW(aLink.getString("route"),"/link/","_blank","_self")%>"><%=aLink.getString("title")%></a>
                             <% } %>
                         </div>
                     </div>
                 <% } %>
                 <div class="mt-3 pb-1">
-                    <div class="banner-box-link-more">没有找到想要的产品或服务？<a href="./?r=<%=BannerLeftLink.getString("more_route")%>">发布需求</a></div>
+                    <div class="banner-box-link-more">没有找到想要的产品或服务？
+                        <a href="./?r=<%=BannerLeftLink.getString("more_route")%>"
+                           target="<%=ActiveX.getStW(BannerLeftLink.getString("more_route"),"/link/","_blank","_self")%>"
+                        >发布需求</a>
+                    </div>
                 </div>
             </div>
         </div>
@@ -65,7 +69,7 @@
                             <img src="<%=Banner.getString("img")%>"
                                  class="d-block w-100 m-auto"
                                  alt="..."
-                                <% if(StringX.isNotNull(Banner.getString("route"))){ %> onclick="window.open('./?r=<%=Banner.getString("route")%>','_self')"<% } %>
+                                <% if(StringX.isNotNull(Banner.getString("route"))){ %> onclick="window.open('./?r=<%=Banner.getString("route")%>','<%=ActiveX.getStW(Banner.getString("route"),"/link/","_blank","_self")%>')"<% } %>
                             >
                         </div>
                     <% } %>
@@ -81,19 +85,19 @@
                     <div class="col-4">
                         <div class="banner-box-trd-card"
                              style="background: url('<%=BannerADLink_middle.getJsonObject("left").getString("img")%>') no-repeat center center;background-size:auto 100%;"
-                             onclick="window.open('./?r=<%=BannerADLink_middle.getJsonObject("left").getString("route")%>','_self')"
+                             onclick="window.open('./?r=<%=BannerADLink_middle.getJsonObject("left").getString("route")%>','<%=ActiveX.getStW(BannerADLink_middle.getJsonObject("left").getString("route"),"/link/","_blank","_self")%>')"
                         ></div>
                     </div>
                     <div class="col-4">
                         <div class="banner-box-trd-card"
                              style="background: url('<%=BannerADLink_middle.getJsonObject("middle").getString("img")%>') no-repeat center center;background-size:auto 100%;"
-                             onclick="window.open('./?r=<%=BannerADLink_middle.getJsonObject("middle").getString("route")%>','_self')"
+                             onclick="window.open('./?r=<%=BannerADLink_middle.getJsonObject("middle").getString("route")%>','<%=ActiveX.getStW(BannerADLink_middle.getJsonObject("middle").getString("route"),"/link/","_blank","_self")%>')"
                         ></div>
                     </div>
                     <div class="col-4">
                         <div class="banner-box-trd-card"
                              style="background: url('<%=BannerADLink_middle.getJsonObject("right").getString("img")%>') no-repeat center center;background-size:auto 100%;"
-                             onclick="window.open('./?r=<%=BannerADLink_middle.getJsonObject("right").getString("route")%>','_self')"
+                             onclick="window.open('./?r=<%=BannerADLink_middle.getJsonObject("right").getString("route")%>','<%=ActiveX.getStW(BannerADLink_middle.getJsonObject("right").getString("route"),"/link/","_blank","_self")%>')"
                         ></div>
                     </div>
                 </div>
@@ -112,7 +116,7 @@
                 </div>
                 <div class="banner-box-ad-area mt-1"
                      style="background: url('<%=BannerADLink_right.getString("img")%>') no-repeat center center;background-size:100% auto;"
-                     onclick="window.open('./?r=<%=BannerADLink_right.getString("route")%>','_self')"
+                     onclick="window.open('./?r=<%=BannerADLink_right.getString("route")%>','<%=ActiveX.getStW(BannerADLink_right.getString("route"),"/link/","_blank","_self")%>')"
                 ></div>
             </div>
         </div>
@@ -171,7 +175,7 @@
     <!--广告横幅-->
     <div class="bottom-info sa-bg-color position-relative us-hover"
          style="background: url('<%=GlobalSettings.getJsonObject("inner_streamer").getString("img")%>') no-repeat center center;background-size: auto 100%;"
-         onclick="window.open('./?r=<%=GlobalSettings.getJsonObject("inner_streamer").getString("route")%>','_self')"
+         onclick="window.open('./?r=<%=GlobalSettings.getJsonObject("inner_streamer").getString("route")%>','_blank')"
     ></div>
 <% } %>
 <%--行业解决方案--%>

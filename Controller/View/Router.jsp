@@ -7,63 +7,44 @@
 --%>
 <%@ page contentType="text/html;charset=UTF-8" %>
 <%
-    if(request.getParameter("r").startsWith("/link/")){
-        String url_c = request.getParameter("r").replace("/link/","");
-        if(StringX.isNotNull(url_c)){
+    if (request.getParameter("r").startsWith("/link/")) {
+        String url_c = request.getParameter("r").replace("/link/", "");
+        if (StringX.isNotNull(url_c)) {
             String _url = Base64X.getStr(url_c);
-            String _302 = "/";
-            if(StringX.isNotNull(request.getParameter("302"))){
-                _302 = request.getParameter("302");
-            }
+            response.sendRedirect(_url);
+        } else {
+            response.sendRedirect("./?r=/");
+        }
+    } else {
+        switch (request.getParameter("r")) { case "/":
 %>
-    <script>
-        window.open("<%=_url%>","_blank");
-        window.location.href = "./?r=<%=_302%>";
-    </script>
-<% } else { %>
-    <script>
-        window.open("./?r=/","_self");
-    </script>
-<% }} else { %>
-    <% switch (request.getParameter("r")){case "/": %>
-        <%@ include file="../../Temples/page/Home.jsp" %>
-    <% break; case "/product/": %>
-        <% if(StringX.isNotNull(request.getParameter("aid"))){ %>
+    <%@ include file="../../Temples/page/Home.jsp" %>
+<% break; case "/product/": if (StringX.isNotNull(request.getParameter("aid"))) { %>
             <%--加载文章模板--%>
             <%@ include file="../../Temples/page/Article.jsp" %>
         <% } else { %>
             <%--加载列表模板--%>
             <%@ include file="../../Temples/page/Product.jsp" %>
-        <% } %>
-    <% break; case "/news/": %>
-        <% if(StringX.isNotNull(request.getParameter("aid"))){ %>
+<% } break; case "/news/": if (StringX.isNotNull(request.getParameter("aid"))) { %>
             <%--加载文章模板--%>
             <%@ include file="../../Temples/page/Article.jsp" %>
         <% } else { %>
             <%--加载列表模板--%>
             <%@ include file="../../Temples/page/OfficialNews.jsp" %>
-        <% } %>
-    <% break; case "/solution/": %>
-        <% if(StringX.isNotNull(request.getParameter("aid"))){ %>
+<% } break; case "/solution/": if (StringX.isNotNull(request.getParameter("aid"))) { %>
             <%--加载文章模板--%>
             <%@ include file="../../Temples/page/Article.jsp" %>
         <% } else { %>
             <%--加载列表模板--%>
             <%@ include file="../../Temples/page/List.jsp" %>
-        <% } %>
-    <% break; case "/join/": %>
+<% } break; case "/join/": %>
         <%@ include file="../../Temples/page/JoinTo.jsp" %>
-    <% break; case "/case/": %>
-        <% if(StringX.isNotNull(request.getParameter("aid"))){ %>
-            <%--加载文章 模板--%>
-            <%@ include file="../../Temples/page/Article.jsp" %>
-        <% } else { %>
-            <%--加载列表 模板--%>
-            <%@ include file="../../Temples/page/List.jsp" %>
-        <% } %>
-    <% break; default: %>
-        <script>
-            window.open("./?r=/","_self");
-        </script>
-    <% break; } %>
-<% } %>
+<% break;
+    case "/case/": %>
+    <% if (StringX.isNotNull(request.getParameter("aid"))) { %>
+        <%--加载文章 模板--%>
+        <%@ include file="../../Temples/page/Article.jsp" %>
+    <% } else { %>
+        <%--加载列表 模板--%>
+        <%@ include file="../../Temples/page/List.jsp" %>
+<% } break; default: response.sendRedirect("./?r=/"); break; }} %>
