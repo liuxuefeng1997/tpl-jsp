@@ -61,7 +61,7 @@
                             }
                             JsonObject Banner = BannerList.getJsonArray("banner").getJsonObject(i);
                     %>
-                        <div class="carousel-item<%=_c%><%=ActiveX.getNull(Banner.getString("route")," us-hover")%>">
+                        <div class="carousel-item<%=_c%><%=ActiveX.getUnNull(Banner.getString("route")," us-hover")%>">
                             <img src="<%=Banner.getString("img")%>"
                                  class="d-block w-100 m-auto"
                                  alt="..."
