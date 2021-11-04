@@ -43,11 +43,11 @@
             </div>
             <div class="consult-right us-none">
                 <div class="consult-right-code">
-                    <img src="<%=GlobalSettings.getJsonObject("concat_qr").getJsonObject("a").getString("img")%>" alt="a">
+                    <img src="<%=GlobalSettings.getJsonObject("concat_qr").getJsonObject("a").getString("img")%>" width="140" height="140" alt="a">
                     <span><%=GlobalSettings.getJsonObject("concat_qr").getJsonObject("a").getString("title")%></span>
                 </div>
                 <div class="consult-right-code">
-                    <img src="<%=GlobalSettings.getJsonObject("concat_qr").getJsonObject("b").getString("img")%>" alt="b">
+                    <img src="<%=GlobalSettings.getJsonObject("concat_qr").getJsonObject("b").getString("img")%>" width="140" height="140" alt="b">
                     <span><%=GlobalSettings.getJsonObject("concat_qr").getJsonObject("b").getString("title")%></span>
                 </div>
             </div>

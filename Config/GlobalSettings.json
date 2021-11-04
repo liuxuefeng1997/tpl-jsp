@@ -1,7 +1,7 @@
 {
     "__c_self": "-----网站基本信息配置-----",
     "logo": "https://v5.bootcss.com/docs/5.1/assets/brand/bootstrap-logo.svg",
-    "title": "yq-saas",
+    "title": "saas",
     "__b_self": "-----登录背景图配置-----",
     "banner_login_bg": "resources/images/default/temple_login.jpg",
     "__1_self": "-----页脚横幅开关及配置-----",
@@ -49,17 +49,17 @@
         },
         {
             "title": "周一至周六",
-            "inner": "400-886-7993"
+            "inner": "400-650-3580"
         }
     ],
     "__0_self": "-----页脚二维码配置-----",
     "concat_qr": {
         "a": {
-            "img": "https://www.niushop.com/app/web/view/public/img/base/qq_code.png",
-            "title": "官方QQ群"
+            "img": "https://sh-yq.com/templets/demo/picture/xcxgf1.jpg",
+            "title": "官方商城"
         },
         "b": {
-            "img": "https://www.niushop.com/app/web/view/public/img/base/wx_code.png",
+            "img": "https://sh-yq.com/templets/demo/picture/ewm.jpg",
             "title": "官方公众号"
         }
     },

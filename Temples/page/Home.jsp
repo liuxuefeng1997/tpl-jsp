@@ -169,7 +169,7 @@
 <%--广告横幅--%>
 <% if (GlobalSettings.getBoolean("is_inner_streamer_show")) { %>
     <!--广告横幅-->
-    <div class="bottom-info sa-bg-color position-relative"
+    <div class="bottom-info sa-bg-color position-relative us-hover"
          style="background: url('<%=GlobalSettings.getJsonObject("inner_streamer").getString("img")%>') no-repeat center center;background-size: auto 100%;"
          onclick="window.open('./?r=<%=GlobalSettings.getJsonObject("inner_streamer").getString("route")%>','_self')"
     ></div>
@@ -188,7 +188,7 @@
                     <div class="sa-sm-card-out-x">
                         <% for(int i = 0;i < 8;i++){ %>
                             <div class="sa-sm-card sa-sm-card-x">
-                                <div class="sa-sm-card-img us-hover" onclick="window.open('./?r=/','_self')"></div>
+                                <div class="sa-sm-card-img us-hover" onclick="window.open('./?r=/solution/&aid=行业解决方案','_self')"></div>
                                 <div class="sa-sm-card-title">抖音本地生活小程序</div>
                                 <div class="sa-sm-card-old-price">市场价:<span>￥19800.00</span></div>
                                 <div class="sa-sm-card-last-price">价格:<span>￥4999.00</span></div>
@@ -234,7 +234,7 @@
                     <div class="sa-sm-card-out">
                         <% for(int i = 0;i < 4;i++){ %>
                             <div class="sa-sm-card">
-                                <div class="sa-sm-card-img us-hover" onclick="window.open('./?r=/','_self')"></div>
+                                <div class="sa-sm-card-img us-hover" onclick="window.open('./?r=/product/&aid=0','_self')"></div>
                                 <div class="sa-sm-card-title">抖音本地生活小程序</div>
                                 <div class="sa-sm-card-old-price">市场价:<span>￥19800.00</span></div>
                                 <div class="sa-sm-card-last-price">价格:<span>￥4999.00</span></div>
@@ -280,13 +280,13 @@
                     <div class="sa-sm-card-out-x">
                         <% for(int i = 0;i < 7;i++){ %>
                             <div class="sa-sm-card sa-sm-card-x">
-                                <div class="sa-sm-card-img us-hover" onclick="window.open('./?r=/','_self')"></div>
+                                <div class="sa-sm-card-img us-hover" onclick="window.open('./?r=/product/&aid=0','_self')"></div>
                                 <div class="sa-sm-card-title">抖音本地生活小程序</div>
                                 <div class="sa-sm-card-old-price">市场价:<span>￥19800.00</span></div>
                                 <div class="sa-sm-card-last-price">价格:<span>￥4999.00</span></div>
                             </div>
                         <% } %>
-                        <div class="sa-sm-card sa-sm-card-x us-hover" onclick="window.open('./?r=/','_self')">
+                        <div class="sa-sm-card sa-sm-card-x us-hover" onclick="window.open('./?r=/product/','_self')">
                             <div class="sa-sm-card-more-top">其他/社群粉丝</div>
                             <div class="sa-sm-card-more-bottom">查看更多></div>
                         </div>
@@ -306,7 +306,7 @@
                 <button class="nav-link" id="business-tab" data-bs-toggle="tab" data-bs-target="#nav-business" type="button" role="tab" aria-controls="nav-business" aria-selected="false">行业资讯</button>
                 <button class="nav-link" id="contact-tab" data-bs-toggle="tab" data-bs-target="#nav-contact" type="button" role="tab" aria-controls="nav-contact" aria-selected="false">公司新闻</button>
                 <button class="nav-link" id="industry-tab" data-bs-toggle="tab" data-bs-target="#nav-industry" type="button" role="tab" aria-controls="nav-industry" aria-selected="false">业界视点</button>
-                <a class="nav-link nav-link-more ms-auto" href="./?r=/">查看更多></a>
+                <a class="nav-link nav-link-more ms-auto" href="./?r=/news/">查看更多></a>
             </div>
         </nav>
         <div class="tab-content" id="nav-tabContent">
