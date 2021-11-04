@@ -134,7 +134,7 @@
                     <div class="sa-sm-card-out">
                         <% for(int i = 0;i < 4;i++){ %>
                             <div class="sa-sm-card">
-                                <div class="sa-sm-card-img" onclick="window.open('./?r=/product/&aid=0','_self')"></div>
+                                <div class="sa-sm-card-img us-hover" onclick="window.open('./?r=/product/&aid=0','_self')"></div>
                                 <div class="sa-sm-card-title">抖音本地生活小程序</div>
                                 <div class="sa-sm-card-old-price">市场价:<span>￥19800.00</span></div>
                                 <div class="sa-sm-card-last-price">价格:<span>￥4999.00</span></div>
@@ -188,7 +188,7 @@
                     <div class="sa-sm-card-out-x">
                         <% for(int i = 0;i < 8;i++){ %>
                             <div class="sa-sm-card sa-sm-card-x">
-                                <div class="sa-sm-card-img" onclick="window.open('./?r=/','_self')"></div>
+                                <div class="sa-sm-card-img us-hover" onclick="window.open('./?r=/','_self')"></div>
                                 <div class="sa-sm-card-title">抖音本地生活小程序</div>
                                 <div class="sa-sm-card-old-price">市场价:<span>￥19800.00</span></div>
                                 <div class="sa-sm-card-last-price">价格:<span>￥4999.00</span></div>
@@ -234,7 +234,7 @@
                     <div class="sa-sm-card-out">
                         <% for(int i = 0;i < 4;i++){ %>
                             <div class="sa-sm-card">
-                                <div class="sa-sm-card-img" onclick="window.open('./?r=/','_self')"></div>
+                                <div class="sa-sm-card-img us-hover" onclick="window.open('./?r=/','_self')"></div>
                                 <div class="sa-sm-card-title">抖音本地生活小程序</div>
                                 <div class="sa-sm-card-old-price">市场价:<span>￥19800.00</span></div>
                                 <div class="sa-sm-card-last-price">价格:<span>￥4999.00</span></div>
@@ -280,13 +280,13 @@
                     <div class="sa-sm-card-out-x">
                         <% for(int i = 0;i < 7;i++){ %>
                             <div class="sa-sm-card sa-sm-card-x">
-                                <div class="sa-sm-card-img" onclick="window.open('./?r=/','_self')"></div>
+                                <div class="sa-sm-card-img us-hover" onclick="window.open('./?r=/','_self')"></div>
                                 <div class="sa-sm-card-title">抖音本地生活小程序</div>
                                 <div class="sa-sm-card-old-price">市场价:<span>￥19800.00</span></div>
                                 <div class="sa-sm-card-last-price">价格:<span>￥4999.00</span></div>
                             </div>
                         <% } %>
-                        <div class="sa-sm-card sa-sm-card-x" onclick="window.open('./?r=/','_self')">
+                        <div class="sa-sm-card sa-sm-card-x us-hover" onclick="window.open('./?r=/','_self')">
                             <div class="sa-sm-card-more-top">其他/社群粉丝</div>
                             <div class="sa-sm-card-more-bottom">查看更多></div>
                         </div>
@@ -313,7 +313,7 @@
             <div class="tab-pane fade show active" id="nav-news" role="tabpanel" aria-labelledby="news-tab">
                 <div class="w-100 mt-1 overflow-hidden">
                     <% for(int i = 0;i < 4;i++){ %>
-                        <div class="card news-card">
+                        <div class="card news-card us-none us-hover">
                             <div class="row">
                                 <div class="col-5">
                                     <img src="https://cn.bing.com/th?id=OHR.UnkindnessRavens_ZH-CN2840574948_1920x1080.jpg&rf=LaDigue_1920x1080.jpg" alt="" class="card-img">
@@ -331,7 +331,7 @@
             <div class="tab-pane fade" id="nav-business" role="tabpanel" aria-labelledby="business-tab">
                 <div class="w-100 mt-1 overflow-hidden">
                     <% for(int i = 0;i < 4;i++){ %>
-                        <div class="card news-card">
+                        <div class="card news-card us-none us-hover">
                             <div class="row">
                                 <div class="col-5">
                                     <img src="https://cn.bing.com/th?id=OHR.UnkindnessRavens_ZH-CN2840574948_1920x1080.jpg&rf=LaDigue_1920x1080.jpg" alt="" class="card-img">
@@ -349,7 +349,7 @@
             <div class="tab-pane fade" id="nav-contact" role="tabpanel" aria-labelledby="contact-tab">
                 <div class="w-100 mt-1 overflow-hidden">
                     <% for(int i = 0;i < 4;i++){ %>
-                        <div class="card news-card">
+                        <div class="card news-card us-none us-hover">
                             <div class="row">
                                 <div class="col-5">
                                     <img src="https://cn.bing.com/th?id=OHR.UnkindnessRavens_ZH-CN2840574948_1920x1080.jpg&rf=LaDigue_1920x1080.jpg" alt="" class="card-img">
@@ -367,7 +367,7 @@
             <div class="tab-pane fade" id="nav-industry" role="tabpanel" aria-labelledby="industry-tab">
                 <div class="w-100 mt-1 overflow-hidden">
                     <% for(int i = 0;i < 4;i++){ %>
-                        <div class="card news-card">
+                        <div class="card news-card us-none us-hover">
                             <div class="row">
                                 <div class="col-5">
                                     <img src="https://cn.bing.com/th?id=OHR.UnkindnessRavens_ZH-CN2840574948_1920x1080.jpg&rf=LaDigue_1920x1080.jpg" alt="" class="card-img">
