@@ -175,7 +175,7 @@
     <!--广告横幅-->
     <div class="bottom-info sa-bg-color position-relative us-hover"
          style="background: url('<%=GlobalSettings.getJsonObject("inner_streamer").getString("img")%>') no-repeat center center;background-size: auto 100%;"
-         onclick="window.open('./?r=<%=GlobalSettings.getJsonObject("inner_streamer").getString("route")%>','_blank')"
+         onclick="window.open('./?r=<%=GlobalSettings.getJsonObject("inner_streamer").getString("route")%>','<%=ActiveX.getStW(GlobalSettings.getJsonObject("inner_streamer").getString("route"),"/link/","_blank","_self")%>')"
     ></div>
 <% } %>
 <%--行业解决方案--%>
@@ -211,13 +211,13 @@
             <div class="col">
                 <div class="card us-none">
                     <div class="card-header text-center fw-bold">网站建设</div>
-                    <img src="<%=GlobalSettings.getJsonObject("web").getString("img")%>" onclick="window.open('./?r=<%=GlobalSettings.getJsonObject("web").getString("route")%>','_self')" alt="" class="card-img-bottom us-hover">
+                    <img src="<%=GlobalSettings.getJsonObject("web").getString("img")%>" onclick="window.open('./?r=<%=GlobalSettings.getJsonObject("web").getString("route")%>','<%=ActiveX.getStW(GlobalSettings.getJsonObject("web").getString("route"),"/link/","_blank","_self")%>')" alt="" class="card-img-bottom us-hover">
                 </div>
             </div>
             <div class="col">
                 <div class="card us-none">
                     <div class="card-header text-center fw-bold">营销推广</div>
-                    <img src="<%=GlobalSettings.getJsonObject("extend").getString("img")%>" onclick="window.open('./?r=<%=GlobalSettings.getJsonObject("extend").getString("route")%>','_self')" alt="" class="card-img-bottom us-hover">
+                    <img src="<%=GlobalSettings.getJsonObject("extend").getString("img")%>" onclick="window.open('./?r=<%=GlobalSettings.getJsonObject("extend").getString("route")%>','<%=ActiveX.getStW(GlobalSettings.getJsonObject("extend").getString("route"),"/link/","_blank","_self")%>')" alt="" class="card-img-bottom us-hover">
                 </div>
             </div>
         </div>
