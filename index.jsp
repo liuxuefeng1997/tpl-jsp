@@ -17,8 +17,4 @@
     <%@ include file="Controller/View/Router.jsp" %>
     <%--这里插入footer--%>
     <%@ include file="Temples/footer.jsp" %>
-<% } else { %>
-    <script>
-        window.open("./?r=/","_self");
-    </script>
-<% } %>
+<% } else { response.sendRedirect("./?r=/"); } %>
