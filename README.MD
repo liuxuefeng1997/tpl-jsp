@@ -38,5 +38,22 @@
 # 外链说明 /link/
 ## 当需要使用外链时，路由格式如下：
 <pre>   /link/[Base64URL]</pre>
-#### *注：如果需要添加额外参数直接添加在route字段后面即可，用 & 分隔；您还可以通过添加参数 302=重定向地址 自定义重定向跳转，默认跳转首页
+#### *注：如果需要添加额外参数直接添加在route字段后面即可，用 & 分隔
+# 内置API说明
+## Base64 URL 生成 API
+### 信息
+<pre>
+    Method: GET/POST
+    Path: /
+    Parameters: {
+        "r": "/base/",                  //路由地址，必填，不要修改
+        "m": "api",                     //模式参数，必填，不要修改
+        "url": "https://www.baidu.com"  //要生成的网址，必填，修改成需要的内容
+    }
+</pre>
+### 示例
+<pre>
+    GET /?r=/base/&m=api&url=https://www.baidu.com
+    Request: aHR0cHM6Ly93d3cuYmFpZHUuY29t
+</pre>
 
