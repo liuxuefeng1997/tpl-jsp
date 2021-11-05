@@ -2,6 +2,8 @@
     "__c_self": "-----网站基本信息配置-----",
     "logo": "https://sh-yq.com/templets/demo/picture/logo.png",
     "title": "saas",
+    "__r_self": "-----重定向提示开关-----",
+    "redirect_tip": false,
     "__b_self": "-----登录背景图配置-----",
     "banner_login_bg": "resources/images/default/temple_login.jpg",
     "__1_self": "-----页脚横幅开关及配置-----",
@@ -44,8 +46,8 @@
     "__9_self": "-----页脚联系方式配置-----",
     "concat": [
         {
-            "title": "QQ讨论群",
-            "inner": "295097902"
+            "title": "QQ咨询",
+            "inner": "3290946334"
         },
         {
             "title": "周一至周六",
