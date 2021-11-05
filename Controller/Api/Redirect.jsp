@@ -6,7 +6,7 @@
   To change this template use File | Settings | File Templates.
 --%>
 <%@ page contentType="text/html;charset=UTF-8" %>
-<% if(StringX.isNotNull(request.getParameter("b64"))){
+<% if(StringX.isNotNull(request.getParameter("b64")) && request.getParameter("b64").length() > 1 && !(request.getParameter("b64").contains("@"))){
     String _url = Base64X.getStr(request.getParameter("b64"));
     if(GlobalSettings.getBoolean("redirect_tip")){ %>
 
@@ -79,5 +79,5 @@
 </html>
 
 <% } else { response.sendRedirect(_url); }} else { %>
-    <%="Parameter is null"%>
+    <%="Parameter Error"%>
 <% } %>
