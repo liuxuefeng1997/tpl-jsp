@@ -41,7 +41,6 @@
             border: 1px solid rgba(0,0,0,0.1);
         }
         .error-button-bar{
-            /*width: calc(100% - 20px);*/
             margin: 15px auto;
             height: 50px;
             display: inline-flex;

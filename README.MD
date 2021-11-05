@@ -48,7 +48,7 @@
     Parameters: {
         "r": "/base/",                  //路由地址，必填，不要修改
         "m": "api",                     //模式参数，必填，不要修改
-        "url": "https://www.baidu.com"  //要生成的网址，必填，修改成需要的内容
+        "url": "https://www.baidu.com"  //要生成Base64 URL的网址，必填
     }
 </pre>
 ### 示例
@@ -56,4 +56,20 @@
     GET /?r=/base/&m=api&url=https://www.baidu.com
     Request: aHR0cHM6Ly93d3cuYmFpZHUuY29t
 </pre>
-
+## 重定向 API
+### 信息
+<pre>
+    Method: GET/POST
+    Path: /
+    Parameters: {
+        "r": "/link/",                      //路由地址，必填，不要修改
+        "m": "api",                             //模式参数，必填，不要修改
+        "b64": "aHR0cHM6Ly93d3cuYmFpZHUuY29t"   //重定向网址的Base64 URL编码，必填
+    }
+</pre>
+### 示例
+<pre>
+    GET /?r=/link/&m=api&b64=aHR0cHM6Ly93d3cuYmFpZHUuY29t
+    Request: https://www.baidu.com
+</pre>
+#### *注：可直接在配置文件route字段内填入?r=后面的全部数据

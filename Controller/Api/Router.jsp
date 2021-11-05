@@ -8,7 +8,7 @@
 <%@ page contentType="text/html;charset=UTF-8" %>
 <% switch (request.getParameter("r")){case "/base/": %>
     <%@ include file="UrlBase.jsp" %>
-<% break; case "/redirect/": %>
+<% break; case "/link/": %>
     <%@ include file="Redirect.jsp" %>
 <% break; default:
     response.sendRedirect("./?r=/");

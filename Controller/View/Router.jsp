@@ -10,7 +10,7 @@
     if (request.getParameter("r").startsWith("/link/")) {
         String url_c = request.getParameter("r").replace("/link/", "");
         if (StringX.isNotNull(url_c)) {
-            response.sendRedirect("./?r=/redirect/&m=api&b64="+url_c);
+            response.sendRedirect("./?r=/link/&m=api&b64="+url_c);
         } else {
             response.sendRedirect("./?r=/");
         }
