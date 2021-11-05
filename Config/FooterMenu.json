@@ -5,12 +5,12 @@
             "title": "关于我们",
             "link_list": [
                 {
-                    "route": "/news/&aid=简介",
-                    "title": "简介"
+                    "route": "/link/aHR0cHM6Ly93d3cuc2gteXEuY29t",
+                    "title": "公司官网"
                 },
                 {
-                    "route": "/news/&aid=常见问题",
-                    "title": "常见问题"
+                    "route": "/link/aHR0cHM6Ly93d3cuc2gteXEuY29tL2EvZ3Vhbnl1d29tZW4vZ29uZ3Npamllc2hhby8_dj0x",
+                    "title": "公司简介"
                 }
             ]
         },
