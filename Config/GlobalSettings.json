@@ -2,7 +2,7 @@
     "__c_self": "-----网站基本信息配置-----",
     "logo": "https://sh-yq.com/templets/demo/picture/logo.png",
     "title": "saas",
-    "__r_self": "-----重定向提示开关（全局）-----",
+    "__r_self": "-----重定向提示开关（全局，但不影响tip参数）-----",
     "redirect_tip": false,
     "__b_self": "-----登录背景图配置-----",
     "banner_login_bg": "resources/images/default/temple_login.jpg",
