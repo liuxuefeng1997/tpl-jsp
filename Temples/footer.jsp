@@ -27,7 +27,7 @@
                         <% for(int n = 0;n < _menu.getJsonArray("link_list").size();n++){
                             JsonObject _menu_link = _menu.getJsonArray("link_list").getJsonObject(n);
                         %>
-                            <dd><a href="./?r=<%=_menu_link.getString("route")%>"><%=_menu_link.getString("title")%></a></dd>
+                            <dd><a href="./?r=<%=_menu_link.getString("route")%>" target="<%=ActiveX.getStW(_menu_link.getString("route"),"/link/","_blank","_self")%>"><%=_menu_link.getString("title")%></a></dd>
                         <% } %>
                     </dl>
                 <% } %>
