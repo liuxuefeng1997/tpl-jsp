@@ -7,7 +7,7 @@
 --%>
 <%@ page contentType="text/html;charset=UTF-8" %>
 <% switch (request.getParameter("r")){case "/base/": %>
-    <%@ include file="Authn.jsp" %>
+    <%@ include file="UrlBase.jsp" %>
 <% break; default:
     response.sendRedirect("./?r=/");
     break; } %>
