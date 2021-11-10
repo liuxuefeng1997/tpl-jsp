@@ -24,3 +24,4 @@
     //内容页设置
     JsonObject IntroSettings = JSONReaderX.getJsonObj(FileReaderX.getStr(wwwRoot + "/Config/IntroSettings.json"));
 %>
+<%@ include file="Addon/Data.jsp" %>

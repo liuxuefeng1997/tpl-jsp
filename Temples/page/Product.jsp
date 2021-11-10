@@ -7,6 +7,7 @@
 --%>
 <%@ page contentType="text/html;charset=UTF-8" %>
 <% JsonObject ProductSettings = JSONReaderX.getJsonObj(FileReaderX.getStr(wwwRoot + "/Config/ProductSettings.json")); %>
+<% JsonObject ProductTags = JSONReaderX.getJsonObj(HTTPLoaderX.getResponses("POST",Api_Url_Product_Tags,"",null));System.out.println(ProductTags); %>
 <div class="container mt-1 mb-1">
     <div class="pd-banner" style="background: url('<%=ProductSettings.getString("banner")%>') no-repeat center center;background-size: auto 100%;">
         <div class="pd-banner-right us-none">

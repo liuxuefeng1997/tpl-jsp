@@ -1,0 +1,11 @@
+{
+    "api_protocol": "http://",
+    "api_host": "api.sh-yq.cn",
+    "api_list": {
+        "product": {
+            "tags": "/product/tags",
+            "list": "/product/list",
+            "detail": "/product/detail"
+        }
+    }
+}
