@@ -50,5 +50,3 @@
         </div>
     </div>
 </div>
-
-<link rel="stylesheet" href="<%=request.getContextPath()%>/resources/page/home/style.css?v=<%=TimerX.getNowTimeStr(10)%>">

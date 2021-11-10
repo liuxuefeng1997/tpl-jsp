@@ -18,15 +18,18 @@
                          background-size: auto 100%;"
             ></div>
             <div class="card jt-card mt-4 mb-1">
-                <% if(_route.equals("/product/") && _aid.equals("0")){ %>
-                    <%@ include file="../modal/DefaultProduct.jsp" %>
+                <%
+                    switch (_route){case "/product/":
+                        JsonObject ProductDetail = JSONReaderX.getJsonObj(HTTPLoaderX.getResponses("POST",Api_Url_Product_Detail,"id=" + _aid,Api_Url_Host));
+                        if(ProductDetail.getInt("code") == 0){
+                            JsonObject data = ProductDetail.getJsonObject("data");
+                %>
+                    <div class="sa-card-title us-none"><%=data.getString("title")%></div>
+                    <div class="sa-card-subtitle us-none"><%=data.getString("subtitle")%></div>
+                    <%=data.getString("content")%>
                 <% } else { %>
-                    <br>
-                    <% for(int i = 0;i < 15;i++){ %>
-                        <center><%=_aid%></center>
-                        <hr>
-                        <br>
-                <% }} %>
+                    <%@ include file="../modal/DefaultProduct.jsp" %>
+                <% } break; } %>
             </div>
         </div>
         <div class="col-3">
@@ -35,5 +38,6 @@
     </div>
 </div>
 
+<link rel="stylesheet" href="<%=request.getContextPath()%>/resources/page/home/style.css?v=<%=TimerX.getNowTimeStr(10)%>">
 <link rel="stylesheet" href="<%=request.getContextPath()%>/resources/page/join/style.css?v=<%=TimerX.getNowTimeStr(10)%>">
 <link rel="stylesheet" href="<%=request.getContextPath()%>/resources/page/article/style.css?v=<%=TimerX.getNowTimeStr(10)%>">
