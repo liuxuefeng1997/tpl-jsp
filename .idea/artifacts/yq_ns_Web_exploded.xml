@@ -1,12 +1,10 @@
 <component name="ArtifactManager">
   <artifact type="exploded-war" name="yq-ns:Web exploded">
-    <output-path>$PROJECT_DIR$/out/artifacts/yq_ns_Web_exploded</output-path>
+    <output-path>$PROJECT_DIR$/../[out]/yq_ns</output-path>
     <root id="root">
       <element id="javaee-facet-resources" facet="yq-ns/web/Web" />
       <element id="directory" name="WEB-INF">
-        <element id="directory" name="classes">
-          <element id="module-output" name="yq-ns" />
-        </element>
+        <element id="directory" name="classes" />
         <element id="directory" name="lib">
           <element id="library" level="project" name="annotations-api" />
           <element id="library" level="project" name="el-api" />

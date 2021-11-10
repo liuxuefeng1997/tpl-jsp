@@ -7,7 +7,7 @@
 --%>
 <%@ page contentType="text/html;charset=UTF-8" %>
 <% JsonObject ProductSettings = JSONReaderX.getJsonObj(FileReaderX.getStr(wwwRoot + "/Config/ProductSettings.json")); %>
-<% JsonObject ProductTags = JSONReaderX.getJsonObj(HTTPLoaderX.getResponses("POST",Api_Url_Product_Tags,"",null));System.out.println(ProductTags); %>
+<% JsonObject ProductTags = JSONReaderX.getJsonObj(HTTPLoaderX.getResponses("POST",Api_Url_Product_Tags,"",Api_Url_Host)); %>
 <div class="container mt-1 mb-1">
     <div class="pd-banner" style="background: url('<%=ProductSettings.getString("banner")%>') no-repeat center center;background-size: auto 100%;">
         <div class="pd-banner-right us-none">
@@ -55,89 +55,62 @@
 <div class="container">
     <nav>
         <div class="nav nav-tabs" id="nav-tab" role="tablist">
-            <button class="nav-link active" id="news-tab" data-bs-toggle="tab" data-bs-target="#nav-news" type="button" role="tab" aria-controls="nav-news" aria-selected="true">小程序系统</button>
-            <button class="nav-link" id="business-tab" data-bs-toggle="tab" data-bs-target="#nav-business" type="button" role="tab" aria-controls="nav-business" aria-selected="false">独立部署软件</button>
-            <button class="nav-link" id="contact-tab" data-bs-toggle="tab" data-bs-target="#nav-contact" type="button" role="tab" aria-controls="nav-contact" aria-selected="false">行业解决方案</button>
-            <button class="nav-link" id="industry-tab" data-bs-toggle="tab" data-bs-target="#nav-industry" type="button" role="tab" aria-controls="nav-industry" aria-selected="false">营销推广</button>
+            <%
+                if(ProductTags.getInt("code") == 0){
+                    JsonArray data = ProductTags.getJsonArray("data");
+                    for(int i = 0;i < data.size();i++){
+                        JsonObject dt = data.getJsonObject(i);
+                        String title = dt.getString("label");
+                        String value = dt.getInt("value") + "";
+                        String tag = null;
+                        if(i == 0){
+                            tag = "999";
+                        }
+            %>
+            <button class="nav-link<%=ActiveX.getUnNull(tag," active")%>" id="tab-<%=value%>" data-bs-toggle="tab" data-bs-target="#nav-<%=value%>" type="button" role="tab" aria-controls="nav-<%=value%>" aria-selected="<%=ActiveX.getStu(tag,"999","true","false")%>"><%=title%></button>
+            <% }} %>
         </div>
     </nav>
     <div class="tab-content" id="nav-tabContent">
-        <div class="tab-pane fade show active" id="nav-news" role="tabpanel" aria-labelledby="news-tab">
+        <%
+            if(ProductTags.getInt("code") == 0){
+                JsonArray data = ProductTags.getJsonArray("data");
+                for(int i = 0;i < data.size();i++){
+                    JsonObject dt = data.getJsonObject(i);
+                    String path = dt.getJsonArray("path").toString();
+                    String value = dt.getInt("value") + "";
+                    String tag = null;
+                    if(i == 0){
+                        tag = "999";
+                    }
+        %>
+        <div class="tab-pane fade<%=ActiveX.getUnNull(tag," show active")%>" id="nav-<%=value%>" role="tabpanel" aria-labelledby="tab-<%=value%>">
             <div class="w-100 mt-1 overflow-hidden">
-                <% for(int i = 0;i < 16;i++){ %>
-                    <div class="card pd-card us-none"
-                         onclick="window.open('./?r=/product/&aid=<%=i + ""%>','_self')"
-                    >
-                        <div class="pd-card-img" style="background: url('<%=ProductSettings.getString("card")%>') no-repeat center center;background-size: 100% 100%;"></div>
-                        <div class="pd-card-body">
-                            <div class="pd-card-title">单商户V4基础版</div>
-                            <div class="pd-card-subtitle">单商户V4基础版</div>
-                            <div class="pd-card-bottom">
-                                <div class="pd-card-price"><span>￥980.00</span><span>￥1900.00</span></div>
-                                <div class="pd-card-buySum">1406人购买</div>
-                            </div>
+                <%
+                    out.print(path);
+                    //读取分类
+                    JsonObject ProductList = JSONReaderX.getJsonObj(HTTPLoaderX.getResponses("POST",Api_Url_Product_List,"{tag:" + path + "}",Api_Url_Host));
+                    JsonArray ds = ProductList.getJsonObject("data").getJsonArray("data");
+                    for(JsonValue d : ds){
+                        JsonObject j = d.asJsonObject();
+                %>
+                <div class="card pd-card us-none"
+                     onclick="window.open('./?r=/product/&aid=<%=j.getInt("id") + ""%>','_self')"
+                >
+                    <div class="pd-card-img" style="background: url('<%=j.getString("head_pic")%>') no-repeat center center;background-size: 100% 100%;"></div>
+                    <div class="pd-card-body">
+                        <div class="pd-card-title"><%=j.getString("title")%></div>
+                        <div class="pd-card-subtitle"><%=j.getString("subtitle")%></div>
+                        <div class="pd-card-bottom">
+                            <div class="pd-card-price"><span>￥<%=(j.getInt("price") / 100.00) + ""%></span><span>￥<%=(j.getInt("old_price") / 100.00) + ""%></span></div>
+                            <div class="pd-card-buySum"><%=j.getInt("sale_number") + ""%>人购买</div>
                         </div>
                     </div>
+                </div>
                 <% } %>
             </div>
         </div>
-        <div class="tab-pane fade" id="nav-business" role="tabpanel" aria-labelledby="business-tab">
-            <div class="w-100 mt-1 overflow-hidden">
-                <% for(int i = 0;i < 16;i++){ %>
-                    <div class="card pd-card us-none"
-                         onclick="window.open('./?r=/product/&aid=' + i,'_self')"
-                    >
-                        <div class="pd-card-img" style="background: url('<%=ProductSettings.getString("card")%>') no-repeat center center;background-size: 100% 100%;"></div>
-                        <div class="pd-card-body">
-                            <div class="pd-card-title">单商户V4基础版</div>
-                            <div class="pd-card-subtitle">单商户V4基础版</div>
-                            <div class="pd-card-bottom">
-                                <div class="pd-card-price"><span>￥980.00</span><span>￥1900.00</span></div>
-                                <div class="pd-card-buySum">1406人购买</div>
-                            </div>
-                        </div>
-                    </div>
-                <% } %>
-            </div>
-        </div>
-        <div class="tab-pane fade" id="nav-contact" role="tabpanel" aria-labelledby="contact-tab">
-            <div class="w-100 mt-1 overflow-hidden">
-                <% for(int i = 0;i < 16;i++){ %>
-                    <div class="card pd-card us-none"
-                         onclick="window.open('./?r=/product/&aid=' + i,'_self')"
-                    >
-                        <div class="pd-card-img" style="background: url('<%=ProductSettings.getString("card")%>') no-repeat center center;background-size: 100% 100%;"></div>
-                        <div class="pd-card-body">
-                            <div class="pd-card-title">单商户V4基础版</div>
-                            <div class="pd-card-subtitle">单商户V4基础版</div>
-                            <div class="pd-card-bottom">
-                                <div class="pd-card-price"><span>￥980.00</span><span>￥1900.00</span></div>
-                                <div class="pd-card-buySum">1406人购买</div>
-                            </div>
-                        </div>
-                    </div>
-                <% } %>
-            </div>
-        </div>
-        <div class="tab-pane fade" id="nav-industry" role="tabpanel" aria-labelledby="industry-tab">
-            <div class="w-100 mt-1 overflow-hidden">
-                <% for(int i = 0;i < 16;i++){ %>
-                    <div class="card pd-card us-none"
-                         onclick="window.open('./?r=/product/&aid=' + i,'_self')"
-                    >
-                        <div class="pd-card-img" style="background: url('<%=ProductSettings.getString("card")%>') no-repeat center center;background-size: 100% 100%;"></div>
-                        <div class="pd-card-body">
-                            <div class="pd-card-title">单商户V4基础版</div>
-                            <div class="pd-card-subtitle">单商户V4基础版</div>
-                            <div class="pd-card-bottom">
-                                <div class="pd-card-price"><span>￥980.00</span><span>￥1900.00</span></div>
-                                <div class="pd-card-buySum">1406人购买</div>
-                            </div>
-                        </div>
-                    </div>
-                <% } %>
-            </div>
-        </div>
+        <% }} %>
     </div>
 </div>
 

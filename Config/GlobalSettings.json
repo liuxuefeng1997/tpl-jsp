@@ -1,6 +1,6 @@
 {
     "__c_self": "-----网站基本信息配置-----",
-    "logo": "https://sh-yq.com/templets/demo/picture/logo.png",
+    "logo": "resources/images/default/logo.png",
     "title": "saas",
     "__r_self": "-----重定向提示开关（全局，但不影响tip参数）-----",
     "redirect_tip": false,
@@ -57,11 +57,11 @@
     "__0_self": "-----页脚二维码配置-----",
     "concat_qr": {
         "a": {
-            "img": "https://sh-yq.com/templets/demo/picture/xcxgf1.jpg",
+            "img": "resources/images/default/xcxgf1.jpg",
             "title": "官方商城"
         },
         "b": {
-            "img": "https://sh-yq.com/templets/demo/picture/ewm.jpg",
+            "img": "resources/images/default/ewm.jpg",
             "title": "官方公众号"
         }
     },
