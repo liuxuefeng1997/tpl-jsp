@@ -115,7 +115,7 @@
         <% }} else { %>
             <div class="tab-pane fade show active" id="nav-error" role="tabpanel" aria-labelledby="tab-error">
                 <div class="w-100 mt-1 overflow-hidden">
-                    <%=(ProductTags != null ? "\n<span class=\"fw-bold\">服务器返回：</span>" + ProductTags : "\n<span class=\"fw-bold\">错误：</span>无法连接至API服务器")%>
+                    <%=(ProductTags != null ? "\n<span class=\"fw-bold\">服务器返回：</span>" + ProductTags : "\n<span class=\"fw-bold\">错误：</span>连接至API服务器超时")%>
                 </div>
             </div>
         <% } %>
