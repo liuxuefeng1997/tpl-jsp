@@ -5,7 +5,14 @@
       <webServer id="e8ad5f34-80a3-4479-9581-67b7aacaf771" name="yq106" url="http://saas-offical.sh-yq.cn/">
         <fileTransfer host="106.14.117.33" port="21">
           <advancedOptions>
-            <advancedOptions controlEncoding="UTF-8" dataProtectionLevel="Private" shareSSLContext="true" />
+            <advancedOptions controlEncoding="UTF-8" dataProtectionLevel="Private" keepAliveTimeout="0" shareSSLContext="true" />
+          </advancedOptions>
+        </fileTransfer>
+      </webServer>
+      <webServer id="59b24740-6282-4257-ad83-9837f3826534" name="mytest" url="http://test.mailx.top">
+        <fileTransfer rootFolder="/var/www/tomcat_test" accessType="SFTP" host="101.34.35.236" port="22" sshConfigId="b3cb0c99-f607-471d-b945-dd7c460f43ca" sshConfig="root@101.34.35.236:22 password">
+          <advancedOptions>
+            <advancedOptions dataProtectionLevel="Private" keepAliveTimeout="0" passiveMode="true" shareSSLContext="true" />
           </advancedOptions>
         </fileTransfer>
       </webServer>

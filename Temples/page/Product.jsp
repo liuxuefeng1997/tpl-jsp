@@ -56,7 +56,7 @@
     <nav>
         <div class="nav nav-tabs" id="nav-tab" role="tablist">
             <%
-                if(ProductTags.getInt("code") == 0){
+                if(ProductTags != null && ProductTags.getInt("code") == 0){
                     JsonArray data = ProductTags.getJsonArray("data");
                     for(int i = 0;i < data.size();i++){
                         JsonObject dt = data.getJsonObject(i);
@@ -68,12 +68,14 @@
                         }
             %>
             <button class="nav-link<%=ActiveX.getUnNull(tag," active")%>" id="tab-<%=value%>" data-bs-toggle="tab" data-bs-target="#nav-<%=value%>" type="button" role="tab" aria-controls="nav-<%=value%>" aria-selected="<%=ActiveX.getStu(tag,"999","true","false")%>"><%=title%></button>
-            <% }} %>
+            <% }} else { %>
+            <button class="nav-link active" id="tab-error" data-bs-toggle="tab" data-bs-target="#nav-error" type="button" role="tab" aria-controls="nav-error" aria-selected="true">API 不可用</button>
+            <% } %>
         </div>
     </nav>
     <div class="tab-content" id="nav-tabContent">
         <%
-            if(ProductTags.getInt("code") == 0){
+            if(ProductTags != null && ProductTags.getInt("code") == 0){
                 JsonArray data = ProductTags.getJsonArray("data");
                 for(int i = 0;i < data.size();i++){
                     JsonObject dt = data.getJsonObject(i);
@@ -110,7 +112,13 @@
                 <% } %>
             </div>
         </div>
-        <% }} %>
+        <% }} else { %>
+            <div class="tab-pane fade show active" id="nav-error" role="tabpanel" aria-labelledby="tab-error">
+                <div class="w-100 mt-1 overflow-hidden">
+                    <%=(ProductTags != null ? "\n<span class=\"fw-bold\">服务器返回：</span>" + ProductTags : "\n<span class=\"fw-bold\">错误：</span>无法连接至API服务器")%>
+                </div>
+            </div>
+        <% } %>
     </div>
 </div>
 
