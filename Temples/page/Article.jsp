@@ -29,7 +29,9 @@
                     <%=data.getString("content")%>
                 <% } else { %>
                     <%@ include file="../modal/DefaultProduct.jsp" %>
-                <% } break; } %>
+                <% } break; case "/case/": %>
+                    <%@ include file="../modal/DefaultProduct.jsp" %>
+                <% break; } %>
             </div>
         </div>
         <div class="col-3">

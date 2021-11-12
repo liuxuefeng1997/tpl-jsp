@@ -6,7 +6,10 @@ window.iu = {
         "Author": "IUIdeas",
         "Version": "1.2.1.211027",
         "License": "GPL v3 (https://www.gnu.org/licenses/gpl-3.0-standalone.html)",
-        "EndTip": "IUIdeas Shanghai"
+        "EndTip": "IUIdeas Shanghai",
+        "__update": function (){
+            return iu.html.addJavascript("https://www.mailx.top/public-js/iu.library.js");
+        }
     },
     'time': {
         'nowTimes': function () {
