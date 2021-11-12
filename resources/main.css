@@ -174,9 +174,19 @@ body::-webkit-scrollbar{
     box-sizing: border-box;
 }
 
-.base-footer .footer-consult .consult-right .consult-right-code img {
+.base-footer .footer-consult .consult-right .consult-right-code img,
+.base-footer .footer-consult .consult-right .consult-right-code div{
     margin-bottom: 10px;
     max-width: 100%;
+    text-align: center;
+}
+.base-footer .footer-consult .consult-right .consult-right-code div {
+    width: 140px;
+    height: 140px;
+    background: #FFF;
+}
+.base-footer .footer-consult .consult-right .consult-right-code div svg {
+    margin-top: 10px;
 }
 
 .base-footer .footer-consult .consult-right .consult-right-code span {

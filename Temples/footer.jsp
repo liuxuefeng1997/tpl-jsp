@@ -43,11 +43,29 @@
             </div>
             <div class="consult-right us-none">
                 <div class="consult-right-code">
+                    <% if(GlobalSettings.getJsonObject("concat_qr").getJsonObject("a").getBoolean("if_generate")){ %>
+                    <div id="iu-lib-qr-box-1"></div>
+                    <script id="iu-lib-qr-js-1">
+                        document.getElementById("iu-lib-qr-box-1").appendChild(iu.QRCode.generate("<%=GlobalSettings.getJsonObject("concat_qr").getJsonObject("a").getString("img")%>",120));
+                        document.getElementById("iu-lib-qr-box-1").removeAttribute("id");
+                        document.getElementById("iu-lib-qr-js-1").remove();
+                    </script>
+                    <% }else { %>
                     <img src="<%=GlobalSettings.getJsonObject("concat_qr").getJsonObject("a").getString("img")%>" width="140" height="140" alt="a">
+                    <% } %>
                     <span><%=GlobalSettings.getJsonObject("concat_qr").getJsonObject("a").getString("title")%></span>
                 </div>
                 <div class="consult-right-code">
+                    <% if(GlobalSettings.getJsonObject("concat_qr").getJsonObject("b").getBoolean("if_generate")){ %>
+                    <div id="iu-lib-qr-box-2"></div>
+                    <script id="iu-lib-qr-js-2">
+                        document.getElementById("iu-lib-qr-box-2").appendChild(iu.QRCode.generate("<%=GlobalSettings.getJsonObject("concat_qr").getJsonObject("b").getString("img")%>",120));
+                        document.getElementById("iu-lib-qr-box-2").removeAttribute("id");
+                        document.getElementById("iu-lib-qr-js-2").remove();
+                    </script>
+                    <% }else { %>
                     <img src="<%=GlobalSettings.getJsonObject("concat_qr").getJsonObject("b").getString("img")%>" width="140" height="140" alt="b">
+                    <% } %>
                     <span><%=GlobalSettings.getJsonObject("concat_qr").getJsonObject("b").getString("title")%></span>
                 </div>
             </div>

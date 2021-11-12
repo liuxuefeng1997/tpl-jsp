@@ -57,11 +57,13 @@
     "__0_self": "-----页脚二维码配置-----",
     "concat_qr": {
         "a": {
+            "if_generate": false,
             "img": "resources/images/default/xcxgf1.jpg",
             "title": "官方商城"
         },
         "b": {
-            "img": "resources/images/default/ewm.jpg",
+            "if_generate": true,
+            "img": "http://weixin.qq.com/r/NTmdhV-EtQLKrRvm92wn",
             "title": "官方公众号"
         }
     },
