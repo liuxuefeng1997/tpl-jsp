@@ -74,3 +74,21 @@
     Request: https://www.baidu.com
 </pre>
 #### *注：可直接在配置文件route字段内填入?r=后面的全部数据
+# 外部API说明
+## 外部 API 配置文件路径
+<pre>   /Config/Api/Url.json</pre>
+## 外部 API 配置文件结构说明
+<pre>
+    {
+        "api_protocol": "http://",              //api 连接协议
+        "api_host": "api.sh-yq.cn",             //api 域名配置
+        "api_list": {                           //api 列表
+            "product": {                          //api 所属模块
+                "_self": "产品中心",               //api 描述（仅用于指示，无实际作用）
+                "tags": "/product/tags",          //api 路径配置
+                "list": "/product/list",
+                "detail": "/product/detail"
+            }
+        }
+    }
+</pre>

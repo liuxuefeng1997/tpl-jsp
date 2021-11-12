@@ -3,6 +3,7 @@
     "api_host": "api.sh-yq.cn",
     "api_list": {
         "product": {
+            "_self": "产品中心",
             "tags": "/product/tags",
             "list": "/product/list",
             "detail": "/product/detail"
