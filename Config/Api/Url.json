@@ -1,5 +1,5 @@
 {
-    "api_protocol": "http://",
+    "api_protocol": "https://",
     "api_host": "api.sh-yq.cn",
     "api_list": {
         "product": {
