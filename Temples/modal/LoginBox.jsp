@@ -152,10 +152,10 @@
             v_tip("v-login-ph","请输入手机号");
             flag = false;
         }else if(document.forms.namedItem("v-login-form").vi_phone.value.length !== 11){
-            v_tip("v-login-ph","请输入正确的手机号");
+            v_tip("v-login-ph","请输入正确的11位手机号码");
             flag = false;
         }else if(parseInt(document.forms.namedItem("v-login-form").vi_phone.value.substring(0,2)) < 13){
-            v_tip("v-login-ph","请输入正确的手机号");
+            v_tip("v-login-ph","请检查输入的手机号是否正确");
             flag = false;
         }
         if(!i){
