@@ -110,8 +110,8 @@
                          style="background: url('<%=GlobalSettings.getString("banner_login_bg")%>') no-repeat center center;background-size:auto 100%;"
                     ></div>
                     <div class="banner-box-login-button-area mt-1 mb-1">
-                        <button type="button" class="btn btn-primary">登录</button>
-                        <button type="button" class="btn btn-outline-dark">注册</button>
+                        <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#v-login">登录</button>
+                        <button type="button" class="btn btn-outline-dark" data-bs-toggle="modal" data-bs-target="#v-login">注册</button>
                     </div>
                 </div>
                 <div class="banner-box-ad-area mt-1"
@@ -391,3 +391,5 @@
 <% } %>
 <!--加载当页样式-->
 <link rel="stylesheet" href="<%=request.getContextPath()%>/resources/page/home/style.css?v=<%=TimerX.getNowTimeStr(10)%>">
+<%@ include file="../modal/LoginBox.jsp" %>
+<%@ include file="../modal/TipBox.jsp" %>
