@@ -114,6 +114,7 @@
                                     v_tip("sendCode",res_data.message,5);
                                 }else if (res_data.code === 0){
                                     localStorage.setItem("token",res_data.data.token);
+                                    //window.location.href = window.location.href + "";
                                 }else {
                                     v_tip("v-l-b","登录失败 (" + e.responseText + ")",8);
                                 }
