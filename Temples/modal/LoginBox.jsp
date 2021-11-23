@@ -18,11 +18,11 @@
                 <form name="v-login-form">
                     <div class="input-group mb-3">
                         <span class="input-group-text" id="v-phone">手机</span>
-                        <input type="number" class="form-control" id="v-login-ph" name="vi_phone" placeholder="Phone" aria-label="Phone" aria-describedby="v-phone">
+                        <input type="number" class="form-control" id="v-login-ph" name="vi_phone" placeholder="输入手机号" aria-label="Phone" aria-describedby="v-phone">
                     </div>
                     <div class="input-group mb-3">
                         <span class="input-group-text" id="v-code">验证码</span>
-                        <input type="text" class="form-control" id="v-login-c" name="vi_code" placeholder="Code" aria-label="Code" aria-describedby="v-code">
+                        <input type="text" class="form-control" autocomplete="off" id="v-login-c" name="vi_code" placeholder="输入验证码" aria-label="Code" aria-describedby="v-code">
                         <button type="button" class="btn btn-outline-dark" id="sendCode">发送</button>
                         <script>
                             let popover = {
@@ -148,27 +148,22 @@
     }
     function check(i){
         let flag = true;
-        if(i){
-            if(document.forms.namedItem("v-login-form").vi_phone.value.trim() === ""){
-                v_tip("v-login-ph","请输入手机号");
-                flag = false;
-            }else if(document.forms.namedItem("v-login-form").vi_phone.value.length !== 11){
-                v_tip("v-login-ph","请输入正确的手机号");
-                flag = false;
-            }
-        }else {
-            if(document.forms.namedItem("v-login-form").vi_phone.value.trim() === ""){
-                v_tip("v-login-ph","请输入手机号");
-                flag = false;
-            }else if(document.forms.namedItem("v-login-form").vi_phone.value.length !== 11){
-                v_tip("v-login-ph","请输入正确的手机号");
-                flag = false;
-            }
+        if(document.forms.namedItem("v-login-form").vi_phone.value.trim() === ""){
+            v_tip("v-login-ph","请输入手机号");
+            flag = false;
+        }else if(document.forms.namedItem("v-login-form").vi_phone.value.length !== 11){
+            v_tip("v-login-ph","请输入正确的手机号");
+            flag = false;
+        }else if(parseInt(document.forms.namedItem("v-login-form").vi_phone.value.substring(0,2)) < 13){
+            v_tip("v-login-ph","请输入正确的手机号");
+            flag = false;
+        }
+        if(!i){
             if(document.forms.namedItem("v-login-form").vi_code.value.trim() === ""){
                 v_tip("sendCode","请输入验证码");
                 flag = false;
             }else if(document.forms.namedItem("v-login-form").vi_code.value.length !== 6){
-                v_tip("sendCode","验证码不正确，请检查后再试",5);
+                v_tip("sendCode","验证码不正确，请检查后再试");
                 flag = false;
             }
         }
@@ -184,5 +179,13 @@
     /* 火狐浏览器 */
     input[type="number"]{
         -moz-appearance: textfield;
+    }
+    .modal::-webkit-scrollbar {
+        display: none;
+        user-select: none;
+        -webkit-user-drag: none;
+    }
+    .input-group-text,.modal-title {
+        user-select: none;
     }
 </style>
