@@ -163,7 +163,7 @@
                 v_tip("sendCode","请输入验证码");
                 flag = false;
             }else if(document.forms.namedItem("v-login-form").vi_code.value.length !== 6){
-                v_tip("sendCode","验证码不正确，请检查后再试");
+                v_tip("sendCode","请输入正确的6位验证码");
                 flag = false;
             }
         }
