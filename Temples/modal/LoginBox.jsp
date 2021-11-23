@@ -100,8 +100,8 @@
                         if(!check()){return null;}
                         //请求部分
                         iu.http.res("POST","<%=Api_Url_Users_SMS_Login%>",false,JSON.stringify({
-                            phone: document.forms.namedItem("v-login-form").vi_phone.value + "",
-                            code: document.forms.namedItem("v-login-form").vi_code.value + ""
+                            phone: document.forms.namedItem("v-login-form").vi_phone.value.toString(),
+                            code: document.forms.namedItem("v-login-form").vi_code.value.toString()
                         }),[
                             {
                                 "name": "content-type",
@@ -110,7 +110,7 @@
                         ],function (e){
                             if(e.status !== 500){
                                 let res_data = JSON.parse(e.responseText);
-                                if(res_data.code === 201){
+                                if(res_data.code === 201 || res_data.code === 202){
                                     v_tip("sendCode",res_data.message,5);
                                 }else if (res_data.code === 0){
                                     localStorage.setItem("token",res_data.data.token);
@@ -119,7 +119,7 @@
                                     v_tip("v-l-b","登录失败 (" + e.responseText + ")",8);
                                 }
                             }else {
-                                v_tip("v-l-b","登录失败：服务器返回 (" + e.status + "|" + e.responseText + ")",8)
+                                v_tip("v-l-b","登录失败：服务器返回 (" + e.status + "|" + e.responseText + ")",8);
                             }
                         });
                     }
