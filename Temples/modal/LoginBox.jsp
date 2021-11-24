@@ -123,7 +123,7 @@
                                     v_tip("v-l-b","登录失败 (" + e.responseText + ")",8);
                                 }
                             }else {
-                                v_tip("v-l-b","登录失败：服务器返回 (" + e.status + "|" + e.responseText + ")",8);
+                                v_tip("v-l-b","登录失败：服务器返回 (" + e.status + " | " + e.responseText + ")",8);
                             }
                         });
                     }

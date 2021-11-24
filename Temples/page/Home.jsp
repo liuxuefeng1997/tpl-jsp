@@ -110,7 +110,7 @@
                          style="background: url('<%=GlobalSettings.getString("banner_login_bg")%>') no-repeat center center;background-size:auto 100%;"
                     ></div>
                     <div class="banner-box-login-button-area mt-1 mb-1">
-                        <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#v-login">登录 / 注册</button>
+                        <button type="button" class="btn btn-primary" id="login-btn-home" data-bs-toggle="modal" data-bs-target="#v-login">检查登录...</button>
                     </div>
                 </div>
                 <div class="banner-box-ad-area mt-1"
@@ -121,6 +121,15 @@
         </div>
     </div>
 </div>
+<script>
+    if(localStorage.getItem("token")){
+        document.getElementById("login-btn-home").setAttribute("data-bs-target","#v-tip");
+        document.getElementById("login-btn-home").innerHTML = "用户中心";
+    }else {
+        document.getElementById("login-btn-home").setAttribute("data-bs-target","#v-login");
+        document.getElementById("login-btn-home").innerHTML = "登录 / 注册";
+    }
+</script>
 <!--展示 区域-->
 <%--热点应用--%>
 <% if(GlobalSettings.getBoolean("is_hot_app_show")){ %>

@@ -51,7 +51,7 @@
                 </li>
             </ul>
             <div class="nav-login ms-auto">
-                <button type="button" class="btn btn-primary btn-lg" id="login-btn" data-bs-toggle="modal" data-bs-target="#v-login">登录 / 注册</button>
+                <button type="button" class="btn btn-primary btn-lg" id="login-btn" data-bs-toggle="modal" data-bs-target="#v-login">检查登录...</button>
             </div>
         </div>
     </div>
