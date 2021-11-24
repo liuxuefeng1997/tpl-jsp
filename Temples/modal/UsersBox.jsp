@@ -18,8 +18,8 @@
                 ...
             </div>
             <div class="modal-footer">
-                <button type="button" class="btn btn-primary" id="v-t-b">退出登录</button>
-                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">关闭</button>
+                <button type="button" class="btn btn-secondary" id="v-t-b">退出登录</button>
+                <button type="button" class="btn btn-primary" data-bs-dismiss="modal">关闭</button>
                 <script>
                     document.getElementById("v-t-b").onclick = function (){
                         localStorage.removeItem("token");
