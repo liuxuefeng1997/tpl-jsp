@@ -6,6 +6,8 @@
   To change this template use File | Settings | File Templates.
 --%>
 <%@ page contentType="text/html;charset=UTF-8" %>
+<%@ include file="./modal/LoginBox.jsp" %>
+<%@ include file="./modal/TipBox.jsp" %>
 <%--页尾横幅--%>
 <% if (GlobalSettings.getBoolean("is_streamer_show")) { %>
     <!--底部横幅-->

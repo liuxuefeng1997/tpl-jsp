@@ -390,5 +390,3 @@
 <% } %>
 <!--加载当页样式-->
 <link rel="stylesheet" href="<%=request.getContextPath()%>/resources/page/home/style.css?v=<%=TimerX.getNowTimeStr(10)%>">
-<%@ include file="../modal/LoginBox.jsp" %>
-<%@ include file="../modal/TipBox.jsp" %>
