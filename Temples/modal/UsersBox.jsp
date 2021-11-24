@@ -8,7 +8,7 @@
 <%@ page contentType="text/html;charset=UTF-8" %>
 <!-- Modal -->
 <div class="modal fade" id="v-tip" tabindex="-1" aria-labelledby="v-tip-label" aria-hidden="true">
-    <div class="modal-dialog modal-dialog-centered modal-lg">
+    <div class="modal-dialog modal-dialog-centered modal-sm">
         <div class="modal-content">
             <div class="modal-header">
                 <h5 class="modal-title" id="v-tip-label">用户中心</h5>
@@ -21,8 +21,11 @@
                 <button type="button" class="btn btn-secondary" id="v-t-b">退出登录</button>
                 <button type="button" class="btn btn-primary" data-bs-dismiss="modal">关闭</button>
                 <script>
+                    if(localStorage.getItem("phone")){
+                        document.getElementById("v-tip-text").innerHTML = "当前登录手机号：" + localStorage.getItem("phone");
+                    }
                     document.getElementById("v-t-b").onclick = function (){
-                        localStorage.removeItem("token");
+                        localStorage.clear();
                         window.location.href = window.location.href + "";
                     }
                 </script>
