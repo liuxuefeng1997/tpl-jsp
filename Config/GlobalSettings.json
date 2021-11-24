@@ -8,8 +8,9 @@
     "banner_login_bg": "resources/images/default/temple_login.jpg",
     "__l_self": "-----登录协议设置（name为空隐藏此提示内容）-----",
     "login_proxy": {
-        "name": "666",
-        "route": "/"
+        "name": "假装登录了",
+        "route": "javascript:localStorage.setItem('token','11111111');window.location.href = window.location.href + '';",
+        "if_not_route": true
     },
     "__1_self": "-----页脚横幅开关及配置-----",
     "is_streamer_show": true,

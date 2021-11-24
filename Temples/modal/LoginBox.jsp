@@ -91,7 +91,8 @@
                     </div>
                     <p class="v-login-tip">*注：如果当前登录手机号未注册，将自动注册</p>
                     <% if(StringX.isNotNull(GlobalSettings.getJsonObject("login_proxy").getString("name"))){ %>
-                        <p class="v-login-tip">*登录即代表您同意《<a href="./?r=<%=GlobalSettings.getJsonObject("login_proxy").getString("route")%>" target="<%=ActiveX.getStW(GlobalSettings.getJsonObject("login_proxy").getString("route"),"/link/","_blank","_self")%>"><%=GlobalSettings.getJsonObject("login_proxy").getString("name")%></a>》</p>
+                        <% String href = GlobalSettings.getJsonObject("login_proxy").getBoolean("if_not_route") ? "" : "./r="; %>
+                        <p class="v-login-tip">*登录即代表您同意《<a href="<%=href%><%=GlobalSettings.getJsonObject("login_proxy").getString("route")%>" target="<%=ActiveX.getStW(GlobalSettings.getJsonObject("login_proxy").getString("route"),"/link/","_blank","_self")%>"><%=GlobalSettings.getJsonObject("login_proxy").getString("name")%></a>》</p>
                     <% } %>
                 </form>
             </div>
