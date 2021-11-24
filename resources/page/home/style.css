@@ -65,19 +65,15 @@
     position: relative;
 }
 .banner-box-login-button-area button {
+    --button-width: 125px;
     height: 35px;
-    width: 90px;
+    width: var(--button-width);
     line-height: 0.6;
     border-radius: calc(35px / 2);
-    --button-width: 15px;
 }
 .banner-box-login-button-area button:nth-child(1) {
     position: absolute;
-    left: var(--button-width);
-}
-.banner-box-login-button-area button:nth-child(2) {
-    position: absolute;
-    right: var(--button-width);
+    left: calc(50% - (var(--button-width) / 2));
 }
 .banner-box-ad-area {
     height: 215px;

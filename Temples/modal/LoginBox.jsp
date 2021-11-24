@@ -89,6 +89,10 @@
                             }
                         </script>
                     </div>
+                    <p class="v-login-tip">*注：如果当前登录手机号未注册，将自动注册</p>
+                    <% if(StringX.isNotNull(GlobalSettings.getJsonObject("login_proxy").getString("name"))){ %>
+                        <p class="v-login-tip">*登录即代表您同意《<a href="./?r=<%=GlobalSettings.getJsonObject("login_proxy").getString("route")%>" target="<%=ActiveX.getStW(GlobalSettings.getJsonObject("login_proxy").getString("route"),"/link/","_blank","_self")%>"><%=GlobalSettings.getJsonObject("login_proxy").getString("name")%></a>》</p>
+                    <% } %>
                 </form>
             </div>
             <div class="modal-footer">
@@ -114,7 +118,7 @@
                                     v_tip("sendCode",res_data.message,5);
                                 }else if (res_data.code === 0){
                                     localStorage.setItem("token",res_data.data.token);
-                                    //window.location.href = window.location.href + "";
+                                    window.location.href = window.location.href + "";
                                 }else {
                                     v_tip("v-l-b","登录失败 (" + e.responseText + ")",8);
                                 }
@@ -129,6 +133,13 @@
     </div>
 </div>
 <script>
+    if(localStorage.getItem("token")){
+        document.getElementById("login-btn").setAttribute("data-bs-target","#v-tip");
+        document.getElementById("login-btn").innerHTML = "用户中心";
+    }else {
+        document.getElementById("login-btn").setAttribute("data-bs-target","#v-login");
+        document.getElementById("login-btn").innerHTML = "登录 / 注册";
+    }
     function v_tip(id,tip_text,delay_sec,addon_func){
         let n = new bootstrap.Popover(document.getElementById(id), {
             animation: true,
@@ -187,5 +198,22 @@
     }
     .input-group-text,.modal-title {
         user-select: none;
+    }
+    .v-login-tip {
+        font-size: 10px;
+        text-align: right;
+        margin-block-end: unset;
+        margin-block-start: unset;
+        user-select: none;
+    }
+    .v-login-tip a {
+        text-decoration: none;
+        color: blue;
+    }
+    .v-login-tip a:hover {
+        opacity: 0.8;
+    }
+    #v-login .modal-body {
+        padding-bottom: 0;
     }
 </style>
