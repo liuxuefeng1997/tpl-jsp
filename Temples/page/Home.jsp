@@ -107,6 +107,7 @@
             <div class="container-fluid mt-1 mb-1 pb-3 bg-white banner-box banner-box-right">
                 <div class="banner-box-login-area mt-1 mb-1">
                     <div class="banner-box-login-img-box mt-1 mb-1"
+                         id="login-bg-home"
                          style="background: url('<%=GlobalSettings.getString("banner_login_bg")%>') no-repeat center center;background-size:auto 100%;"
                     ></div>
                     <div class="banner-box-login-button-area mt-1 mb-1">
@@ -125,6 +126,7 @@
     if(localStorage.getItem("token")){
         document.getElementById("login-btn-home").setAttribute("data-bs-target","#v-tip");
         document.getElementById("login-btn-home").innerHTML = "用户中心";
+        document.getElementById("login-bg-home").removeAttribute("style");
     }else {
         document.getElementById("login-btn-home").setAttribute("data-bs-target","#v-login");
         document.getElementById("login-btn-home").innerHTML = "登录 / 注册";
