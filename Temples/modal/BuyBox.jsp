@@ -11,7 +11,7 @@
     <div class="modal-dialog modal-dialog-centered modal-sm">
         <div class="modal-content">
             <div class="modal-header">
-                <h5 class="modal-title" id="buyBox-label"><span id="product-name-span"></span> - 购买</h5>
+                <h5 class="modal-title" id="buyBox-label"><span id="product-name-span"></span>购买</h5>
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
             <div class="modal-body text-center" id="buyBox-text">
