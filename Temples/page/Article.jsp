@@ -50,7 +50,9 @@
                                         let json = JSON.parse(e.responseText);
                                         if(json.code === 0){
                                             document.getElementById("buyBox-text").innerHTML = "";
-                                            iu.QRCode.addToHTML(document.getElementById("buyBox-text"),json.data.pay_url,200,"wx_pay_qr");
+                                            let qr_svg = iu.QRCode.generate(json.data.pay_url,200,"<%=request.getContextPath()%>/resources/images/wxpay.png",35);
+                                            qr_svg.id = "wx_pay_qr";
+                                            document.getElementById("buyBox-text").appendChild(qr_svg);
                                             document.getElementById("buyBox-label").setAttribute("order_id",json.data.order_id);
                                             let div = document.createElement("div");
                                             div.style.width = "100%";
