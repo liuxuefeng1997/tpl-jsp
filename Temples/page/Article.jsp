@@ -50,8 +50,19 @@
                                         let json = JSON.parse(e.responseText);
                                         if(json.code === 0){
                                             document.getElementById("buyBox-text").innerHTML = "";
-                                            iu.QRCode.addToHTML(document.getElementById("buyBox-text"),json.data.pay_url,200);
+                                            iu.QRCode.addToHTML(document.getElementById("buyBox-text"),json.data.pay_url,200,"wx_pay_qr");
                                             document.getElementById("buyBox-label").setAttribute("order_id",json.data.order_id);
+                                            let div = document.createElement("div");
+                                            div.style.width = "100%";
+                                            div.style.height = "24px";
+                                            div.style.lineHeight = "24px";
+                                            div.style.fontSize = "18px";
+                                            div.style.fontWeight = "bold";
+                                            div.style.marginTop = "0.5em";
+                                            div.className = "text-center";
+                                            div.innerHTML = "需支付： ￥ <%=(data.getInt("price") / 100.00) + ""%>"
+                                            document.getElementById("buyBox-text").appendChild(div);
+                                            document.getElementById("wx_pay_qr").setAttribute("style","margin-top: 0.5em;");
                                         }else if(json.code === 401){
                                             document.getElementById("buyBox-text").innerHTML = "需要登录才能购买！";
                                             if(document.getElementById("buyBox-check")){document.getElementById("buyBox-check").remove();}
