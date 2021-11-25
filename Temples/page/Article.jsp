@@ -49,8 +49,9 @@
                                     if(e.status !== 500){
                                         let json = JSON.parse(e.responseText);
                                         if(json.code === 0){
+                                            document.getElementById("product-name-span").innerHTML = "<%=data.getString("title")%>";
                                             document.getElementById("buyBox-text").innerHTML = "";
-                                            let qr_svg = iu.QRCode.generate(json.data.pay_url,200,"<%=request.getContextPath()%>/resources/images/wxpay.png",35);
+                                            let qr_svg = iu.QRCode.generate(json.data.pay_url,200,"resources/images/default/wxpay.jpg",50);
                                             qr_svg.id = "wx_pay_qr";
                                             document.getElementById("buyBox-text").appendChild(qr_svg);
                                             document.getElementById("buyBox-label").setAttribute("order_id",json.data.order_id);
