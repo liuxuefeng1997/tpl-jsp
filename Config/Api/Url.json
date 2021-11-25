@@ -12,7 +12,9 @@
             "_self": "用户相关",
             "sms_send": "/user/phone/send",
             "sms_login": "/user/phone/login",
-            "product": "/user/product"
+            "product": "/user/product",
+            "buy_wx": "/user/product/wechat",
+            "buy_flag": "/user/product/check"
         }
     }
 }

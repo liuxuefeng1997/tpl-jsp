@@ -8,7 +8,7 @@
 <%@ page contentType="text/html;charset=UTF-8" %>
 <!-- Modal -->
 <div class="modal fade" id="v-tip" tabindex="-1" aria-labelledby="v-tip-label" aria-hidden="true">
-    <div class="modal-dialog modal-dialog-centered modal-sm">
+    <div class="modal-dialog modal-dialog-centered modal-xl">
         <div class="modal-content">
             <div class="modal-header">
                 <h5 class="modal-title" id="v-tip-label">用户中心</h5>
@@ -40,7 +40,9 @@
                             let json = JSON.parse(e.responseText);
                             let tFlag = true;
                             for(let x in json.data.data){
-                                document.getElementById("v-tip-text").innerHTML += "<br>" + json.data.data[x];
+                                document.getElementById("v-tip-text").innerHTML += "<br>订单号："
+                                    + json.data.data[x].order_id + " | " + json.data.data[x].product.title + " | ￥"
+                                    + (json.data.data[x].product.price / 100).toFixed(2);
                                 tFlag = false;
                             }
                             if(tFlag){

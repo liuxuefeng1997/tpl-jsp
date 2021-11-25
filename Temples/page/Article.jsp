@@ -14,6 +14,7 @@
     <div class="row">
         <div class="col-9">
             <div class="card jt-card jt-top-card mt-1 mb-1"
+                 id="product-head-image"
                  style="background: url('<%=IntroSettings.getJsonObject("top_img").getString(_route.replace("/",""))%>') no-repeat center center;
                          background-size: auto 100%;"
             ></div>
@@ -27,6 +28,39 @@
                     <div class="sa-card-title us-none"><%=data.getString("title")%></div>
                     <div class="sa-card-subtitle us-none"><%=data.getString("subtitle")%></div>
                     <%=data.getString("content")%>
+                    <%@ include file="../modal/BuyBox.jsp" %>
+                    <script>
+                        window.onload = function (){
+                            document.getElementById("product-buy").setAttribute("data-bs-toggle","modal");
+                            document.getElementById("product-buy").setAttribute("data-bs-target","#buyBox");
+                            document.getElementById("product-buy").onclick = function (){
+                                iu.http.res("POST","<%=Api_Url_Users_Buy%>",true,JSON.stringify({
+                                    product_id: <%=_aid%>
+                                }),[
+                                    {
+                                        "name": "content-type",
+                                        "value": "application/json;charset=UTF-8"
+                                    },
+                                    {
+                                        "name": "Authorization",
+                                        "value": localStorage.getItem("token")
+                                    }
+                                ],function (e){
+                                    if(e.status !== 500){
+                                        let json = JSON.parse(e.responseText);
+                                        if(json.code === 0){
+                                            document.getElementById("buyBox-text").innerHTML = "";
+                                            iu.QRCode.addToHTML(document.getElementById("buyBox-text"),json.data.pay_url,200);
+                                            document.getElementById("buyBox-label").setAttribute("order_id",json.data.order_id);
+                                        }else if(json.code === 401){
+                                            document.getElementById("buyBox-text").innerHTML = "需要登录才能购买！";
+                                            if(document.getElementById("buyBox-check")){document.getElementById("buyBox-check").remove();}
+                                        }
+                                    }
+                                });
+                            }
+                        }
+                    </script>
                 <% } else { %>
                     <%@ include file="../modal/DefaultProduct.jsp" %>
                 <% } break; case "/case/": %>
