@@ -10,11 +10,13 @@
 <% JsonObject ProductTags = JSONReaderX.getJsonObj(HTTPLoaderX.getResponses("POST",Api_Url_Product_Tags,"",Api_Url_Host)); %>
 <div class="container mt-1 mb-1">
     <div class="pd-banner" style="background: url('<%=ProductSettings.getString("banner")%>') no-repeat center center;background-size: auto 100%;">
-        <div class="pd-banner-right us-none">
-            <div class="pd-banner-card">码云下载</div>
-            <div class="pd-banner-card">授权查询</div>
-            <div class="pd-banner-card">GitHub</div>
-        </div>
+        <% if(GlobalSettings.getBoolean("is_product_banner_button_show")){ %>
+            <div class="pd-banner-right us-none">
+                <div class="pd-banner-card">码云下载</div>
+                <div class="pd-banner-card">授权查询</div>
+                <div class="pd-banner-card">GitHub</div>
+            </div>
+        <% } %>
     </div>
     <div class="pd-banner-bottom us-none">
         <div class="row">
