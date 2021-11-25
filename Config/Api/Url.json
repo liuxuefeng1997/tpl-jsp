@@ -11,7 +11,8 @@
         "users": {
             "_self": "用户相关",
             "sms_send": "/user/phone/send",
-            "sms_login": "/user/phone/login"
+            "sms_login": "/user/phone/login",
+            "product": "/user/product"
         }
     }
 }

@@ -14,4 +14,5 @@
     String Api_Url_Product_Detail = Api_Url_Host + Api_Url.getJsonObject("api_list").getJsonObject("product").getString("detail");
     String Api_Url_Users_SMS_Send = Api_Url_Host + Api_Url.getJsonObject("api_list").getJsonObject("users").getString("sms_send");
     String Api_Url_Users_SMS_Login = Api_Url_Host + Api_Url.getJsonObject("api_list").getJsonObject("users").getString("sms_login");
+    String Api_Url_Users_Order = Api_Url_Host + Api_Url.getJsonObject("api_list").getJsonObject("users").getString("product");
 %>

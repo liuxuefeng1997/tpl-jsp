@@ -22,8 +22,32 @@
                 <button type="button" class="btn btn-primary" data-bs-dismiss="modal">关闭</button>
                 <script>
                     if(localStorage.getItem("phone")){
-                        document.getElementById("v-tip-text").innerHTML = "当前登录手机号：" + localStorage.getItem("phone");
+                        document.getElementById("v-tip-text").innerHTML = "当前用户：" + localStorage.getItem("phone");
                     }
+                    iu.http.res("POST","<%=Api_Url_Users_Order%>",true,JSON.stringify({
+                        page: 1
+                    }),[
+                        {
+                            "name": "content-type",
+                            "value": "application/json;charset=UTF-8"
+                        },
+                        {
+                            "name": "Authorization",
+                            "value": localStorage.getItem("token")
+                        }
+                    ],function (e){
+                        if(e.status !== 500){
+                            let json = JSON.parse(e.responseText);
+                            let tFlag = true;
+                            for(let x in json.data.data){
+                                document.getElementById("v-tip-text").innerHTML += "<br>" + json.data.data[x];
+                                tFlag = false;
+                            }
+                            if(tFlag){
+                                document.getElementById("v-tip-text").innerHTML += "<br>你还没有订单~"
+                            }
+                        }
+                    })
                     document.getElementById("v-t-b").onclick = function (){
                         localStorage.clear();
                         window.location.href = window.location.href + "";
