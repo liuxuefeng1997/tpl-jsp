@@ -181,7 +181,7 @@
     </div>
 <% } %>
 <%--广告横幅--%>
-<% if (GlobalSettings.getBoolean("is_inner_streamer_show")) { %>
+<% if(GlobalSettings.getBoolean("is_inner_streamer_show")){ %>
     <!--广告横幅-->
     <div class="bottom-info sa-bg-color position-relative us-hover"
          style="background: url('<%=GlobalSettings.getJsonObject("inner_streamer").getString("img")%>') no-repeat center center;background-size: auto 100%;"
