@@ -17,7 +17,7 @@
                  style="background: url('<%=IntroSettings.getJsonObject("top_img").getString(_route.replace("/",""))%>') no-repeat center center;
                          background-size: auto 100%;"
             ></div>
-            <div class="card jt-card mt-4 mb-1">
+            <div class="card jt-card mt-4 mb-1 us-none">
                 <%
                     switch (_route){case "/product/":
                         JsonObject ProductDetail = JSONReaderX.getJsonObj(HTTPLoaderX.getResponses("POST",Api_Url_Product_Detail,"id=" + _aid,Api_Url_Host));
