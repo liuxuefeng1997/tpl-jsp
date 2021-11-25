@@ -8,7 +8,7 @@
     "banner_login_bg": "resources/images/default/temple_login.jpg",
     "__l_self": "-----登录协议设置（name为空隐藏此提示内容）-----",
     "login_proxy": {
-        "name": "协议名称",
+        "name": "",
         "route": "/",
         "if_not_route": false
     },
