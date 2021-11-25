@@ -14,7 +14,11 @@
                 <h5 class="modal-title" id="buyBox-label">购买 - 微信支付</h5>
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
-            <div class="modal-body text-center" id="buyBox-text"></div>
+            <div class="modal-body text-center" id="buyBox-text">
+                <div class="spinner-border text-primary" role="status">
+                    <span class="visually-hidden">加载中...</span>
+                </div>
+            </div>
             <div class="modal-footer">
                 <button type="button" class="btn btn-primary" id="buyBox-check">检查订单</button>
                 <button type="button" class="btn btn-secondary" data-bs-dismiss="modal" id="buyBox-close">关闭</button>

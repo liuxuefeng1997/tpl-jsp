@@ -111,7 +111,10 @@
                          style="background: url('<%=GlobalSettings.getString("banner_login_bg")%>') no-repeat center center;background-size:auto 100%;"
                     ></div>
                     <div class="banner-box-login-button-area mt-1 mb-1">
-                        <button type="button" class="btn btn-primary" id="login-btn-home" data-bs-toggle="modal" data-bs-target="#v-login">检查登录...</button>
+                        <button type="button" class="btn btn-primary" id="login-btn-home" data-bs-toggle="modal" data-bs-target="#v-login">
+                            <span class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span>
+                            <span class="visually-hidden">检查登录...</span>
+                        </button>
                     </div>
                 </div>
                 <div class="banner-box-ad-area mt-1"

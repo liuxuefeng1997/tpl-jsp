@@ -51,7 +51,10 @@
                 </li>
             </ul>
             <div class="nav-login ms-auto">
-                <button type="button" class="btn btn-primary btn-lg" id="login-btn" data-bs-toggle="modal" data-bs-target="#v-login">检查登录...</button>
+                <button type="button" class="btn btn-primary btn-lg" id="login-btn" data-bs-toggle="modal" data-bs-target="#v-login">
+                    <span class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span>
+                    <span class="visually-hidden">检查登录...</span>
+                </button>
             </div>
         </div>
     </div>
