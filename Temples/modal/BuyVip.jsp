@@ -13,7 +13,7 @@
                 <h5 class="modal-title" id="b-vip-label">购买VIP</h5>
             </div>
             <div class="modal-body">
-                <div class="container text-center" id="vip-button-list">
+                <div class="container-fluid text-center" id="vip-button-list">
                     <div class="spinner-border text-primary" id="b-v-load" role="status">
                         <span class="visually-hidden">加载中...</span>
                     </div>
