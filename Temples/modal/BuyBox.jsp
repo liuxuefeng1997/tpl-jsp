@@ -55,6 +55,14 @@
                                         document.getElementById("buyBox-check").innerHTML = "检查订单";
                                     },3000)
                                 }
+                            }else {
+                                document.getElementById("buyBox-text").innerHTML = "Internal Server Error.（500）";
+                                document.getElementById("buyBox-check").remove();
+                                document.getElementById("buyBox-close").removeAttribute("data-bs-dismiss");
+                                document.getElementById("buyBox-close").innerHTML = "关闭并刷新"
+                                document.getElementById("buyBox-close").onclick = function (){
+                                    window.location.href = window.location.href + "";
+                                }
                             }
                         });
                     }

@@ -14,7 +14,10 @@
             "sms_login": "/user/phone/login",
             "product": "/user/product",
             "buy_wx": "/user/product/wechat",
-            "buy_flag": "/user/product/check"
+            "buy_flag": "/user/product/check",
+            "info": "/user/info",
+            "vip_list": "/user/vip/list",
+            "vip_wx": "/user/vip/wechat"
         }
     }
 }

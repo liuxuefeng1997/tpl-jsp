@@ -17,4 +17,7 @@
     String Api_Url_Users_Order = Api_Url_Host + Api_Url.getJsonObject("api_list").getJsonObject("users").getString("product");
     String Api_Url_Users_Buy = Api_Url_Host + Api_Url.getJsonObject("api_list").getJsonObject("users").getString("buy_wx");
     String Api_Url_Users_Buy_Check = Api_Url_Host + Api_Url.getJsonObject("api_list").getJsonObject("users").getString("buy_flag");
+    String Api_Url_Users_Info = Api_Url_Host + Api_Url.getJsonObject("api_list").getJsonObject("users").getString("info");
+    String Api_Url_Users_Vip_List = Api_Url_Host + Api_Url.getJsonObject("api_list").getJsonObject("users").getString("vip_list");
+    String Api_Url_Users_Vip_Buy = Api_Url_Host + Api_Url.getJsonObject("api_list").getJsonObject("users").getString("vip_wx");
 %>

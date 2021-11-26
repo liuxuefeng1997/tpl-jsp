@@ -14,12 +14,38 @@
                          background-size: auto 100%;"
             ></div>
             <div class="card jt-card mt-4 mb-1">
-                <br>
-                <% for(int i = 0;i < 15;i++){ %>
-                    <center>这里是富文本</center>
-                    <hr>
-                    <br>
-                <% } %>
+                <div class="nsa-title">价格表</div>
+                <div class="container">
+                    <table class="table">
+                        <thead>
+                        <tr>
+                            <th scope="col">#</th>
+                            <th scope="col">First</th>
+                            <th scope="col">Last</th>
+                            <th scope="col">Handle</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr>
+                            <th scope="row">1</th>
+                            <td>Mark</td>
+                            <td>Otto</td>
+                            <td>@mdo</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">2</th>
+                            <td>Jacob</td>
+                            <td>Thornton</td>
+                            <td>@fat</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">3</th>
+                            <td colspan="2">Larry the Bird</td>
+                            <td>@twitter</td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </div>
             </div>
         </div>
         <div class="col-3">

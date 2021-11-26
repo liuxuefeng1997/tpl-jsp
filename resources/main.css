@@ -306,6 +306,20 @@ a {
 .hide-text:hover {
     color: rgba(255,255,255,1);
 }
+.nsa-title {
+    margin: 5px;
+    width: 100%;
+    height: 50px;
+    line-height: 50px;
+    overflow: hidden;
+    font-size: 26px;
+    font-weight: bold;
+    background: url("images/default/title-bg.png") no-repeat center center;
+    background-size: auto 100%;
+    text-align: center;
+    text-shadow: 0 3px 5px #002C83;
+    color: #FFFFFF;
+}
 .bottom-info button{
     margin-top: 30px;
     width: 160px;
