@@ -51,6 +51,12 @@
         <div class="col-3">
             <%@ include file="../modal/CaseRightBar.jsp" %>
         </div>
+        <script id="cache_set">
+            document.getElementById("product-buy").innerHTML = "购买VIP";
+            document.getElementById("product-buy").setAttribute("data-bs-toggle","modal");
+            document.getElementById("product-buy").setAttribute("data-bs-target","#b-vip");
+            document.getElementById("cache_set").remove();
+        </script>
     </div>
 </div>
 
