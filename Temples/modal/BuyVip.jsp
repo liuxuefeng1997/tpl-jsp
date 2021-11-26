@@ -11,7 +11,6 @@
         <div class="modal-content">
             <div class="modal-header">
                 <h5 class="modal-title" id="b-vip-label">购买VIP</h5>
-                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
             <div class="modal-body">
                 <div class="container text-center" id="vip-button-list">
