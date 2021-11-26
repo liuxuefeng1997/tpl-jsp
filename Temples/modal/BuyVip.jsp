@@ -18,6 +18,7 @@
                         <span class="visually-hidden">加载中...</span>
                     </div>
                 </div>
+                <div class="container-fluid text-center overflow-hidden" id="vip-qrcode"></div>
             </div>
             <div class="modal-footer">
                 <button type="button" class="btn btn-secondary" id="vip-buy-close" data-bs-toggle="modal" data-bs-target="#v-tip">取消购买</button>
@@ -27,7 +28,6 @@
         <script>
             iu.http.res("POST","<%=Api_Url_Users_Vip_List%>",true,null,null,function (e){
                 if(e.status !== 500){
-                    sessionStorage.removeItem("order_id");
                     let json = JSON.parse(e.responseText);
                     let array = json.data.vip;
                     let button = '<button class="btn btn-outline-dark" onclick="chooseVip(' + "'{{id}}'" + ')">{{type}}<br><span style="font-size: 14px;color: red;">{{price}}</span></button>';
@@ -69,24 +69,25 @@
                     if(e.status !== 500){
                         let json = JSON.parse(e.responseText);
                         if(json.code === 0){
-                            if(document.getElementById("wx_vip_pay_qr")){
-                                document.getElementById("wx_vip_pay_qr").remove();
-                            }
+                            document.getElementById("vip-qrcode").innerHTML = "";
                             let qr_svg = iu.QRCode.generate(json.data.pay_url,200,"resources/images/default/wxpay.jpg",50);
                             qr_svg.id = "wx_vip_pay_qr";
-                            document.getElementById("vip-button-list").appendChild(qr_svg);
-                            sessionStorage.setItem("order_id",json.data.order_id);
+                            document.getElementById("vip-qrcode").appendChild(qr_svg);
+                            document.getElementById("vip-qrcode").setAttribute("order_id",json.data.order_id);
                             document.getElementById("wx_vip_pay_qr").setAttribute("style","margin-top: 0.5em;");
                         }else if(json.code === 401){
-                            document.getElementById("buyBox-text").innerHTML = "需要登录才能购买！";
+                            document.getElementById("vip-button-list").innerHTML = "需要登录才能购买！";
                             if(document.getElementById("vip-buy-check")){document.getElementById("vip-buy-check").remove();}
                         }
                     }
                 });
             }
             document.getElementById("vip-buy-check").onclick = function (){
+                if(!document.getElementById("vip-qrcode").getAttribute("order_id")){
+                    return null;
+                }
                 iu.http.res("POST","<%=Api_Url_Users_Buy_Check%>",true,JSON.stringify({
-                    order_id: parseInt(sessionStorage.getItem("order_id"))
+                    order_id: parseInt(document.getElementById("vip-qrcode").getAttribute("order_id"))
                 }),[
                     {
                         "name": "content-type",
@@ -102,7 +103,6 @@
                         if(json.data.is_payed){
                             document.getElementById("vip-button-list").innerHTML = "支付成功";
                             document.getElementById("vip-buy-check").remove();
-                            sessionStorage.removeItem("order_id");
                             document.getElementById("vip-buy-close").removeAttribute("data-bs-toggle");
                             document.getElementById("vip-buy-close").removeAttribute("data-bs-target");
                             document.getElementById("vip-buy-close").innerHTML = "关闭"
