@@ -91,7 +91,6 @@
         <div class="tab-pane fade<%=ActiveX.getUnNull(tag," show active")%>" id="nav-<%=value%>" role="tabpanel" aria-labelledby="tab-<%=value%>">
             <div class="w-100 mt-1 overflow-hidden">
                 <%
-                    //out.print(path);
                     //读取分类
                     JsonObject ProductList = JSONReaderX.getJsonObj(HTTPLoaderX.getResponses("POST",Api_Url_Product_List,"{\"tags\":" + path + "}",Api_Url_Host));
                     JsonArray ds = ProductList.getJsonObject("data").getJsonArray("data");
@@ -111,6 +110,8 @@
                         </div>
                     </div>
                 </div>
+                    <%--Debug 行--%>
+                    <% if(DebugSettings){ %><div class="card pd-card"><%=path%><%=j.toString()%></div><% } %>
                 <% } %>
             </div>
         </div>

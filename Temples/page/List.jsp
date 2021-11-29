@@ -42,15 +42,14 @@
                                     String title = data.getString("title");
                                     String subtitle = data.getString("subtitle");
                                     String picture = data.getJsonArray("picture").size() >= 1 ? data.getJsonArray("picture").getJsonObject(0).getString("url") : "https://cn.bing.com/th?id=OHR.UnkindnessRavens_ZH-CN2840574948_1920x1080.jpg&rf=LaDigue_1920x1080.jpg";
-                                    String time = data.get("updated_at").toString();
+                                    String time = data.getString("updated_at");
                             %>
                                 <div class="card news-card-x mb-1 us-none"
                                      onclick="window.open('./?r=<%=request.getParameter("r")%>&aid=<%=id + ""%>','_self')"
                                 >
                                     <div class="row">
                                         <div class="col-4">
-                                            <img src="<%=picture%>"
-                                                 alt="" class="card-img">
+                                            <div class="card-img" style="background: url('<%=picture%>') no-repeat center center;background-size: 100% auto;height: 139px;"></div>
                                         </div>
                                         <div class="col-8">
                                             <div class="news-card-title mt-2 mb-1"><%=title%></div>
