@@ -18,16 +18,12 @@
             "title": "产品与服务",
             "link_list": [
                 {
-                    "route": "/product/&aid=开源商城案例",
-                    "title": "开源商城案例"
+                    "route": "/product/",
+                    "title": "产品中心"
                 },
                 {
-                    "route": "/product/&aid=行业商城方案",
-                    "title": "行业商城方案"
-                },
-                {
-                    "route": "/product/&aid=商城系统手册",
-                    "title": "商城系统手册"
+                    "route": "/join/",
+                    "title": "加盟代理"
                 }
             ]
         },

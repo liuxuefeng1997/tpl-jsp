@@ -37,7 +37,7 @@
                     <div class="banner-box-link-more">没有找到想要的产品或服务？
                         <a href="./?r=<%=BannerLeftLink.getString("more_route")%>"
                            target="<%=ActiveX.getStW(BannerLeftLink.getString("more_route"),"/link/","_blank","_self")%>"
-                        >发布需求</a>
+                        >提交需求</a>
                     </div>
                 </div>
             </div>
