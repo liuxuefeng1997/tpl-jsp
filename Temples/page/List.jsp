@@ -6,6 +6,24 @@
   To change this template use File | Settings | File Templates.
 --%>
 <%@ page contentType="text/html;charset=UTF-8" %>
+<%--接口处理—START--%>
+<%
+    int News_type = 1;
+    switch (request.getParameter("r")){
+        case "/news/":
+            News_type = 2; //2
+            break;
+        case "/solution/":
+            News_type = 3;
+            break;
+        case "/case/":
+            News_type = 4;
+            break;
+    }
+    JsonObject News_Json = JSONReaderX.getJsonObj(HTTPLoaderX.getResponses("POST",Api_Url_News,"type=" + News_type,Api_Url.getString("api_host")));
+    if(DebugSettings){out.print(News_Json);}
+%>
+<%--接口处理—END--%>
     <div class="container mt-1 mb-1">
         <div class="row">
             <div class="col-8">
@@ -17,24 +35,32 @@
                 <div class="tab-content mt-2" id="nav-tabContent">
                     <div class="tab-pane fade show active" id="nav-news" role="tabpanel" aria-labelledby="news-tab">
                         <div class="w-100 mt-1 overflow-hidden">
-                            <% for (int i = 0; i < 4; i++) { %>
-                            <div class="card news-card-x mb-1 us-none"
-                                 onclick="window.open('./?r=<%=request.getParameter("r")%>&aid=<%=i + ""%>','_self')"
-                            >
-                                <div class="row">
-                                    <div class="col-4">
-                                        <img src="https://cn.bing.com/th?id=OHR.UnkindnessRavens_ZH-CN2840574948_1920x1080.jpg&rf=LaDigue_1920x1080.jpg"
-                                             alt="" class="card-img">
-                                    </div>
-                                    <div class="col-8">
-                                        <div class="news-card-title mt-2 mb-1">《世界互联网发展报告2021》和《中国互联网发展报告2021》蓝皮书发布</div>
-                                        <div class="news-card-intro mt-4 mb-1">
-                                            《世界互联网发展报告2021》和《中国互联网发展报告2021》蓝皮书在2021年世界互联网大会乌镇峰会上发...
+                            <%
+                                for(JsonValue x : News_Json.getJsonObject("data").getJsonArray("data")){
+                                    JsonObject data = x.asJsonObject();
+                                    int id = data.getInt("id");
+                                    String title = data.getString("title");
+                                    String subtitle = data.getString("subtitle");
+                                    String picture = data.getJsonArray("picture").size() >= 1 ? data.getJsonArray("picture").getJsonObject(0).getString("url") : "https://cn.bing.com/th?id=OHR.UnkindnessRavens_ZH-CN2840574948_1920x1080.jpg&rf=LaDigue_1920x1080.jpg";
+                                    String time = data.get("updated_at").toString();
+                            %>
+                                <div class="card news-card-x mb-1 us-none"
+                                     onclick="window.open('./?r=<%=request.getParameter("r")%>&aid=<%=id + ""%>','_self')"
+                                >
+                                    <div class="row">
+                                        <div class="col-4">
+                                            <img src="<%=picture%>"
+                                                 alt="" class="card-img">
                                         </div>
-                                        <div class="news-card-times mt-3 mb-2">2021-10-23 10:56:51</div>
+                                        <div class="col-8">
+                                            <div class="news-card-title mt-2 mb-1"><%=title%></div>
+                                            <div class="news-card-intro mt-4 mb-1">
+                                                <%=subtitle%>
+                                            </div>
+                                            <div class="news-card-times mt-3 mb-2"><%=time%></div>
+                                        </div>
                                     </div>
                                 </div>
-                            </div>
                             <% } %>
                         </div>
                     </div>

@@ -25,11 +25,11 @@
             <%--加载列表模板--%>
             <%@ include file="../../Temples/page/Product.jsp" %>
 <% } break; case "/news/": if (StringX.isNotNull(request.getParameter("aid"))) { %>
-            <%--加载文章模板--%>
+            <%--加载文章模板n--%>
             <%@ include file="../../Temples/page/Article.jsp" %>
         <% } else { %>
             <%--加载列表模板--%>
-            <%@ include file="../../Temples/page/OfficialNews.jsp" %>
+            <%@ include file="../../Temples/page/List.jsp" %>
 <% } break; case "/solution/": if (StringX.isNotNull(request.getParameter("aid"))) { %>
             <%--加载文章模板--%>
             <%@ include file="../../Temples/page/Article.jsp" %>

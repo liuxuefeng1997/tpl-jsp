@@ -203,13 +203,34 @@
                 ></div>
                 <div class="sa-card-inner-right">
                     <div class="sa-sm-card-out-x">
-                        <% for(int i = 0;i < 8;i++){ %>
-                            <div class="sa-sm-card sa-sm-card-x">
-                                <div class="sa-sm-card-img us-hover" onclick="window.open('./?r=/solution/&aid=行业解决方案','_self')"></div>
-                                <div class="sa-sm-card-title">抖音本地生活小程序</div>
-                                <div class="sa-sm-card-old-price">市场价:<span>￥19800.00</span></div>
-                                <div class="sa-sm-card-last-price">价格:<span>￥4999.00</span></div>
-                            </div>
+                        <%
+                            //out.print(path);
+                            //读取分类
+                            JsonObject ProductList = JSONReaderX.getJsonObj(HTTPLoaderX.getResponses("POST",Api_Url_Product_List,"{\"tags\":[8]}",Api_Url_Host));
+                            JsonArray ds = ProductList.getJsonObject("data").getJsonArray("data");
+                            int ____pi = 0;
+                            for(JsonValue d : ds){
+                                JsonObject j = d.asJsonObject();
+                                if(____pi > 7){
+                                    break;
+                                }
+                                ____pi++;
+                        %>
+                        <div class="sa-sm-card sa-sm-card-x">
+                            <div class="sa-sm-card-img us-hover"
+                                 onclick="window.open('./?r=/product/&aid=<%=j.getInt("id") + ""%>','_self')"
+                                 style="background: url('<%=j.getString("head_pic")%>') no-repeat center center;background-size: 100% 100%;"
+                            ></div>
+                            <div class="sa-sm-card-title"><%=j.getString("title")%></div>
+                            <div class="sa-sm-card-old-price">市场价:<span>￥<%=(j.getInt("old_price") / 100.00) + ""%></span></div>
+                            <div class="sa-sm-card-last-price">价格:<span>￥<%=(j.getInt("price") / 100.00) + ""%></span></div>
+                        </div>
+                        <% } %>
+                        <% if(____pi > 7){ %>
+                        <div class="sa-sm-card sa-sm-card-x us-hover" onclick="window.open('./?r=/product/','_self')">
+                            <div class="sa-sm-card-more-top">行业解决方案</div>
+                            <div class="sa-sm-card-more-bottom">查看更多></div>
+                        </div>
                         <% } %>
                     </div>
                 </div>
@@ -249,13 +270,23 @@
                 ></div>
                 <div class="sa-card-inner-right" id="<%=cid%>">
                     <div class="sa-sm-card-out">
-                        <% for(int i = 0;i < 4;i++){ %>
-                            <div class="sa-sm-card">
-                                <div class="sa-sm-card-img us-hover" onclick="window.open('./?r=/product/&aid=0','_self')"></div>
-                                <div class="sa-sm-card-title">抖音本地生活小程序</div>
-                                <div class="sa-sm-card-old-price">市场价:<span>￥19800.00</span></div>
-                                <div class="sa-sm-card-last-price">价格:<span>￥4999.00</span></div>
-                            </div>
+                        <%
+                            //out.print(path);
+                            //读取分类
+                            JsonObject ProductList = JSONReaderX.getJsonObj(HTTPLoaderX.getResponses("POST",Api_Url_Product_List,"{\"tags\":[6]}",Api_Url_Host));
+                            JsonArray ds = ProductList.getJsonObject("data").getJsonArray("data");
+                            for(JsonValue d : ds){
+                                JsonObject j = d.asJsonObject();
+                        %>
+                        <div class="sa-sm-card">
+                            <div class="sa-sm-card-img us-hover"
+                                 onclick="window.open('./?r=/product/&aid=<%=j.getInt("id") + ""%>','_self')"
+                                 style="background: url('<%=j.getString("head_pic")%>') no-repeat center center;background-size: 100% 100%;"
+                            ></div>
+                            <div class="sa-sm-card-title"><%=j.getString("title")%></div>
+                            <div class="sa-sm-card-old-price">市场价:<span>￥<%=(j.getInt("old_price") / 100.00) + ""%></span></div>
+                            <div class="sa-sm-card-last-price">价格:<span>￥<%=(j.getInt("price") / 100.00) + ""%></span></div>
+                        </div>
                         <% } %>
                     </div>
                 </div>
@@ -295,18 +326,35 @@
                 ></div>
                 <div class="sa-card-inner-right">
                     <div class="sa-sm-card-out-x">
-                        <% for(int i = 0;i < 7;i++){ %>
-                            <div class="sa-sm-card sa-sm-card-x">
-                                <div class="sa-sm-card-img us-hover" onclick="window.open('./?r=/product/&aid=0','_self')"></div>
-                                <div class="sa-sm-card-title">抖音本地生活小程序</div>
-                                <div class="sa-sm-card-old-price">市场价:<span>￥19800.00</span></div>
-                                <div class="sa-sm-card-last-price">价格:<span>￥4999.00</span></div>
-                            </div>
+                        <%
+                            //out.print(path);
+                            //读取分类
+                            JsonObject ProductList = JSONReaderX.getJsonObj(HTTPLoaderX.getResponses("POST",Api_Url_Product_List,"{\"tags\":[7]}",Api_Url_Host));
+                            JsonArray ds = ProductList.getJsonObject("data").getJsonArray("data");
+                            int ____pi = 0;
+                            for(JsonValue d : ds){
+                                JsonObject j = d.asJsonObject();
+                                if(____pi > 7){
+                                    break;
+                                }
+                                ____pi++;
+                        %>
+                        <div class="sa-sm-card sa-sm-card-x">
+                            <div class="sa-sm-card-img us-hover"
+                                 onclick="window.open('./?r=/product/&aid=<%=j.getInt("id") + ""%>','_self')"
+                                 style="background: url('<%=j.getString("head_pic")%>') no-repeat center center;background-size: 100% 100%;"
+                            ></div>
+                            <div class="sa-sm-card-title"><%=j.getString("title")%></div>
+                            <div class="sa-sm-card-old-price">市场价:<span>￥<%=(j.getInt("old_price") / 100.00) + ""%></span></div>
+                            <div class="sa-sm-card-last-price">价格:<span>￥<%=(j.getInt("price") / 100.00) + ""%></span></div>
+                        </div>
                         <% } %>
+                        <% if(____pi > 7){ %>
                         <div class="sa-sm-card sa-sm-card-x us-hover" onclick="window.open('./?r=/product/','_self')">
-                            <div class="sa-sm-card-more-top">其他/社群粉丝</div>
+                            <div class="sa-sm-card-more-top">独立部署软件</div>
                             <div class="sa-sm-card-more-bottom">查看更多></div>
                         </div>
+                        <% } %>
                     </div>
                 </div>
             </div>
@@ -316,83 +364,31 @@
 <%--新闻模块--%>
 <% if(GlobalSettings.getBoolean("is_news_modal_show")){ %>
     <div class="container mt-5 mb-1">
-        <div class="sa-card-title">资讯信息</div>
-        <nav>
-            <div class="nav nav-tabs" id="nav-tab" role="tablist">
-                <button class="nav-link active" id="news-tab" data-bs-toggle="tab" data-bs-target="#nav-news" type="button" role="tab" aria-controls="nav-news" aria-selected="true">最新资讯</button>
-                <button class="nav-link" id="business-tab" data-bs-toggle="tab" data-bs-target="#nav-business" type="button" role="tab" aria-controls="nav-business" aria-selected="false">行业资讯</button>
-                <button class="nav-link" id="contact-tab" data-bs-toggle="tab" data-bs-target="#nav-contact" type="button" role="tab" aria-controls="nav-contact" aria-selected="false">公司新闻</button>
-                <button class="nav-link" id="industry-tab" data-bs-toggle="tab" data-bs-target="#nav-industry" type="button" role="tab" aria-controls="nav-industry" aria-selected="false">业界视点</button>
-                <a class="nav-link nav-link-more ms-auto" href="./?r=/news/">查看更多></a>
-            </div>
-        </nav>
+        <div class="sa-card-title">新闻资讯</div>
         <div class="tab-content" id="nav-tabContent">
             <div class="tab-pane fade show active" id="nav-news" role="tabpanel" aria-labelledby="news-tab">
-                <div class="w-100 mt-1 overflow-hidden">
-                    <% for(int i = 0;i < 4;i++){ %>
-                        <div class="card news-card us-none us-hover">
+                <div class="w-100 mt-2 overflow-hidden">
+                    <%
+                        JsonObject News_Json = JSONReaderX.getJsonObj(HTTPLoaderX.getResponses("POST",Api_Url_News,"type=1",Api_Url.getString("api_host")));
+                        for(JsonValue x : News_Json.getJsonObject("data").getJsonArray("data")){
+                            JsonObject data = x.asJsonObject();
+                            int id = data.getInt("id");
+                            String title = data.getString("title");
+                            String subtitle = data.getString("subtitle");
+                            String picture = data.getJsonArray("picture").size() >= 1 ? data.getJsonArray("picture").getJsonObject(0).getString("url") : "https://cn.bing.com/th?id=OHR.UnkindnessRavens_ZH-CN2840574948_1920x1080.jpg&rf=LaDigue_1920x1080.jpg";
+                            String time = data.get("updated_at").toString();
+                    %>
+                        <div class="card news-card us-none us-hover"
+                             onclick="window.open('./?r=/news/&aid=<%=id + ""%>','_self')"
+                        >
                             <div class="row">
                                 <div class="col-5">
-                                    <img src="https://cn.bing.com/th?id=OHR.UnkindnessRavens_ZH-CN2840574948_1920x1080.jpg&rf=LaDigue_1920x1080.jpg" alt="" class="card-img">
+                                    <img src="<%=picture%>" alt="" class="card-img">
                                 </div>
                                 <div class="col-7">
-                                    <div class="news-card-title mt-2 mb-1">《世界互联网发展报告2021》和《中国互联网发展报告2021》蓝皮书发布</div>
-                                    <div class="news-card-intro mt-4 mb-1">《世界互联网发展报告2021》和《中国互联网发展报告2021》蓝皮书在2021年世界互联网大会乌镇峰会上发...</div>
-                                    <div class="news-card-times mt-3 mb-2">2021-10-23 10:56:51</div>
-                                </div>
-                            </div>
-                        </div>
-                    <% } %>
-                </div>
-            </div>
-            <div class="tab-pane fade" id="nav-business" role="tabpanel" aria-labelledby="business-tab">
-                <div class="w-100 mt-1 overflow-hidden">
-                    <% for(int i = 0;i < 4;i++){ %>
-                        <div class="card news-card us-none us-hover">
-                            <div class="row">
-                                <div class="col-5">
-                                    <img src="https://cn.bing.com/th?id=OHR.UnkindnessRavens_ZH-CN2840574948_1920x1080.jpg&rf=LaDigue_1920x1080.jpg" alt="" class="card-img">
-                                </div>
-                                <div class="col-7">
-                                    <div class="news-card-title mt-2 mb-1">搭建私域流量池，企业应该选择微商城or小程序?</div>
-                                    <div class="news-card-intro mt-4 mb-1">企业基于微信天然的社交属性，打造IP人设，快速实现社交裂变。</div>
-                                    <div class="news-card-times mt-3 mb-2">2021-10-23 10:56:51</div>
-                                </div>
-                            </div>
-                        </div>
-                    <% } %>
-                </div>
-            </div>
-            <div class="tab-pane fade" id="nav-contact" role="tabpanel" aria-labelledby="contact-tab">
-                <div class="w-100 mt-1 overflow-hidden">
-                    <% for(int i = 0;i < 4;i++){ %>
-                        <div class="card news-card us-none us-hover">
-                            <div class="row">
-                                <div class="col-5">
-                                    <img src="https://cn.bing.com/th?id=OHR.UnkindnessRavens_ZH-CN2840574948_1920x1080.jpg&rf=LaDigue_1920x1080.jpg" alt="" class="card-img">
-                                </div>
-                                <div class="col-7">
-                                    <div class="news-card-title mt-2 mb-1">《世界互联网发展报告2021》和《中国互联网发展报告2021》蓝皮书发布</div>
-                                    <div class="news-card-intro mt-4 mb-1">《世界互联网发展报告2021》和《中国互联网发展报告2021》蓝皮书在2021年世界互联网大会乌镇峰会上发...</div>
-                                    <div class="news-card-times mt-3 mb-2">2021-10-23 10:56:51</div>
-                                </div>
-                            </div>
-                        </div>
-                    <% } %>
-                </div>
-            </div>
-            <div class="tab-pane fade" id="nav-industry" role="tabpanel" aria-labelledby="industry-tab">
-                <div class="w-100 mt-1 overflow-hidden">
-                    <% for(int i = 0;i < 4;i++){ %>
-                        <div class="card news-card us-none us-hover">
-                            <div class="row">
-                                <div class="col-5">
-                                    <img src="https://cn.bing.com/th?id=OHR.UnkindnessRavens_ZH-CN2840574948_1920x1080.jpg&rf=LaDigue_1920x1080.jpg" alt="" class="card-img">
-                                </div>
-                                <div class="col-7">
-                                    <div class="news-card-title mt-2 mb-1">搭建私域流量池，企业应该选择微商城or小程序?</div>
-                                    <div class="news-card-intro mt-4 mb-1">企业基于微信天然的社交属性，打造IP人设，快速实现社交裂变。</div>
-                                    <div class="news-card-times mt-3 mb-2">2021-10-23 10:56:51</div>
+                                    <div class="news-card-title mt-2 mb-1"><%=title%></div>
+                                    <div class="news-card-intro mt-4 mb-1"><%=subtitle%></div>
+                                    <div class="news-card-times mt-3 mb-2"><%=time%></div>
                                 </div>
                             </div>
                         </div>

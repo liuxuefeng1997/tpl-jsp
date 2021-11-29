@@ -20,4 +20,5 @@
     String Api_Url_Users_Info = Api_Url_Host + Api_Url.getJsonObject("api_list").getJsonObject("users").getString("info");
     String Api_Url_Users_Vip_List = Api_Url_Host + Api_Url.getJsonObject("api_list").getJsonObject("users").getString("vip_list");
     String Api_Url_Users_Vip_Buy = Api_Url_Host + Api_Url.getJsonObject("api_list").getJsonObject("users").getString("vip_wx");
+    String Api_Url_News = Api_Url_Host + Api_Url.getJsonObject("api_list").getJsonObject("news").getString("n");
 %>

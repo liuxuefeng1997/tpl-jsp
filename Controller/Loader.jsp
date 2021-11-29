@@ -23,5 +23,7 @@
     JsonObject FooterMenu = JSONReaderX.getJsonObj(FileReaderX.getStr(wwwRoot + "/Config/FooterMenu.json"));
     //内容页设置
     JsonObject IntroSettings = JSONReaderX.getJsonObj(FileReaderX.getStr(wwwRoot + "/Config/IntroSettings.json"));
+    //调试设置
+    Boolean DebugSettings = StringX.isNotNull(FileReaderX.getStr(wwwRoot + "/Config/Debug.json")) && JSONReaderX.getJsonObj(FileReaderX.getStr(wwwRoot + "/Config/Debug.json")).getBoolean("Debug");
 %>
 <%@ include file="Addon/Data.jsp" %>

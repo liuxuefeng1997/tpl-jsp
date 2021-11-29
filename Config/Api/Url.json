@@ -18,6 +18,10 @@
             "info": "/user/info",
             "vip_list": "/user/vip/list",
             "vip_wx": "/user/vip/wechat"
+        },
+        "news": {
+            "_self": "新闻相关",
+            "n": "/product/news"
         }
     }
 }

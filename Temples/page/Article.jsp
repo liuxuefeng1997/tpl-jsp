@@ -77,8 +77,11 @@
                     </script>
                 <% } else { %>
                     <%@ include file="../modal/DefaultProduct.jsp" %>
-                <% } break; case "/case/": %>
-                    <%@ include file="../modal/DefaultProduct.jsp" %>
+                <% } break; default:
+                    JsonObject NewsDetail = JSONReaderX.getJsonObj(HTTPLoaderX.getResponses("POST",Api_Url_Product_Detail,"id=" + _aid,Api_Url_Host));
+                    if(DebugSettings){out.print(NewsDetail);}
+                %>
+                
                 <% break; } %>
             </div>
         </div>
