@@ -370,8 +370,13 @@
                 <div class="w-100 mt-2 overflow-hidden">
                     <%
                         JsonObject News_Json = JSONReaderX.getJsonObj(HTTPLoaderX.getResponses("POST",Api_Url_News,"type=1",Api_Url.getString("api_host")));
+                        int ____pi = 0;
                         for(JsonValue x : News_Json.getJsonObject("data").getJsonArray("data")){
                             JsonObject data = x.asJsonObject();
+                            if(____pi > 4){
+                                break;
+                            }
+                            ____pi++;
                             int id = data.getInt("id");
                             String title = data.getString("title");
                             String subtitle = data.getString("subtitle");
