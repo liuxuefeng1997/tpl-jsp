@@ -49,7 +49,7 @@
         }
     ],function (e){
         if(e.status !== 500){
-            let temple = '<div class="col-5 jt-card-img" style="background: url(' + "'{{img}}'" + ') no-repeat center center;background-size: auto 100%;" ></div> <div class="col-7"><div class="jt-card-child-intro jt-card-child-title">{{title}}</div><div class="jt-card-child-intro jt-card-child-price">{{price}}</div></div>';
+            let temple = `<div class="col-5 jt-card-img" style="/*noinspection CssUnknownTarget*/background: url('{{img}}') no-repeat center center;background-size: auto 100%;" ></div> <div class="col-7"><div class="jt-card-child-intro jt-card-child-title">{{title}}</div><div class="jt-card-child-intro jt-card-child-price">{{price}}</div></div>`;
             let json = JSON.parse(e.responseText);
             if(json.code === 0){
                 let array = json.data.data;
