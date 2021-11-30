@@ -21,7 +21,12 @@
         },
         "news": {
             "_self": "新闻相关",
-            "n": "/product/news"
+            "n": "/product/news",
+            "d": "/product/news/detail"
+        },
+        "home": {
+            "_self": "首页部分",
+            "banner": "/product/banner"
         }
     }
 }

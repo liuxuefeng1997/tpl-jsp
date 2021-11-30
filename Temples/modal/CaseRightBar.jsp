@@ -21,7 +21,7 @@
     </div>
 </div>
 <div class="card jt-card mt-4 mb-1">
-    <div class="card-body">
+    <div class="card-body" id="Hot_App">
         <div class="jt-card-title">热门应用</div>
         <% for(int i = 0;i < 6;i++){ %>
         <div class="jt-card-child row us-none"
@@ -38,3 +38,32 @@
         <% } %>
     </div>
 </div>
+<script>
+    document.getElementById("Hot_App").innerHTML = '<div class="jt-card-title">热门应用</div>';
+    iu.http.res("POST","<%=Api_Url_Product_List%>",true,JSON.stringify({
+        hot_status: 1
+    }),[
+        {
+            "name": "content-type",
+            "value": "application/json;charset=UTF-8"
+        }
+    ],function (e){
+        if(e.status !== 500){
+            let temple = '<div class="col-5 jt-card-img" style="background: url(' + "'{{img}}'" + ') no-repeat center center;background-size: auto 100%;" ></div> <div class="col-7"><div class="jt-card-child-intro jt-card-child-title">{{title}}</div><div class="jt-card-child-intro jt-card-child-price">{{price}}</div></div>';
+            let json = JSON.parse(e.responseText);
+            if(json.code === 0){
+                let array = json.data.data;
+                for (let i in array){
+                    let data = array[i];
+                    let div = document.createElement("div");
+                    div.className = "jt-card-child row us-none";
+                    div.onclick = function (){
+                        window.open('./?r=/product/&aid=' + data.id,'_self');
+                    }
+                    div.innerHTML = temple.replace("{{img}}",data.head_pic).replace("{{title}}",data.title).replace("{{price}}",(data.price / 100).toFixed(2).toString() + "元/年");
+                    document.getElementById("Hot_App").appendChild(div);
+                }
+            }
+        }
+    });
+</script>

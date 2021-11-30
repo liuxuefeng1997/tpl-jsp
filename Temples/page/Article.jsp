@@ -78,11 +78,16 @@
                 <% } else { %>
                     <%@ include file="../modal/DefaultProduct.jsp" %>
                 <% } break; default:
-                    JsonObject NewsDetail = JSONReaderX.getJsonObj(HTTPLoaderX.getResponses("POST",Api_Url_Product_Detail,"id=" + _aid,Api_Url_Host));
+                    JsonObject NewsDetail = JSONReaderX.getJsonObj(HTTPLoaderX.getResponses("POST",Api_Url_News_Detail,"id=" + _aid,Api_Url_Host));
                     if(DebugSettings){out.print(NewsDetail);}
+                    //if(DebugSettings){break;}//这是一个断点
+                    if(NewsDetail.getInt("code") == 0){
+                        JsonObject data = NewsDetail.getJsonObject("data");
                 %>
-                
-                <% break; } %>
+                    <div class="sa-card-title us-none"><%=data.getString("title")%></div>
+                    <div class="sa-card-subtitle us-none"><%=data.getString("subtitle")%></div>
+                    <div class="container-fluid mt-3 pb-2"><%=data.getString("content")%></div>
+                <% } break; } %>
             </div>
         </div>
         <div class="col-3">

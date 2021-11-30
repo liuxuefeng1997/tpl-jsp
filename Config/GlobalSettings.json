@@ -22,7 +22,7 @@
         "btn_route": "/"
     },
     "__2_self": "-----热点应用排行开关及配置-----",
-    "is_hot_app_show": false,
+    "is_hot_app_show": true,
     "hot_app_img": "resources/images/default/a1.png",
     "__3_self": "-----页中横幅开关及配置-----",
     "is_inner_streamer_show": false,

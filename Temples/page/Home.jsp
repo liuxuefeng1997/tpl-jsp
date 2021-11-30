@@ -44,7 +44,32 @@
         </div>
         <div class="col-6">
             <div id="carouselExampleIndicators" class="carousel slide banner-box banner-box-carousel" data-bs-ride="carousel">
-                <% JsonObject BannerList = JSONReaderX.getJsonObj(FileReaderX.getStr(wwwRoot + "/Config/BannerList.json")); %>
+                <%
+                    //Banner 处理函数
+                    JsonObject BannerList = JSONReaderX.getJsonObj(FileReaderX.getStr(wwwRoot + "/Config/BannerList.json")); //Banner列表默认值
+                    JsonObject Banner_Rm = JSONReaderX.getJsonObj(HTTPLoaderX.getResponses("GET",Api_Url_Banner,null,Api_Url_Host));
+                    //if(DebugSettings){out.print(Banner_Rm);}
+                    if(Banner_Rm != null){
+                        StringBuilder newBannerList = new StringBuilder();
+                        newBannerList.append("{\"banner\":[");
+                        int flag = 0;
+                        for (JsonValue j : Banner_Rm.getJsonObject("data").getJsonObject("data").getJsonArray("1")){
+                            JsonObject data = j.asJsonObject();
+                            String img = data.getString("url");
+                            String route = data.getString("link");
+                            String ff = ",";
+                            if(flag == 0){
+                                ff = "";
+                            }
+                            newBannerList.append(ff).append("{\"img\":\"").append(img).append("\",\"route\":\"").append(route).append("\"}");
+                            flag++;
+                        }
+                        newBannerList.append("]}");
+                        String BL = new String(newBannerList);
+                        if(DebugSettings){out.print(BL);}
+                        BannerList = JSONReaderX.getJsonObj(BL);
+                    }
+                %>
                 <div class="carousel-indicators">
                     <%
                         for(int i = 0;i < BannerList.getJsonArray("banner").size();i++){
@@ -149,12 +174,18 @@
                 ></div>
                 <div class="sa-card-inner-right" id="<%=cid%>">
                     <div class="sa-sm-card-out">
-                        <% for(int i = 0;i < 4;i++){ %>
+                        <%
+                            JsonObject Hot_App_Rank = JSONReaderX.getJsonObj(HTTPLoaderX.getResponses("POST",Api_Url_Product_List,"hot_status=1",Api_Url_Host));
+                            for(JsonValue j : Hot_App_Rank.getJsonObject("data").getJsonArray("data")){
+                                JsonObject data = j.asJsonObject();
+                        %>
                             <div class="sa-sm-card">
-                                <div class="sa-sm-card-img us-hover" onclick="window.open('./?r=/product/&aid=0','_self')"></div>
-                                <div class="sa-sm-card-title">抖音本地生活小程序</div>
-                                <div class="sa-sm-card-old-price">市场价:<span>￥19800.00</span></div>
-                                <div class="sa-sm-card-last-price">价格:<span>￥4999.00</span></div>
+                                <div class="sa-sm-card-img us-hover"
+                                     style="background: url('<%=data.getString("head_pic")%>') no-repeat center center;background-size: 100% auto;"
+                                     onclick="window.open('./?r=/product/&aid=<%=data.getInt("id") + ""%>','_self')"></div>
+                                <div class="sa-sm-card-title"><%=data.getString("title")%></div>
+                                <div class="sa-sm-card-old-price">市场价:<span>￥<%=data.getInt("old_price") / 100.00 + ""%></span></div>
+                                <div class="sa-sm-card-last-price">价格:<span>￥<%=data.getInt("price") / 100.00 + ""%></span></div>
                             </div>
                         <% } %>
                     </div>
