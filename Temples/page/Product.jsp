@@ -92,7 +92,8 @@
             <div class="w-100 mt-1 overflow-hidden">
                 <%
                     //读取分类
-                    JsonObject ProductList = JSONReaderX.getJsonObj(HTTPLoaderX.getResponses("POST",Api_Url_Product_List,"{\"tags\":" + path + "}",Api_Url_Host));
+                    JsonObject ProductList = JSONReaderX.getJsonObj(HTTPLoaderX.getResponses("POST",Api_Url_Product_List,"{\"tag\":" + path + "}",Api_Url_Host,"application/json;charset=UTF-8"));
+                    System.out.print("{\"tag\":" + path + "}");System.out.println(ProductList);
                     JsonArray ds = ProductList.getJsonObject("data").getJsonArray("data");
                     for(JsonValue d : ds){
                         JsonObject j = d.asJsonObject();

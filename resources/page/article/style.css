@@ -9,8 +9,8 @@
     margin-top: 15px;
 }
 .acm-card {
-    width: 152px;
-    height: 307px;
+    width: 145px;
+    height: 270px;
     margin: 54px auto 21px;
     overflow: hidden;
 }
@@ -94,4 +94,65 @@
     font-size: 16px;
     color: #333333;
     font-weight: 400;
+}
+.sa-card-buy {
+    width: 100%;
+    overflow: hidden;
+}
+.sa-card-buy-img {
+    width: 292px;
+    height: 292px;
+    overflow: hidden;
+    margin: 27px 0 0 11px;
+    border-radius: 5px;
+}
+.sa-card-buy-title {
+    width: 100%;
+    height: 29px;
+    line-height: 29px;
+    color: #0C06AF;
+    font-weight: 600;
+    font-size: 21px;
+    margin-top: 20px;
+}
+.sa-card-buy-subtitle {
+    width: 100%;
+    overflow: hidden;
+    padding: 5px 0;
+    line-height: 26px;
+    font-size: 18px;
+    color: #666666;
+    font-weight: 400;
+    margin-top: 20px;
+}
+.sa-card-buy-info {
+    width: calc(100% - 15px);
+    height: 30px;
+    line-height: 30px;
+    color: #666666;
+    margin-top: 20px;
+    font-weight: 400;
+    font-size: 18px;
+}
+.sa-card-buy-info div:nth-child(1) span {
+    font-size: 21px;
+    color: #FF0000;
+    margin-left: 20px;
+}
+.sa-card-buy-button {
+    width: 100%;
+    height: 66px;
+    margin-top: 40px;
+}
+.sa-card-buy-button button:nth-child(1) {
+    position: absolute;
+    right: 247px;
+}
+.sa-card-buy-button button:nth-child(2) {
+    position: absolute;
+    right: 21px;
+}
+.sa-card-buy-button .btn {
+    padding: 16px 59px;
+    font-size: 21px;
 }

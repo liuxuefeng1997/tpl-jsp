@@ -26,7 +26,7 @@
     <orderEntry type="library" name="bootstrap-icons" level="application" />
     <orderEntry type="library" name="bootstrap" level="application" />
     <orderEntry type="library" name="jquery" level="application" />
-    <orderEntry type="library" name="com.iuideas.library" level="project" />
     <orderEntry type="library" name="mdui" level="application" />
+    <orderEntry type="library" name="com.iuideas.library" level="project" />
   </component>
 </module>

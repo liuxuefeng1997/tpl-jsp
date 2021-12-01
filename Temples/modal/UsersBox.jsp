@@ -63,12 +63,13 @@
                         line-height: 6px;
                     }
                 </style>
-                <div class="nsa-title">产品订单</div>
+                <div class="nsa-title">订单中心</div>
                 <table class="table mt-2">
                     <thead>
                         <tr>
                             <th scope="col">订单号</th>
                             <th scope="col">商品</th>
+                            <th scope="col">类型</th>
                             <th scope="col">价格</th>
                             <th scope="col">时间</th>
                         </tr>
@@ -95,13 +96,13 @@
                         if(e.status !== 500){
                             let json = JSON.parse(e.responseText);
                             let tFlag = true;
-                            let temple = '<tr><th scope="row">{{order_id}}</th><td>{{product}}</td><td>{{price}}</td><td>{{order_time}}</td></tr>';
+                            let temple = '<tr><td>{{order_id}}</td><td>{{product}}</td><td>{{type}}</td><td>{{price}}</td><td>{{order_time}}</td></tr>';
                             for(let x in json.data.data){
                                 let data = json.data.data[x];
                                 document.getElementById("u-order-table").innerHTML += temple.replace("{{order_id}}",data.order_id)
                                     .replace("{{product}}",data.product.title)
                                     .replace("{{price}}","￥" + (json.data.data[x].product.price / 100).toFixed(2))
-                                    .replace("{{order_time}}",data.created_at);
+                                    .replace("{{order_time}}",data.created_at).replace("{{type}}","默认");
                                 tFlag = false;
                             }
                             if(tFlag){

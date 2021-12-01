@@ -10,16 +10,15 @@
 <div class="modal fade" id="buyBox" tabindex="-1" aria-labelledby="buyBox-label" aria-hidden="true">
     <div class="modal-dialog modal-dialog-centered modal-sm">
         <div class="modal-content">
-            <div class="modal-header">
+            <div class="modal-header" style="border-bottom: none;">
                 <h5 class="modal-title" id="buyBox-label"><span id="product-name-span"></span>购买</h5>
-                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
             <div class="modal-body text-center" id="buyBox-text">
                 <div class="spinner-border text-primary" role="status">
                     <span class="visually-hidden">加载中...</span>
                 </div>
             </div>
-            <div class="modal-footer">
+            <div class="modal-footer" style="border-top: none;">
                 <button type="button" class="btn btn-primary" id="buyBox-check">检查订单</button>
                 <button type="button" class="btn btn-secondary" data-bs-dismiss="modal" id="buyBox-close">关闭</button>
                 <script>

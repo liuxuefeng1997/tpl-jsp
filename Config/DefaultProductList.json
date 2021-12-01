@@ -2,23 +2,53 @@
     "mList": [
         {
             "img": "resources/images/default/acm-1.png",
-            "title": "生鲜"
+            "title": "生鲜",
+            "qrImg": ""
         },
         {
             "img": "resources/images/default/acm-2.png",
-            "title": "简约商城"
+            "title": "简约商城",
+            "qrImg": ""
         },
         {
             "img": "resources/images/default/acm-3.png",
-            "title": "外卖"
+            "title": "外卖",
+            "qrImg": ""
         },
         {
             "img": "resources/images/default/acm-4.png",
-            "title": "母婴"
+            "title": "母婴",
+            "qrImg": ""
         },
         {
             "img": "resources/images/default/acm-5.png",
-            "title": "家居"
+            "title": "家居",
+            "qrImg": ""
+        },
+        {
+            "img": "resources/images/default/acm-1.png",
+            "title": "生鲜",
+            "qrImg": ""
+        },
+        {
+            "img": "resources/images/default/acm-2.png",
+            "title": "简约商城",
+            "qrImg": ""
+        },
+        {
+            "img": "resources/images/default/acm-3.png",
+            "title": "外卖",
+            "qrImg": ""
+        },
+        {
+            "img": "resources/images/default/acm-4.png",
+            "title": "母婴",
+            "qrImg": ""
+        },
+        {
+            "img": "resources/images/default/acm-5.png",
+            "title": "家居",
+            "qrImg": ""
         }
     ],
     "sList": [

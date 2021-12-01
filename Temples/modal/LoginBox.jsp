@@ -185,15 +185,6 @@
     }
 </script>
 <style>
-    /* chrome */
-    input::-webkit-outer-spin-button,
-    input::-webkit-inner-spin-button {
-        -webkit-appearance: none;
-    }
-    /* 火狐浏览器 */
-    input[type="number"]{
-        -moz-appearance: textfield;
-    }
     .modal::-webkit-scrollbar {
         display: none;
         user-select: none;

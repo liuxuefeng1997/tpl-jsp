@@ -73,6 +73,15 @@ body::-webkit-scrollbar{
     height: 15px;
     line-height: 15px;
 }
+/* chrome */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+}
+/* 火狐浏览器 */
+input[type="number"]{
+    -moz-appearance: textfield;
+}
 /**************** 尾部 ********************/
 .ns-base-width {
     width: 1200px;

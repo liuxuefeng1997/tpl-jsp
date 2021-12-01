@@ -9,6 +9,7 @@
 <%
     String _aid = request.getParameter("aid");
     String _route = request.getParameter("r");
+    String _type = request.getParameter("type");
 %>
 <div class="container mt-1 mb-1">
     <div class="row">
@@ -21,63 +22,49 @@
             <div class="card jt-card mt-4 mb-1 us-none">
                 <%
                     switch (_route){case "/product/":
+                        if(StringX.isNotNull(_type) && _type.equals("check")){ %>
+                    <%@ include file="CheckBuy.jsp" %>
+                <% break; }
                         JsonObject ProductDetail = JSONReaderX.getJsonObj(HTTPLoaderX.getResponses("POST",Api_Url_Product_Detail,"id=" + _aid,Api_Url_Host));
-                        if(ProductDetail.getInt("code") == 0){
+                        if(DebugSettings){System.out.print(ProductDetail);}
+                        if(ProductDetail != null && ProductDetail.getInt("code") == 0){
                             JsonObject data = ProductDetail.getJsonObject("data");
+                            //out.print(data);
                 %>
-                    <div class="sa-card-title us-none"><%=data.getString("title")%></div>
-                    <div class="sa-card-subtitle us-none"><%=data.getString("subtitle")%></div>
-                    <%=data.getString("content")%>
-                    <%@ include file="../modal/BuyBox.jsp" %>
-                    <script>
-                        window.onload = function (){
-                            document.getElementById("product-buy").setAttribute("data-bs-toggle","modal");
-                            document.getElementById("product-buy").setAttribute("data-bs-target","#buyBox");
-                            document.getElementById("product-buy").onclick = function (){
-                                iu.http.res("POST","<%=Api_Url_Users_Buy%>",true,JSON.stringify({
-                                    product_id: <%=_aid%>
-                                }),[
-                                    {
-                                        "name": "content-type",
-                                        "value": "application/json;charset=UTF-8"
-                                    },
-                                    {
-                                        "name": "Authorization",
-                                        "value": localStorage.getItem("token")
-                                    }
-                                ],function (e){
-                                    if(e.status !== 500){
-                                        let json = JSON.parse(e.responseText);
-                                        if(json.code === 0){
-                                            document.getElementById("product-name-span").innerHTML = "<%=data.getString("title") + " - "%>";
-                                            document.getElementById("buyBox-text").innerHTML = "";
-                                            let qr_svg = iu.QRCode.generate(json.data.pay_url,200,"resources/images/default/wxpay.jpg",50);
-                                            qr_svg.id = "wx_pay_qr";
-                                            document.getElementById("buyBox-text").appendChild(qr_svg);
-                                            document.getElementById("buyBox-label").setAttribute("order_id",json.data.order_id);
-                                            let div = document.createElement("div");
-                                            div.style.width = "100%";
-                                            div.style.height = "24px";
-                                            div.style.lineHeight = "24px";
-                                            div.style.fontSize = "18px";
-                                            div.style.fontWeight = "bold";
-                                            div.style.marginTop = "0.5em";
-                                            div.className = "text-center";
-                                            div.innerHTML = "需支付： ￥ <%=(data.getInt("price") / 100.00) + ""%>"
-                                            document.getElementById("buyBox-text").appendChild(div);
-                                            document.getElementById("wx_pay_qr").setAttribute("style","margin-top: 0.5em;");
-                                        }else if(json.code === 401){
-                                            document.getElementById("buyBox-text").innerHTML = "需要登录才能购买！";
-                                            if(document.getElementById("buyBox-check")){document.getElementById("buyBox-check").remove();}
+                    <div class="sa-card-buy us-none">
+                        <div class="row">
+                            <div class="col-5">
+                                <div class="sa-card-buy-img"
+                                     style="background: url('<%=data.getString("head_pic")%>') no-repeat center center;
+                                             background-size: 100% auto"
+                                ></div>
+                            </div>
+                            <div class="col-7">
+                                <div class="sa-card-buy-title"><%=data.getString("title")%></div>
+                                <div class="sa-card-buy-subtitle"><%=data.getString("subtitle")%></div>
+                                <div class="sa-card-buy-info">
+                                    <div class="w-50 float-start text-start">价格<span>￥ <%=(data.getInt("price") / 100.00) + ""%></span></div>
+                                    <div class="w-50 float-start text-end"><%=data.getInt("sale_number") + ""%>购买</div>
+                                </div>
+                                <div class="sa-card-buy-button position-relative">
+                                    <button class="btn btn-primary" onclick="window.open('./?r=<%=_route%>&aid=<%=_aid%>&type=check','_self')">立即购买</button>
+                                    <%
+                                        String show_url = "";
+                                        if(!data.get("info").toString().trim().equals("[]") && StringX.isNotNull(data.getJsonObject("info").get("show_url") + "")){
+                                            show_url = " onclick=\"window.open('{{url}}','_blank')\"".replace("{{url}}",data.getJsonObject("info").get("show_url") + "");
                                         }
-                                    }
-                                });
-                            }
-                        }
-                    </script>
+                                    %>
+                                    <button class="btn btn-warning"<%=show_url%>>查看演示</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <%=data.getString("content")%>
                 <% } else { %>
                     <%@ include file="../modal/DefaultProduct.jsp" %>
-                <% } break; default:
+                <% } break; case "/case/": %>
+                    <%@ include file="Case.jsp" %>
+                <% break; default:
                     JsonObject NewsDetail = JSONReaderX.getJsonObj(HTTPLoaderX.getResponses("POST",Api_Url_News_Detail,"id=" + _aid,Api_Url_Host));
                     if(DebugSettings){out.print(NewsDetail);}
                     //if(DebugSettings){break;}//这是一个断点

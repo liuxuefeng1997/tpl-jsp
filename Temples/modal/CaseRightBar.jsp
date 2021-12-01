@@ -17,7 +17,7 @@
             <%=GlobalSettings.getJsonArray("concat").getJsonObject(1).getString("inner")%>
         </div>
         <div class="jt-card-btn jt-card-btn-white us-none opacity-0" style="cursor: default" id="show-demo">查看演示</div>
-        <div class="jt-card-btn jt-card-btn-blue us-none" id="product-buy">购买授权</div>
+        <div class="jt-card-btn jt-card-btn-blue us-none">购买授权</div>
     </div>
 </div>
 <div class="card jt-card mt-4 mb-1">

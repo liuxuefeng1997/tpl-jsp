@@ -38,12 +38,6 @@
             <%@ include file="../../Temples/page/List.jsp" %>
 <% } break; case "/join/": %>
         <%@ include file="../../Temples/page/JoinTo.jsp" %>
-<% break;
-    case "/case/": %>
-    <% if (StringX.isNotNull(request.getParameter("aid"))) { %>
-        <%--加载文章 模板--%>
+<% break; case "/case/": %>
         <%@ include file="../../Temples/page/Article.jsp" %>
-    <% } else { %>
-        <%--加载列表 模板--%>
-        <%@ include file="../../Temples/page/List.jsp" %>
-<% } break; default: response.sendRedirect("./?r=/"); break; }} %>
+<% break; default: response.sendRedirect("./?r=/"); break; }} %>
