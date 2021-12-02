@@ -75,6 +75,8 @@
             "title": "官方公众号"
         }
     },
+    "__ar_self": "-----页面头像及购买BOX区域-----",
+    "is_avatar_box_show": false,
     "__a_self": "-----网站备案号配置-----",
     "beian": "沪ICP备15056381号"
 }

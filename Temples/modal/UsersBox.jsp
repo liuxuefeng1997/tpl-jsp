@@ -77,7 +77,7 @@
                     <tbody id="u-order-table"></tbody>
                 </table>
             </div>
-            <div class="modal-footer">
+            <div class="modal-footer" style="border-top: none;">
                 <button type="button" class="btn btn-secondary" id="v-t-b">退出登录</button>
                 <button type="button" class="btn btn-primary" data-bs-dismiss="modal">关闭</button>
                 <script>

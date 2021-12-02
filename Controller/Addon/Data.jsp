@@ -23,4 +23,5 @@
     String Api_Url_News = Api_Url_Host + Api_Url.getJsonObject("api_list").getJsonObject("news").getString("n");
     String Api_Url_News_Detail = Api_Url_Host + Api_Url.getJsonObject("api_list").getJsonObject("news").getString("d");
     String Api_Url_Banner = Api_Url_Host + Api_Url.getJsonObject("api_list").getJsonObject("home").getString("banner");
+    String Api_Url_Case = Api_Url_Host + Api_Url.getJsonObject("api_list").getJsonObject("product").getString("case");
 %>

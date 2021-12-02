@@ -6,7 +6,8 @@
             "_self": "产品中心",
             "tags": "/product/tags",
             "list": "/product/list",
-            "detail": "/product/detail"
+            "detail": "/product/detail",
+            "case": "/product/cases"
         },
         "users": {
             "_self": "用户相关",

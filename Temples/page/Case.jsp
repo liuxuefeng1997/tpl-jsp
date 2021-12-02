@@ -6,7 +6,9 @@
   To change this template use File | Settings | File Templates.
 --%>
 <%@ page contentType="text/html;charset=UTF-8" %>
-<% JsonObject Lists = JSONReaderX.getJsonObj(FileReaderX.getStr(wwwRoot + "/Config/DefaultProductList.json")); %>
+<%
+    JsonObject Lists = JSONReaderX.getJsonObj(HTTPLoaderX.getResponses("GET",Api_Url_Case,null));
+%>
 <style>
     .case-qr {
         display: none;
@@ -28,24 +30,27 @@
     .acm-card:hover .case-qr {
         display: block;
     }
+    .case-qr-box svg,.case-qr-box img {
+        margin: 4px;
+        text-align: center;
+    }
 </style>
 <div class="sa-card-title us-none">成功案例</div>
 <div class="sa-card-subtitle us-none">内置五套行业模板，不同的模板给您带来不一样的体验</div>
 <div class="container-fluid pb-4">
     <div class="row us-none">
-        <% for(int i = 0;i < Lists.getJsonArray("mList").size();i++){ JsonObject _card_data = Lists.getJsonArray("mList").getJsonObject(i);%>
+        <% for(int i = 0;i < Lists.getJsonArray("data").size();i++){ JsonObject _card_data = Lists.getJsonArray("data").getJsonObject(i);%>
         <div class="col">
             <div class="acm-card position-relative" style="overflow:unset">
-                <img src="<%=_card_data.getString("img")%>" alt="">
+                <img src="<%=_card_data.getString("url")%>" alt="">
                 <div class="acm-card-title" style="font-size: 18px;"><%=_card_data.getString("title")%></div>
                 <div class="case-qr">
-                    <div class="case-qr-box case-qr-image-<%=i + ""%>"></div>
-                    <style>
-                        .case-qr-image-<%=i + ""%> {
-                            background: url("<%=_card_data.getString("img")%>") no-repeat center center;
-                            background-size: 100% 100%;
-                        }
-                    </style>
+                    <div class="case-qr-box" id="qrg-<%=i + ""%>"></div>
+                    <script id="qrs-<%=i + ""%>">
+                        iu.QRCode.addToHTML(document.getElementById("qrg-<%=i + ""%>"),"<%=_card_data.getString("link")%>",80);
+                        document.getElementById("qrg-<%=i + ""%>").removeAttribute("id");
+                        document.getElementById("qrs-<%=i + ""%>").remove();
+                    </script>
                 </div>
             </div>
         </div>

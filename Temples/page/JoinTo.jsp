@@ -14,50 +14,23 @@
                          background-size: auto 100%;"
             ></div>
             <div class="card jt-card mt-4 mb-1">
-                <div class="nsa-title">价格表</div>
-                <div class="container">
-                    <table class="table">
-                        <thead>
-                        <tr>
-                            <th scope="col">#</th>
-                            <th scope="col">First</th>
-                            <th scope="col">Last</th>
-                            <th scope="col">Handle</th>
-                        </tr>
-                        </thead>
-                        <tbody>
-                        <tr>
-                            <th scope="row">1</th>
-                            <td>Mark</td>
-                            <td>Otto</td>
-                            <td>@mdo</td>
-                        </tr>
-                        <tr>
-                            <th scope="row">2</th>
-                            <td>Jacob</td>
-                            <td>Thornton</td>
-                            <td>@fat</td>
-                        </tr>
-                        <tr>
-                            <th scope="row">3</th>
-                            <td colspan="2">Larry the Bird</td>
-                            <td>@twitter</td>
-                        </tr>
-                        </tbody>
-                    </table>
-                </div>
+                <%@ include file="../modal/DefaultProduct.jsp" %>
             </div>
         </div>
         <div class="col-3">
             <%@ include file="../modal/CaseRightBar.jsp" %>
         </div>
-        <script id="cache_set">
-            document.getElementById("product-buy").innerHTML = "购买VIP";
-            document.getElementById("product-buy").setAttribute("data-bs-toggle","modal");
-            document.getElementById("product-buy").setAttribute("data-bs-target","#b-vip");
-            document.getElementById("cache_set").remove();
-        </script>
+        <% if(GlobalSettings.getBoolean("is_avatar_box_show")){ %>
+            <script id="cache_set">
+                document.getElementById("product-buy").innerHTML = "购买VIP";
+                document.getElementById("product-buy").setAttribute("data-bs-toggle","modal");
+                document.getElementById("product-buy").setAttribute("data-bs-target","#b-vip");
+                document.getElementById("cache_set").remove();
+            </script>
+        <% } %>
     </div>
 </div>
 
+<link rel="stylesheet" href="<%=request.getContextPath()%>/resources/page/home/style.css?v=<%=TimerX.getNowTimeStr(10)%>">
 <link rel="stylesheet" href="<%=request.getContextPath()%>/resources/page/join/style.css?v=<%=TimerX.getNowTimeStr(10)%>">
+<link rel="stylesheet" href="<%=request.getContextPath()%>/resources/page/article/style.css?v=<%=TimerX.getNowTimeStr(10)%>">

@@ -6,21 +6,24 @@
   To change this template use File | Settings | File Templates.
 --%>
 <%@ page contentType="text/html;charset=UTF-8" %>
-<div class="card jt-card jt-top-card sa-bg-blue mt-1 mb-1">
-    <div class="jt-card-avatar bg-info"></div>
-    <div class="card-body us-none">
-        <div class="jt-card-intro">
-            <div>你好，欢迎来到奕奇SaaS</div>
-            <div>有什么问题可以咨询我哦</div>
+<%
+    if(GlobalSettings.getBoolean("is_avatar_box_show")){ %>
+    <div class="card jt-card jt-top-card sa-bg-blue mt-1 mb-1">
+        <div class="jt-card-avatar bg-info"></div>
+        <div class="card-body us-none">
+            <div class="jt-card-intro">
+                <div>你好，欢迎来到奕奇SaaS</div>
+                <div>有什么问题可以咨询我哦</div>
+            </div>
+            <div class="jt-card-tel">
+                <%=GlobalSettings.getJsonArray("concat").getJsonObject(1).getString("inner")%>
+            </div>
+            <div class="jt-card-btn jt-card-btn-white us-none opacity-0" style="cursor: default" id="show-demo">查看演示</div>
+            <div class="jt-card-btn jt-card-btn-blue us-none">购买授权</div>
         </div>
-        <div class="jt-card-tel">
-            <%=GlobalSettings.getJsonArray("concat").getJsonObject(1).getString("inner")%>
-        </div>
-        <div class="jt-card-btn jt-card-btn-white us-none opacity-0" style="cursor: default" id="show-demo">查看演示</div>
-        <div class="jt-card-btn jt-card-btn-blue us-none">购买授权</div>
     </div>
-</div>
-<div class="card jt-card mt-4 mb-1">
+<% } %>
+<div class="card jt-card mt-<%=GlobalSettings.getBoolean("is_avatar_box_show") ? "4" : "1"%> mb-1">
     <div class="card-body" id="Hot_App">
         <div class="jt-card-title">热门应用</div>
         <% for(int i = 0;i < 6;i++){ %>
