@@ -1,4 +1,5 @@
 {
+    "_self": "列表/文章页Banner图配置",
     "top_img": {
         "news": "resources/images/default/in-official.png",
         "join": "resources/images/default/jt-banner.png",

@@ -1,5 +1,5 @@
 {
-    "_self": "-----Banner 图 配置-----",
+    "_self": "-----Banner 图 配置 （当外部接口发生错误时）-----",
     "banner": [
         {
             "img": "https://img-prod-cms-rt-microsoft-com.akamaized.net/cms/api/am/imageFileData/RE4wtc2?ver=504e",
