@@ -47,7 +47,7 @@
                 <div class="case-qr">
                     <div class="case-qr-box" id="qrg-<%=i + ""%>"></div>
                     <script id="qrs-<%=i + ""%>">
-                        iu.QRCode.addToHTML(document.getElementById("qrg-<%=i + ""%>"),"<%=_card_data.getString("link")%>",80);
+                        iu.QRCode.addToHTML(document.getElementById("qrg-<%=i + ""%>"),"<%=_card_data.getString("link").startsWith("http://") || _card_data.getString("link").startsWith("https://") ? _card_data.getString("link") : "http://" + _card_data.getString("link") %>",80);
                         document.getElementById("qrg-<%=i + ""%>").removeAttribute("id");
                         document.getElementById("qrs-<%=i + ""%>").remove();
                     </script>
