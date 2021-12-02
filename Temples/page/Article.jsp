@@ -44,14 +44,15 @@
                                 <div class="sa-card-buy-subtitle"><%=data.getString("subtitle")%></div>
                                 <div class="sa-card-buy-info">
                                     <div class="w-50 float-start text-start">价格<span>￥ <%=(data.getInt("price") / 100.00) + ""%></span></div>
-                                    <div class="w-50 float-start text-end"><%=data.getInt("sale_number") + ""%>购买</div>
+                                    <div class="w-50 float-start text-end"><%=data.getInt("sale_number") + ""%> 购买</div>
                                 </div>
                                 <div class="sa-card-buy-button position-relative">
                                     <button class="btn btn-primary" onclick="window.open('./?r=<%=_route%>&aid=<%=_aid%>&type=check','_self')">立即购买</button>
                                     <%
                                         String show_url = "";
                                         if(!data.get("info").toString().trim().equals("[]") && StringX.isNotNull(data.getJsonObject("info").get("show_url") + "")){
-                                            show_url = " onclick=\"window.open('{{url}}','_blank')\"".replace("{{url}}",data.getJsonObject("info").get("show_url") + "");
+                                            String url = data.getJsonObject("info").getJsonObject("show_url").getString("url");
+                                            show_url = " onclick=\"window.open('{{url}}','_blank')\"".replace("{{url}}",url);
                                         }
                                     %>
                                     <button class="btn btn-warning"<%=show_url%>>查看演示</button>

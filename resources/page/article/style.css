@@ -146,13 +146,13 @@
 }
 .sa-card-buy-button button:nth-child(1) {
     position: absolute;
-    right: 247px;
+    right: 220px;
 }
 .sa-card-buy-button button:nth-child(2) {
     position: absolute;
     right: 21px;
 }
 .sa-card-buy-button .btn {
-    padding: 16px 59px;
-    font-size: 21px;
+    padding: .375rem 50px;
+    /*font-size: 21px;*/
 }
