@@ -25,7 +25,7 @@
 <% } %>
 <div class="card jt-card mt-<%=GlobalSettings.getBoolean("is_avatar_box_show") ? "4" : "1"%> mb-1">
     <div class="card-body" id="Hot_App">
-        <div class="jt-card-title">热门应用</div>
+        <%--<div class="jt-card-title">热门应用</div>
         <% for(int i = 0;i < 6;i++){ %>
         <div class="jt-card-child row us-none"
              onclick="window.open('./?r=/product/&aid=<%=i + ""%>','_self')"
@@ -38,7 +38,7 @@
                 <div class="jt-card-child-intro jt-card-child-price">399元/年</div>
             </div>
         </div>
-        <% } %>
+        <% } %>--%>
     </div>
 </div>
 <script>
