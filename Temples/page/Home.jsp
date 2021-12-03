@@ -276,13 +276,13 @@
             <div class="col">
                 <div class="card us-none">
                     <div class="card-header text-center fw-bold">网站建设</div>
-                    <img src="<%=GlobalSettings.getJsonObject("web").getString("img")%>" onclick="window.open('./?r=<%=GlobalSettings.getJsonObject("web").getString("route")%>','<%=ActiveX.getStW(GlobalSettings.getJsonObject("web").getString("route"),"/link/","_blank","_self")%>')" alt="" class="card-img-bottom us-hover">
+                    <img src="<%=GlobalSettings.getJsonObject("web").getString("img")%>"<% if(StringX.isNotNull(GlobalSettings.getJsonObject("web").getString("route"))){ %> onclick="window.open('./?r=<%=GlobalSettings.getJsonObject("web").getString("route")%>','<%=ActiveX.getStW(GlobalSettings.getJsonObject("web").getString("route"),"/link/","_blank","_self")%>')"<% } %> alt="" class="card-img-bottom us-hover">
                 </div>
             </div>
             <div class="col">
                 <div class="card us-none">
                     <div class="card-header text-center fw-bold">营销推广</div>
-                    <img src="<%=GlobalSettings.getJsonObject("extend").getString("img")%>" onclick="window.open('./?r=<%=GlobalSettings.getJsonObject("extend").getString("route")%>','<%=ActiveX.getStW(GlobalSettings.getJsonObject("extend").getString("route"),"/link/","_blank","_self")%>')" alt="" class="card-img-bottom us-hover">
+                    <img src="<%=GlobalSettings.getJsonObject("extend").getString("img")%>"<% if(StringX.isNotNull(GlobalSettings.getJsonObject("web").getString("route"))){ %> onclick="window.open('./?r=<%=GlobalSettings.getJsonObject("extend").getString("route")%>','<%=ActiveX.getStW(GlobalSettings.getJsonObject("extend").getString("route"),"/link/","_blank","_self")%>')"<% } %> alt="" class="card-img-bottom us-hover">
                 </div>
             </div>
         </div>

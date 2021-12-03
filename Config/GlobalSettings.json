@@ -16,33 +16,33 @@
     "__p_self": "-----产品中心banner 按钮开关-----",
     "is_product_banner_button_show": false,
     "__1_self": "-----页脚横幅开关及配置-----",
-    "is_streamer_show": false,
+    "is_streamer_show": true,
     "streamer": {
         "slogan": "我们力争做优秀的产品，欢迎加入",
-        "btn_title": "立即注册",
+        "btn_title": "",
         "btn_route": "/"
     },
     "__2_self": "-----热点应用排行开关及配置-----",
     "is_hot_app_show": true,
     "hot_app_img": "resources/images/default/a1.png",
     "__3_self": "-----页中横幅开关及配置-----",
-    "is_inner_streamer_show": false,
+    "is_inner_streamer_show": true,
     "inner_streamer": {
         "img": "resources/images/default/ad.png",
-        "route": "/link/aHR0cHM6Ly93d3cuYmFpZHUuY29t"
+        "route": "/link/&m=api&b64=aHR0cHM6Ly93d3cuYmFpZHUuY29t&tip=1"
     },
     "__4_self": "-----行业解决方案开关及配置-----",
     "is_solution_show": true,
     "solution_img": "resources/images/default/a2.png",
     "__5_self": "-----网站建设与营销推广模块开关及配置-----",
-    "is_web_extend_show": false,
+    "is_web_extend_show": true,
     "web": {
         "img": "resources/images/default/web.png",
-        "route": "/"
+        "route": ""
     },
     "extend": {
         "img": "resources/images/default/extend.png",
-        "route": "/"
+        "route": ""
     },
     "__6_self": "-----小程序系统开关及配置-----",
     "is_wx_app_show": true,
