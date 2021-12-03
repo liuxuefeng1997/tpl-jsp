@@ -71,7 +71,7 @@
                     if(DebugSettings){out.print(NewsDetail);}
                     if(NewsDetail.getInt("code") == 0){
                         JsonObject data = NewsDetail.getJsonObject("data");
-                        String picture = data.getJsonArray("picture").size() >= 1 ? data.getJsonArray("picture").getJsonObject(0).getString("url") : IntroSettings.getJsonObject("top_img").getString(_route.replace("/",""));
+                        String picture = data.getJsonArray("picture").size() >= 1 ? data.getJsonArray("picture").getJsonObject(0).getString("url") : IntroSettings.getJsonObject("top_img").getString("case");
                 %>
                     <div class="sa-card-title us-none"><%=data.getString("title")%></div>
                     <div class="sa-card-subtitle us-none"><%=data.getString("subtitle")%></div>

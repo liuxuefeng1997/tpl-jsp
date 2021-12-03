@@ -350,3 +350,6 @@ a {
     background-color: #FFFFFF;
     color: #2A7EFB;
 }
+.min-height-30px {
+    min-height: 30px;
+}

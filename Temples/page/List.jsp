@@ -34,7 +34,7 @@
                 <%--<div class="sa-card-title"><%=IntroSettings.getJsonObject("title").getString(request.getParameter("r").replace("/",""))%></div>--%>
                 <div class="tab-content mt-2" id="nav-tabContent">
                     <div class="tab-pane fade show active" id="nav-news" role="tabpanel" aria-labelledby="news-tab">
-                        <div class="w-100 mt-1 overflow-hidden">
+                        <div class="w-100 mt-1 overflow-hidden min-height-30px">
                             <%
                                 for(JsonValue x : News_Json.getJsonObject("data").getJsonArray("data")){
                                     JsonObject data = x.asJsonObject();
