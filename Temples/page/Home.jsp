@@ -144,7 +144,7 @@
                 </div>
                 <div class="banner-box-ad-area mt-1"
                      style="background: url('<%=BannerADLink_right.getString("img")%>') no-repeat center center;background-size:100% auto;"
-                     onclick="window.open('./?r=<%=BannerADLink_right.getString("route")%>','<%=ActiveX.getStW(BannerADLink_right.getString("route"),"/link/","_blank","_self")%>')"
+                     onclick="window.open('./?r=<%=BannerADLink_right.getString("route")%>','<%=ActiveX.getStW(BannerADLink_right.getString("route"),"/link/","_blank","_self")%>');"
                 ></div>
             </div>
         </div>
