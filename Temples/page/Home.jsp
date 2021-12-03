@@ -129,7 +129,7 @@
             </div>
         </div>
         <div class="col-3">
-            <div class="container-fluid mt-1 mb-1 pb-3 bg-white banner-box banner-box-right">
+            <div class="container-fluid mt-1 mb-1 pb-3 bg-white us-none banner-box-right">
                 <div class="banner-box-login-area mt-1 mb-1">
                     <div class="banner-box-login-img-box mt-1 mb-1"
                          id="login-bg-home"
