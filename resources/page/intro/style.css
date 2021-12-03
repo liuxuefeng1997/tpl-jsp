@@ -21,9 +21,10 @@
 .in-right-newly-title {
     margin: 13px 13px 5px;
     font-weight: bold;
-    font-size: 21px;
+    font-size: 18px;
     height: 28px;
     line-height: 28px;
+    color: #666;
 }
 .in-right-newly-child-top3 {
     color: #FF0000;
