@@ -16,6 +16,6 @@
     },
     "right_bottom": {
         "img": "resources/images/default/ad-1.png",
-        "route": "/link/&m=api&b64=aHR0cDovL3dwYS5xcS5jb20vbXNncmQ_dj0zJnVpbj0zMjkwOTQ2MzM0JnNpdGU9cXEmbWVudT15ZXM&tip=1"
+        "route": "/link/&m=api&b64=aHR0cDovL3dwYS5xcS5jb20vbXNncmQ_dj0zJnVpbj0zMjkwOTQ2MzM0JnNpdGU9cXEmbWVudT15ZXM"
     }
 }

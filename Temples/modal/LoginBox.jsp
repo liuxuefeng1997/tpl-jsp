@@ -10,9 +10,8 @@
 <div class="modal fade" id="v-login" tabindex="-1" aria-labelledby="v-login-label" data-bs-backdrop="static" aria-hidden="true">
     <div class="modal-dialog modal-dialog-centered modal-sm">
         <div class="modal-content">
-            <div class="modal-header">
+            <div class="modal-header" style="border-bottom: none">
                 <h5 class="modal-title" id="v-login-label">登录/注册</h5>
-                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
             <div class="modal-body">
                 <form name="v-login-form">
@@ -96,7 +95,7 @@
                     <% } %>
                 </form>
             </div>
-            <div class="modal-footer">
+            <div class="modal-footer" style="border-top: none">
                 <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">取消</button>
                 <button type="button" class="btn btn-primary" id="v-l-b">登录</button>
                 <script>
