@@ -34,7 +34,7 @@
     "__4_self": "-----行业解决方案开关及配置-----",
     "is_solution_show": true,
     "solution_img": "resources/images/default/a2.png",
-    "__5_self": "-----网站建设与营销推广模块开关及配置-----",
+    "__5_self": "-----网站建设与营销推广模块开关及配置（route为空时不跳转）-----",
     "is_web_extend_show": true,
     "web": {
         "img": "resources/images/default/web.png",
