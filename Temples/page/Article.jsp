@@ -52,6 +52,7 @@
                                         String show_url = "";
                                         if(!data.get("info").toString().trim().equals("[]") && StringX.isNotNull(data.getJsonObject("info").get("show_url") + "")){
                                             String url = data.getJsonObject("info").getJsonObject("show_url").getString("url");
+                                            url = url.startsWith("http://") || url.startsWith("https://") ? url : "//" + url;
                                             show_url = " onclick=\"window.open('{{url}}','_blank')\"".replace("{{url}}",url);
                                         }
                                     %>
@@ -68,13 +69,14 @@
                 <% break; default:
                     JsonObject NewsDetail = JSONReaderX.getJsonObj(HTTPLoaderX.getResponses("POST",Api_Url_News_Detail,"id=" + _aid,Api_Url_Host));
                     if(DebugSettings){out.print(NewsDetail);}
-                    //if(DebugSettings){break;}//这是一个断点
                     if(NewsDetail.getInt("code") == 0){
                         JsonObject data = NewsDetail.getJsonObject("data");
+                        String picture = data.getJsonArray("picture").size() >= 1 ? data.getJsonArray("picture").getJsonObject(0).getString("url") : IntroSettings.getJsonObject("top_img").getString(_route.replace("/",""));
                 %>
                     <div class="sa-card-title us-none"><%=data.getString("title")%></div>
                     <div class="sa-card-subtitle us-none"><%=data.getString("subtitle")%></div>
                     <div class="container-fluid mt-3 pb-2"><%=data.getString("content")%></div>
+                    <script id="set-head">document.getElementById("product-head-image").style.background = "url('<%=picture%>') no-repeat center center";</script>
                 <% } break; } %>
             </div>
         </div>
