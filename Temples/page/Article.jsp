@@ -76,7 +76,7 @@
                     <div class="sa-card-title us-none"><%=data.getString("title")%></div>
                     <div class="sa-card-subtitle us-none"><%=data.getString("subtitle")%></div>
                     <div class="container-fluid mt-3 pb-2"><%=data.getString("content")%></div>
-                    <script id="set-head">document.getElementById("product-head-image").style.background = "url('<%=picture%>') no-repeat center center";</script>
+                    <script id="set-head">document.getElementById("product-head-image").style.background = "url('<%=picture%>') no-repeat center center";document.getElementById("set-head").remove();</script>
                 <% } break; } %>
             </div>
         </div>
