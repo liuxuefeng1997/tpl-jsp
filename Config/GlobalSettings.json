@@ -42,7 +42,7 @@
     },
     "extend": {
         "img": "resources/images/default/extend.png",
-        "route": ""
+        "route": "/product/"
     },
     "__6_self": "-----小程序系统开关及配置-----",
     "is_wx_app_show": true,
