@@ -117,7 +117,8 @@
                                 if(res_data.code === 201 || res_data.code === 202){
                                     v_tip("sendCode",res_data.message,5);
                                 }else if (res_data.code === 0){
-                                    localStorage.setItem("token",res_data.data.token);
+                                    let {token} = res_data.data;
+                                    localStorage.setItem("token",token);
                                     let phone_num = document.forms.namedItem("v-login-form").vi_phone.value.toString();
                                     localStorage.setItem("phone",phone_num.substring(0,3) + "****" + phone_num.substring(phone_num.length - 4,phone_num.length));
                                     window.location.href = window.location.href + "";
