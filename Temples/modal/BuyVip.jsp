@@ -99,8 +99,8 @@
                     }
                 ],function (e){
                     if(e.status !== 500){
-                        let json = JSON.parse(e.responseText);
-                        if(json.data.is_payed){
+                        let {is_payed} = JSON.parse(e.responseText).data;
+                        if(is_payed){
                             document.getElementById("vip-button-list").innerHTML = "支付成功";
                             document.getElementById("vip-buy-check").remove();
                             document.getElementById("vip-buy-close").removeAttribute("data-bs-toggle");
