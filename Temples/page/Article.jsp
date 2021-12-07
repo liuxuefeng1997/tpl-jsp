@@ -16,7 +16,7 @@
         <div class="col-9">
             <div class="card jt-card jt-top-card mt-1 mb-1"
                  id="product-head-image"
-                 style="background: url('<%=IntroSettings.getJsonObject("top_img").getString(_route.replace("/",""))%>') no-repeat center center;
+                 style="background: url('<%=_route.equals("/product/") ? IntroSettings.getJsonObject("top_img").getString("join") : IntroSettings.getJsonObject("top_img").getString(_route.replace("/",""))%>') no-repeat center center;
                          background-size: auto 100%;"
             ></div>
             <div class="card jt-card mt-4 mb-1 us-none">
