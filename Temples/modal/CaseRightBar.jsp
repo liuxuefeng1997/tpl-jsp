@@ -57,13 +57,13 @@
             if(json.code === 0){
                 let array = json.data.data;
                 for (let i in array){
-                    let data = array[i];
+                    let {id,head_pic,title,price} = array[i];
                     let div = document.createElement("div");
                     div.className = "jt-card-child row us-none";
                     div.onclick = function (){
-                        window.open('./?r=/product/&aid=' + data.id,'_self');
+                        window.open('./?r=/product/&aid=' + id,'_self');
                     }
-                    div.innerHTML = temple.replace("{{img}}",data.head_pic).replace("{{title}}",data.title).replace("{{price}}",(data.price / 100).toFixed(2).toString() + "元/年");
+                    div.innerHTML = temple.replace("{{img}}",head_pic).replace("{{title}}",title).replace("{{price}}",(price / 100).toFixed(2).toString() + "元/年");
                     document.getElementById("Hot_App").appendChild(div);
                 }
             }
