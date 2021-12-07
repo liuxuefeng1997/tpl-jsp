@@ -43,15 +43,15 @@
                             }
                         ],function (e){
                             if(e.status !== 500){
-                                let json = JSON.parse(e.responseText);
                                 let buy_button = '<button id="buy-vip" class="btn btn-outline-dark ms-3" data-bs-toggle="modal" data-bs-target="#b-vip">购买VIP</button>';
-                                document.getElementById("u-info-table-id").innerHTML = json.data.id;
-                                document.getElementById("u-info-table-name").innerHTML = json.data.name;
+                                let {id,name,discount: {discount, name: discount_name},created_at,updated_at} = JSON.parse(e.responseText).data;
+                                document.getElementById("u-info-table-id").innerHTML = id;
+                                document.getElementById("u-info-table-name").innerHTML = name;
                                 document.getElementById("u-info-table-phone").innerHTML = localStorage.getItem("phone");
-                                document.getElementById("u-info-table-level").innerHTML = json.data.discount.name + buy_button;
-                                document.getElementById("u-info-table-level").setAttribute("discount",json.data.discount.discount);
-                                document.getElementById("u-info-table-create").innerHTML = json.data.created_at;
-                                document.getElementById("u-info-table-update").innerHTML = json.data.updated_at;
+                                document.getElementById("u-info-table-level").innerHTML = discount_name + buy_button;
+                                document.getElementById("u-info-table-level").setAttribute("discount",discount);
+                                document.getElementById("u-info-table-create").innerHTML = created_at;
+                                document.getElementById("u-info-table-update").innerHTML = updated_at;
                             }
                         });
                     }
