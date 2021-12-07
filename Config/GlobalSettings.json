@@ -38,7 +38,7 @@
     "is_web_extend_show": true,
     "web": {
         "img": "resources/images/default/web.png",
-        "route": ""
+        "route": "/product/&aid=22"
     },
     "extend": {
         "img": "resources/images/default/extend.png",
