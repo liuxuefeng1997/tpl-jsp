@@ -94,19 +94,21 @@
                         }
                     ],function (e){
                         if(e.status !== 500){
-                            let json = JSON.parse(e.responseText);
-                            let tFlag = true;
+                            let json = JSON.parse(e.responseText);let tFlag = true;
                             let temple = '<tr><td>{{order_id}}</td><td>{{product}}</td><td>{{type}}</td><td>{{price}}</td><td>{{order_time}}</td></tr>';
                             for(let x in json.data.data){
-                                let data = json.data.data[x];
-                                document.getElementById("u-order-table").innerHTML += temple.replace("{{order_id}}",data.order_id)
-                                    .replace("{{product}}",data.product.title)
-                                    .replace("{{price}}","￥" + (json.data.data[x].product.price / 100).toFixed(2))
-                                    .replace("{{order_time}}",data.created_at).replace("{{type}}","默认");
-                                tFlag = false;
+                                let {order_id,product,created_at} = json.data.data[x];
+                                if(!product){
+                                    break;
+                                }
+                                let {title,price} = product;
+                                document.getElementById("u-order-table").innerHTML += temple.replace("{{order_id}}",order_id)
+                                    .replace("{{product}}",title)
+                                    .replace("{{price}}","￥" + (price / 100).toFixed(2))
+                                    .replace("{{order_time}}",created_at).replace("{{type}}","默认");tFlag = false;
                             }
                             if(tFlag){
-                                document.getElementById("u-order-table").innerHTML = '<tr><th scope="row"> </th><td colspan="3">您还没有订单~</td></tr>';
+                                document.getElementById("u-order-table").innerHTML = '<tr><td colspan="5" class="text-center">您还没有订单~</td></tr>';
                             }
                         }
                     });
