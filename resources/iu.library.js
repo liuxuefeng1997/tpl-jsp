@@ -6,13 +6,17 @@ window.iu = {
     '__version': {
         "Name": "IUIdeas Library Javascript Version",
         "Author": "IUIdeas",
-        "Version": "1.2.11.211117(1118)",
+        "Version": "1.2.12.211208(1740)",
         "License": "GPL v3 (https://www.gnu.org/licenses/gpl-3.0-standalone.html)\n         aralejs/qrcode (https://github.com/aralejs/qrcode)",
         "EndTip": "IUIdeas Shanghai",
         "__update": function (){
             return iu.html.addJavascript("https://www.mailx.top/public-js/iu.library.js");
         },
         "__updateLog": [
+            {
+                "version": "1.2.11.211117(1118) to 1.2.12.211208(1740)",
+                "info": "1.bug fix"
+            },
             {
                 "version": "1.2.10.211117(1046) to 1.2.11.211117(1118)",
                 "info": "1.bug fix"
@@ -234,14 +238,10 @@ window.iu = {
     },
     '___log': function (){
         let n = "";
-        for(let s in iu.__version.__updateLog){
-            n = n + iu.__version.__updateLog[s].version + "\n" + iu.__version.__updateLog[s].info + "\n\n";
+        for(let s of iu.__version.__updateLog){
+            n = n + s.version + "\n" + s.info + "\n\n";
         }
         return n;
     }
 };
-iu.log("{0}\nAuthor：{1}\nVersion：{2}\nLicense：{3}\n\n\n{log}\n<< {4} >>".replace("{0}",iu.__version.Name)
-    .replace("{1}",iu.__version.Author).replace("{2}",iu.__version.Version)
-    .replace("{3}",iu.__version.License).replace("{4}",iu.__version.EndTip)
-    .replace("{log}",iu.___log())
-);
+iu.log(`${iu.__version.Name}\nAuthor：${iu.__version.Author}\nVersion：${iu.__version.Version}\nLicense：${iu.__version.License}\n\n\n${iu.___log()}\n<< ${iu.__version.EndTip} >>`);
