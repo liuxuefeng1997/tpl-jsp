@@ -73,8 +73,8 @@
                         JsonObject data = NewsDetail.getJsonObject("data");
                         String picture = data.getJsonArray("picture").size() >= 1 ? data.getJsonArray("picture").getJsonObject(0).getString("url") : IntroSettings.getJsonObject("top_img").getString("case");
                 %>
-                    <div class="sa-card-title us-none"><%=data.getString("title")%></div>
-                    <div class="sa-card-subtitle us-none"><%=data.getString("subtitle")%></div>
+                    <div class="jt-card-title us-none mt-3 pb-2" style="font-size: 26px;text-align: center"><%=data.getString("title")%></div>
+                    <div class="sa-card-subtitle us-none overflow-hidden mt-3"><%=data.getString("subtitle")%></div>
                     <div class="container-fluid mt-3 pb-2"><%=data.getString("content")%></div>
                     <script id="set-head">document.getElementById("product-head-image").style.background = "url('<%=picture%>') no-repeat center center";document.getElementById("set-head").remove();</script>
                 <% } break; } %>

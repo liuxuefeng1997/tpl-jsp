@@ -400,7 +400,7 @@
             <div class="tab-pane fade show active" id="nav-news" role="tabpanel" aria-labelledby="news-tab">
                 <div class="w-100 mt-2 overflow-hidden">
                     <%
-                        JsonObject News_Json = JSONReaderX.getJsonObj(HTTPLoaderX.getResponses("POST",Api_Url_News,"type=1",Api_Url.getString("api_host")));
+                        JsonObject News_Json = JSONReaderX.getJsonObj(HTTPLoaderX.getResponses("POST",Api_Url_News,"type=2",Api_Url.getString("api_host")));
                         int ____pi = 0;
                         for(JsonValue x : News_Json.getJsonObject("data").getJsonArray("data")){
                             JsonObject data = x.asJsonObject();
