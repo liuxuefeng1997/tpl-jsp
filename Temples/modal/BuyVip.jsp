@@ -28,15 +28,13 @@
         <script>
             iu.http.res("POST","<%=Api_Url_Users_Vip_List%>",true,null,null,function (e){
                 if(e.status !== 500){
-                    let json = JSON.parse(e.responseText);
-                    let array = json.data.vip;
-                    let button = '<button class="btn btn-outline-dark" onclick="chooseVip(' + "'{{id}}'" + ')">{{type}}<br><span style="font-size: 14px;color: red;">{{price}}</span></button>';
+                    let button = '<button class="btn btn-outline-dark me-2" onclick="chooseVip(' + "'{{id}}'" + ')">{{type}}<br><span style="font-size: 14px;color: red;">{{price}}</span></button>';
                     let flag = true;
-                    for (let x in array){
+                    let {vip:array} = JSON.parse(e.responseText).data;
+                    for (let data of array){
                         if(document.getElementById("b-v-load")){
                             document.getElementById("b-v-load").remove();
                         }
-                        let data = array[x];
                         document.getElementById("vip-button-list").innerHTML += button.replace("{{id}}",data.id)
                             .replace("{{type}}",data.type).replace("{{price}}","￥" + (data.value / 100).toFixed(2));
                         flag = false
@@ -49,6 +47,11 @@
                         document.getElementById("vip-buy-close").innerHTML = "关闭"
                         document.getElementById("vip-buy-close").onclick = function (){
                             window.location.href = window.location.href + "";
+                        }
+                    }else {
+                        document.getElementById("vip-buy-close").onclick = function (){
+                            document.getElementById("vip-qrcode").innerHTML = "";
+                            document.getElementById("vip-qrcode").removeAttribute("order_id");
                         }
                     }
                 }
@@ -67,15 +70,16 @@
                     }
                 ],function (e){
                     if(e.status !== 500){
-                        let json = JSON.parse(e.responseText);
-                        if(json.code === 0){
+                        let {code,data} = JSON.parse(e.responseText);
+                        if(code === 0){
+                            let {pay_url,order_id} = data;
                             document.getElementById("vip-qrcode").innerHTML = "";
-                            let qr_svg = iu.QRCode.generate(json.data.pay_url,200,"resources/images/default/wxpay.jpg",50);
+                            let qr_svg = iu.QRCode.generate(pay_url,200,"resources/images/default/wxpay.jpg",50);
                             qr_svg.id = "wx_vip_pay_qr";
                             document.getElementById("vip-qrcode").appendChild(qr_svg);
-                            document.getElementById("vip-qrcode").setAttribute("order_id",json.data.order_id);
+                            document.getElementById("vip-qrcode").setAttribute("order_id",order_id);
                             document.getElementById("wx_vip_pay_qr").setAttribute("style","margin-top: 0.5em;");
-                        }else if(json.code === 401){
+                        }else if(code === 401){
                             document.getElementById("vip-button-list").innerHTML = "需要登录才能购买！";
                             if(document.getElementById("vip-buy-check")){document.getElementById("vip-buy-check").remove();}
                         }
@@ -84,6 +88,10 @@
             }
             document.getElementById("vip-buy-check").onclick = function (){
                 if(!document.getElementById("vip-qrcode").getAttribute("order_id")){
+                    document.getElementById("vip-buy-check").innerHTML = "请先选择一个类型！";
+                    setTimeout(function (){
+                        document.getElementById("vip-buy-check").innerHTML = "检查订单";
+                    },3000)
                     return null;
                 }
                 iu.http.res("POST","<%=Api_Url_Users_Buy_Check%>",true,JSON.stringify({
