@@ -6,7 +6,7 @@
   To change this template use File | Settings | File Templates.
 --%>
 <%@ page contentType="text/html;charset=UTF-8" %>
-<div class="modal fade" id="b-vip" tabindex="-1" aria-labelledby="b-vip-label" aria-hidden="true">
+<div class="modal fade" id="b-vip" tabindex="-1" aria-labelledby="b-vip-label" data-bs-backdrop="static" aria-hidden="true">
     <div class="modal-dialog">
         <div class="modal-content">
             <div class="modal-header">
@@ -28,14 +28,14 @@
         <script>
             iu.http.res("POST","<%=Api_Url_Users_Vip_List%>",true,null,null,function (e){
                 if(e.status !== 500){
-                    let button = '<button class="btn btn-outline-dark me-2" onclick="chooseVip(' + "'{{id}}'" + ')">{{type}}<br><span style="font-size: 14px;color: red;">{{price}}</span></button>';
+                    let button = '<button class="btn btn-outline-dark me-2" id="v-b-{{id}}" onclick="chooseVip(' + "'{{id}}'" + ')">{{type}}<br><span style="font-size: 14px;color: red;">{{price}}</span></button>';
                     let flag = true;
                     let {vip:array} = JSON.parse(e.responseText).data;
                     for (let data of array){
                         if(document.getElementById("b-v-load")){
                             document.getElementById("b-v-load").remove();
                         }
-                        document.getElementById("vip-button-list").innerHTML += button.replace("{{id}}",data.id)
+                        document.getElementById("vip-button-list").innerHTML += button.replaceAll("{{id}}",data.id)
                             .replace("{{type}}",data.type).replace("{{price}}","￥" + (data.value / 100).toFixed(2));
                         flag = false
                     }
@@ -52,6 +52,9 @@
                         document.getElementById("vip-buy-close").onclick = function (){
                             document.getElementById("vip-qrcode").innerHTML = "";
                             document.getElementById("vip-qrcode").removeAttribute("order_id");
+                            for (let el of document.getElementById("vip-button-list").getElementsByTagName("button")){
+                                el.className = "btn btn-outline-dark me-2";
+                            }
                         }
                     }
                 }
@@ -83,6 +86,10 @@
                             document.getElementById("vip-button-list").innerHTML = "需要登录才能购买！";
                             if(document.getElementById("vip-buy-check")){document.getElementById("vip-buy-check").remove();}
                         }
+                        for (let el of document.getElementById("vip-button-list").getElementsByTagName("button")){
+                            el.className = "btn btn-outline-dark me-2";
+                        }
+                        document.getElementById("v-b-" + id).classList.add("active");
                     }
                 });
             }
