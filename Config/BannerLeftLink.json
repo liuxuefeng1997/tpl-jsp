@@ -5,15 +5,15 @@
             "title": "网站建设",
             "list": [
                 {
-                    "route": "/",
+                    "route": "/product/&aid=21",
                     "title": "企业官网"
                 },
                 {
-                    "route": "/",
+                    "route": "/product/&aid=22",
                     "title": "速成建站"
                 },
                 {
-                    "route": "/",
+                    "route": "/product/&aid=23",
                     "title": "营销型网站"
                 }
             ]
@@ -22,33 +22,16 @@
             "title": "小程序",
             "list": [
                 {
-                    "route": "/",
-                    "title": "电商零售"
+                    "route": "/product/&aid=18",
+                    "title": "求职小程序"
                 },
                 {
-                    "route": "/",
+                    "route": "/product/&aid=20",
                     "title": "生活服务"
                 },
                 {
-                    "route": "/",
+                    "route": "/product/&aid=5",
                     "title": "餐饮外卖"
-                }
-            ]
-        },
-        {
-            "title": "电商系统",
-            "list": [
-                {
-                    "route": "/",
-                    "title": "B2B"
-                },
-                {
-                    "route": "/",
-                    "title": "多用户系统"
-                },
-                {
-                    "route": "/",
-                    "title": "B2C"
                 }
             ]
         },
@@ -56,16 +39,33 @@
             "title": "营销推广",
             "list": [
                 {
-                    "route": "/",
+                    "route": "/product/&aid=33",
                     "title": "抖音获客"
                 },
                 {
-                    "route": "/",
+                    "route": "/product/&aid=37",
                     "title": "SEO"
                 },
                 {
-                    "route": "/",
+                    "route": "/product/&aid=40",
                     "title": "竞价推广"
+                }
+            ]
+        },
+        {
+            "title": "定制服务",
+            "list": [
+                {
+                    "route": "/product/&aid=7",
+                    "title": "APP开发"
+                },
+                {
+                    "route": "/product/&aid=22",
+                    "title": "网站定制"
+                },
+                {
+                    "route": "/product/&aid=24",
+                    "title": "小程序定制"
                 }
             ]
         },
@@ -87,19 +87,19 @@
             ]
         },
         {
-            "title": "定制服务",
+            "title": "电商系统",
             "list": [
                 {
                     "route": "/",
-                    "title": "APP开发"
+                    "title": "B2B"
                 },
                 {
                     "route": "/",
-                    "title": "网站定制"
+                    "title": "多用户系统"
                 },
                 {
                     "route": "/",
-                    "title": "H5开发"
+                    "title": "B2C"
                 }
             ]
         }
