@@ -135,7 +135,7 @@
     overflow: hidden;
     border-radius: 6px;
     position: relative;
-    background: #F1FCFF;
+    /*background: #F1FCFF;*/
 }
 .sa-card-inner-x {
     height: calc(295px * 2);
@@ -151,8 +151,8 @@
     height: calc(100% - 18px);
     margin-top: 9px;
     position: absolute;
-    right: 18px;
-    width: calc(100% - 340px);
+    right: 93px;
+    width: calc(100% - 450px);
     overflow: hidden;
     overflow-x: auto;
 }
@@ -176,7 +176,7 @@
     margin: 0 9px;
     position: relative;
     overflow: hidden;
-    box-shadow: 0 0 9px #D2E1F9;
+    box-shadow: 0 0 5px rgb(0 0 0 / 20%);
     border-radius: 4px;
 }
 .sa-sm-card-x {
