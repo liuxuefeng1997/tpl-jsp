@@ -239,7 +239,7 @@
                             //读取分类
                             JsonObject ProductList = JSONReaderX.getJsonObj(HTTPLoaderX.getResponses("POST",Api_Url_Product_List,"{\"tags\":[8]}",Api_Url_Host));
                             JsonArray ds = ProductList.getJsonObject("data").getJsonArray("data");
-                            int ____pi = 0;
+                            int ____pi = 1;
                             for(JsonValue d : ds){
                                 JsonObject j = d.asJsonObject();
                                 if(____pi > 7){
@@ -362,7 +362,7 @@
                             //读取分类
                             JsonObject ProductList = JSONReaderX.getJsonObj(HTTPLoaderX.getResponses("POST",Api_Url_Product_List,"{\"tags\":[7]}",Api_Url_Host));
                             JsonArray ds = ProductList.getJsonObject("data").getJsonArray("data");
-                            int ____pi = 0;
+                            int ____pi = 1;
                             for(JsonValue d : ds){
                                 JsonObject j = d.asJsonObject();
                                 if(____pi > 7){
